@@ -1,110 +1,116 @@
-/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
+:root {
+  /* Breakpoints */
+  --mantine-breakpoint-xs: 576px;
+  --mantine-breakpoint-sm: 768px;
+  --mantine-breakpoint-md: 992px;
+  --mantine-breakpoint-lg: 1200px;
+  --mantine-breakpoint-xl: 1408px;
 
-/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
+  /* Container sizes */
+  --container-xs: 100%;
+  --container-sm: 540px;
+  --container-md: 720px;
+  --container-lg: 960px;
+  --container-xl: 1140px;
+  --container-xxl: 1360px;
 
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
+  /* Blue colors */
+  --blue-0: #f4f9fd;
+  --blue-1: #dfedf7;
+  --blue-2: #cde0ef;
+  --blue-3: #a6c8e3;
+  --blue-4: #5998c9;
+  --blue-5: #4d91c7;
+  --blue-6: #0061af;
+  --blue-7: #004e8c;
+  --blue-8: #003762;
+  --blue-9: #00223d;
 
-html {
-  color: #222;
-  font-size: 1em;
-  line-height: 1.4;
+  /* Red colors */
+  --red-0: #fdf4f6;
+  --red-1: #fdebef;
+  --red-2: #faccd6;
+  --red-3: #f6a6b8;
+  --red-4: #f1738f;
+  --red-5: #ee4d71;
+  --red-6: #e60033;
+  --red-7: #c4002b;
+  --red-8: #a10024;
+  --red-9: #730019;
+
+  /* Grey colors */
+  --grey-0: #ffffff;
+  --grey-1: #f5f6f9;
+  --grey-2: #eceff4;
+  --grey-3: #cad3df;
+  --grey-4: #8493a8;
+  --grey-5: #65778a;
+  --grey-6: #536679;
+  --grey-7: #3b5161;
+  --grey-8: #223a4a;
+  --grey-9: #0a2432;
+
+  /* Green colors */
+  --green-0: #f6fcf8;
+  --green-1: #f1faf4;
+  --green-2: #ddf3e4;
+  --green-3: #c4ead0;
+  --green-4: #a2deb4;
+  --green-5: #77cf92;
+  --green-6: #55c377;
+  --green-7: #48a665;
+  --green-8: #337547;
+  --green-9: #245232;
+
+  /* Yellow colors */
+  --yellow-0: #fff9eb;
+  --yellow-1: #fef1d2;
+  --yellow-2: #fee9b9;
+  --yellow-3: #fde2a5;
+  --yellow-4: #fcd476;
+  --yellow-5: #fbc444;
+  --yellow-6: #fab005;
+  --yellow-7: #c88d04;
+  --yellow-8: #966a03;
+  --yellow-9: #644602;
 }
 
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Customize the background color to match your design.
- */
+.container {
+  width: 100%;
+  max-width: var(--container-xs);
+  margin: 0 auto;
+
+  /* Breakpoints */
+  @media (min-width: var(--mantine-breakpoint-xs)) {
+    max-width: var(--container-sm);
+  }
+  @media (min-width: var(--mantine-breakpoint-sm)) {
+    max-width: var(--container-md);
+  }
+  @media (min-width: var(--mantine-breakpoint-md)) {
+    max-width: var(--container-lg);
+  }
+  @media (min-width: var(--mantine-breakpoint-lg)) {
+    max-width: var(--container-xl);
+  }
+  @media (min-width: var(--mantine-breakpoint-xl)) {
+    max-width: var(--container-xxl);
+  }
+}
+
+html {
+  color: #0a2432;
+}
 
 ::-moz-selection {
-  background: #b3d4fc;
+  background: var(--blue-3);
   text-shadow: none;
 }
 
 ::selection {
-  background: #b3d4fc;
+  background: var(--blue-3);
   text-shadow: none;
 }
-
-/*
- * A better looking default horizontal rule
- */
-
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
-}
-
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
-
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-  vertical-align: middle;
-}
-
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-/*
- * Allow only vertical resizing of textareas.
- */
-
-textarea {
-  resize: vertical;
-}
-
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers
- */
-
-.hidden,
-[hidden] {
-  display: none !important;
-}
-
-/*
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
- */
 
 .visually-hidden {
   border: 0;
@@ -116,132 +122,4 @@ textarea {
   position: absolute;
   white-space: nowrap;
   width: 1px;
-  /* 1 */
 }
-
-/*
- * Extends the .visually-hidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
-
-.visually-hidden.focusable:active,
-.visually-hidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  white-space: inherit;
-  width: auto;
-}
-
-/*
- * Hide visually and from screen readers, but maintain layout
- */
-
-.invisible {
-  visibility: hidden;
-}
-
-/*
- * Clearfix: contain floats
- *
- * The use of `table` rather than `block` is only necessary if using
- * `::before` to contain the top-margins of child elements.
- */
-
-.clearfix::before,
-.clearfix::after {
-  content: "";
-  display: table;
-}
-
-.clearfix::after {
-  clear: both;
-}
-
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
-}
-
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
-}
-
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
-
-@media print {
-  *,
-  *::before,
-  *::after {
-    background: #fff !important;
-    color: #000 !important;
-    /* Black prints faster */
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-
-  a[href]::after {
-    content: " (" attr(href) ")";
-  }
-
-  abbr[title]::after {
-    content: " (" attr(title) ")";
-  }
-
-  /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
-  a[href^="#"]::after,
-  a[href^="javascript:"]::after {
-    content: "";
-  }
-
-  pre {
-    white-space: pre-wrap !important;
-  }
-
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
-}
-
