@@ -53,22 +53,23 @@
 </head>
 
 <body>
-<header>
-  <a href="/" aria-label="Meest China Shop – перейти на головну сторінку">
+<header class="header container">
+  <a href="/" class="header__logo" aria-label="Meest China Shop – перейти на головну сторінку">
     <img src="/img/logo.svg" alt="">
   </a>
 
-  <nav aria-label="Головна навігація">
-    <ul>
-      <li><a href="#top-discount-products">Пропозиції</a></li>
-      <li><a href="#how-to-order">Як замовити</a></li>
-      <li><a href="#why-us">Переваги</a></li>
+  <nav class="header__nav" aria-label="Головна навігація">
+    <ul class="header__nav-list">
+      <li class="header__nav-item"><a href="#top-discount-products" class="header__nav-link">Пропозиції</a></li>
+      <li class="header__nav-item"><a href="#how-to-order" class="header__nav-link">Як замовити</a></li>
+      <li class="header__nav-item"><a href="#why-us" class="header__nav-link">Переваги</a></li>
     </ul>
   </nav>
 
   <!-- TODO: update link -->
   <a
     href="/ru/landing"
+    class="header__language-switcher"
     lang="ru"
     aria-label="Змінити мову сторінки на російську"
   >
@@ -80,7 +81,7 @@
     <span aria-hidden="true">UA</span>
   </a>
 
-  <a href="https://meest-shop.com/#services_id" target="_blank" rel="noopener">Замовити</a>
+  <a href="https://meest-shop.com/#services_id" class="header__cta-button" target="_blank" rel="noopener">Замовити</a>
 </header>
 
 <main>
