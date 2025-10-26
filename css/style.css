@@ -190,6 +190,15 @@ footer {
   }
 }
 
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 /* Header styles */
 .header {
   position: fixed;
@@ -747,33 +756,62 @@ footer {
 
 /* Marketplaces section styles */
 .marketplaces {
-}
-
-.marketplaces__container {
-  padding: 48px 96px;
+  position: relative;
+  overflow: hidden;
+  padding: 48px 0 96px;
 
   @media screen and (min-width: 768px) {
     padding: 48px 0 132px;
   }
 }
 
+.marketplaces::before,
+.marketplaces::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.marketplaces::before {
+  left: 0;
+  background: linear-gradient(to right, var(--grey-0), transparent);
+}
+
+.marketplaces::after {
+  right: 0;
+  background: linear-gradient(to left, var(--grey-0), transparent);
+}
+
 .marketplaces__list {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 16px 60px;
+  gap: 60px;
+  animation: scroll 60s linear infinite;
+  white-space: nowrap;
+  width: max-content;
+  transform: translateX(0%);
 
   @media screen and (min-width: 768px) {
-    gap: 16px 80px;
+    gap: 80px;
+    animation-duration: 80s;
   }
 }
 
 .marketplaces__item {
+  flex-shrink: 0;
   height: 64px;
   width: auto;
   max-height: 64px;
 }
 
 .marketplaces__logo {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
 }
