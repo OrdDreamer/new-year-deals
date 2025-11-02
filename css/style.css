@@ -757,8 +757,8 @@ footer {
 /* Marketplaces section styles */
 .marketplaces {
   position: relative;
-  overflow: hidden;
   padding: 48px 0 96px;
+  overflow: hidden;
 
   @media screen and (min-width: 768px) {
     padding: 48px 0 132px;
@@ -793,10 +793,10 @@ footer {
   justify-content: center;
   gap: 60px;
   width: max-content;
+  padding: 12px 0;
   white-space: nowrap;
   transform: translateX(0%);
   animation: scroll 60s linear infinite;
-  padding: 12px 0;
 
   @media screen and (min-width: 768px) {
     gap: 80px;
