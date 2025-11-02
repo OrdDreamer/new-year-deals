@@ -796,6 +796,7 @@ footer {
   white-space: nowrap;
   transform: translateX(0%);
   animation: scroll 60s linear infinite;
+  padding: 12px 0;
 
   @media screen and (min-width: 768px) {
     gap: 80px;
@@ -806,8 +807,8 @@ footer {
 .marketplaces__item {
   flex-shrink: 0;
   width: auto;
-  height: 64px;
-  max-height: 64px;
+  height: 40px;
+  max-height: 40px;
 }
 
 .marketplaces__logo {
