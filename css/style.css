@@ -158,10 +158,10 @@ hr {
   height: 1px;
   margin: -1px;
   padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
   border: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  clip: rect(0, 0, 0, 0);
 }
 
 body {
@@ -206,8 +206,8 @@ footer {
 .header {
   position: fixed;
   top: 4px;
-  left: 0;
   right: 0;
+  left: 0;
   z-index: 100;
 }
 
@@ -218,13 +218,13 @@ footer {
   gap: 16px;
   height: 72px;
   padding: 12px 12px 12px 8px;
-  background: var(--grey-0);
   border-radius: 200px;
   box-shadow: 0 0 20px 0 #073b660f, 0 0 4px 0 #073b660a;
+  background: var(--grey-0);
 
   @media screen and (min-width: 992px) {
-    height: 80px;
     grid-template-columns: auto 1fr auto auto;
+    height: 80px;
     padding: 4px 16px;
   }
 }
@@ -252,8 +252,8 @@ footer {
   width: 48px;
   height: 48px;
   padding: 0;
-  background: none;
   border: none;
+  background: none;
   cursor: pointer;
 }
 
@@ -267,9 +267,9 @@ footer {
 .mobile-menu {
   position: fixed;
   top: 0;
-  left: 0;
   right: 0;
   bottom: 0;
+  left: 0;
   z-index: 1000;
   display: flex;
   flex-direction: column;
@@ -310,8 +310,8 @@ footer {
   width: 48px;
   height: 48px;
   padding: 0;
-  background: none;
   border: none;
+  background: none;
   cursor: pointer;
 }
 
@@ -325,8 +325,8 @@ footer {
   display: block;
   margin: 16px;
   padding: 12px 24px;
-  background: var(--blue-6);
   border-radius: 200px;
+  background: var(--blue-6);
   color: var(--grey-0);
   text-align: center;
   text-decoration: none;
@@ -379,8 +379,8 @@ footer {
   gap: 8px;
   margin: 16px;
   padding: 8px 24px;
-  background-color: var(--blue-0);
   border-radius: 12px;
+  background-color: var(--blue-0);
   color: var(--blue-6);
   text-align: center;
   text-decoration: none;
@@ -462,16 +462,16 @@ footer {
 }
 
 .header__language-switcher span::before {
-  content: "UA";
   position: absolute;
   top: 0;
   left: 0;
+  display: block;
   width: 100%;
   height: 100%;
-  display: block;
   opacity: 1;
   color: var(--blue-6);
   transition: opacity 150ms ease-in-out;
+  content: "UA";
 }
 
 .header__language-switcher:hover,
@@ -498,8 +498,8 @@ footer {
 .header__cta-button {
   display: block;
   padding: 10px 20px;
-  background-color: var(--blue-6);
   border-radius: 200px;
+  background-color: var(--blue-6);
   color: var(--grey-0);
   text-decoration: none;
   font-weight: 500;
@@ -520,12 +520,12 @@ footer {
   flex-direction: column;
   align-items: center;
   padding: 32px 16px;
-  background: linear-gradient(180deg, #ffffff 0%, #cde0ef 100%);
   border-radius: 0 0 32px 32px;
+  background: linear-gradient(180deg, #ffffff 0%, #cde0ef 100%);
 
   @media screen and (min-width: 768px) {
-    padding-top: 60px;
     min-height: 936px;
+    padding-top: 60px;
   }
 
   @media screen and (min-width: 992px) {
@@ -533,8 +533,8 @@ footer {
   }
 
   @media screen and (min-width: 1200px) {
-    padding: 60px 80px 80px;
     min-height: 640px;
+    padding: 60px 80px 80px;
   }
 }
 
@@ -542,9 +542,9 @@ footer {
 .hero::after {
   position: absolute;
   display: none;
-  content: "";
   background-repeat: no-repeat;
   background-size: contain;
+  content: "";
 }
 
 @media screen and (min-width: 768px) {
@@ -564,8 +564,8 @@ footer {
 }
 
 .hero::after {
-  bottom: 20px;
   right: 0;
+  bottom: 20px;
   width: 324px;
   height: 324px;
   background-image: url("/img/section-hero/illustration-desktop-right.png");
@@ -580,8 +580,8 @@ footer {
   }
 
   .hero::after {
-    bottom: 24px;
     right: 16px;
+    bottom: 24px;
     width: 396px;
     height: 396px;
   }
@@ -595,16 +595,16 @@ footer {
   }
 
   .hero::after {
-    bottom: 28px;
     right: 12px;
+    bottom: 28px;
     width: 340px;
     height: 340px;
   }
 }
 
 .hero__title {
-  margin: 0 0 8px;
   max-width: 939px;
+  margin: 0 0 8px;
   text-align: center;
   font-weight: 600;
   font-size: 40px;
@@ -622,8 +622,8 @@ footer {
 }
 
 .hero__description {
-  margin-bottom: 32px;
   max-width: 708px;
+  margin-bottom: 32px;
   text-align: center;
   font-size: 16px;
   line-height: 1.75;
@@ -685,8 +685,8 @@ footer {
 
 .hero__timer-separator {
   width: 11px;
-  text-align: center;
   color: var(--blue-6);
+  text-align: center;
   font-size: 32px;
   line-height: 1.87;
 
@@ -731,8 +731,8 @@ footer {
 .hero__cta-icon {
   width: 24px;
   height: 24px;
-  object-fit: contain;
   transition: transform 250ms ease-in-out;
+  object-fit: contain;
 }
 
 .hero__cta-button:hover .hero__cta-icon,
@@ -770,13 +770,13 @@ footer {
 
 .marketplaces::before,
 .marketplaces::after {
-  content: "";
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 60px;
   z-index: 2;
+  width: 60px;
   pointer-events: none;
+  content: "";
 }
 
 .marketplaces::before {
@@ -808,10 +808,10 @@ footer {
 }
 
 .marketplaces__item {
-  flex-shrink: 0;
   width: auto;
   height: 40px;
   max-height: 40px;
+  flex-shrink: 0;
 }
 
 .marketplaces__logo {
@@ -822,11 +822,11 @@ footer {
 
 /* Top discount products section styles */
 .top-discount-products {
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-bottom: 96px;
+  overflow: hidden;
 
   @media screen and (min-width: 768px) {
     padding-bottom: 132px;
@@ -835,12 +835,12 @@ footer {
 
 .top-discount-products__header {
   position: relative;
-  padding: 4px 0 0;
   margin-bottom: 32px;
+  padding: 4px 0 0;
 
   @media screen and (min-width: 768px) {
-    padding: 24px 0 0;
     margin-bottom: 48px;
+    padding: 24px 0 0;
   }
 
   @media screen and (min-width: 1200px) {
@@ -853,14 +853,14 @@ footer {
   top: 2px;
   left: 50%;
   z-index: -1;
-  content: "ПРОПОЗИЦІЇ";
-  transform: translateX(-50%);
   opacity: 0.5;
+  color: var(--blue-1);
+  text-transform: uppercase;
   font-weight: 600;
   font-size: 48px;
   line-height: 60px;
-  color: var(--blue-1);
-  text-transform: uppercase;
+  transform: translateX(-50%);
+  content: "ПРОПОЗИЦІЇ";
 
   @media screen and (min-width: 768px) {
     font-size: 93px;
@@ -885,10 +885,10 @@ footer {
 
 .top-discount-products__title {
   margin: 0 0 8px;
+  text-align: center;
   font-weight: 500;
   font-size: 32px;
   line-height: 1.37;
-  text-align: center;
 
   @media screen and (min-width: 768px) {
     margin: 0 0 24px;
@@ -905,10 +905,10 @@ footer {
 }
 
 .top-discount-products__description {
+  text-align: center;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.75;
-  text-align: center;
 
   @media screen and (min-width: 768px) {
     font-size: 18px;
@@ -932,8 +932,8 @@ footer {
   bottom: -10px;
   z-index: 2;
   width: 60px;
-  content: "";
   pointer-events: none;
+  content: "";
 }
 
 .top-discount-products__list-container::before {
@@ -963,12 +963,12 @@ footer {
 }
 
 .top-discount-products__item {
-  flex-shrink: 0;
   width: 280px;
   max-width: 280px;
   height: 280px;
   max-height: 280px;
   transition: transform 250ms ease-in-out;
+  flex-shrink: 0;
 
   @media screen and (min-width: 768px) {
     width: 360px;
@@ -998,7 +998,6 @@ footer {
 }
 
 .top-discount-products__card::before {
-  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -1007,11 +1006,12 @@ footer {
   background: linear-gradient(
     360deg,
     #4d91c7 8.41%,
-    rgba(77, 145, 199, 0.776) 20.2%,
-    rgba(77, 145, 199, 0.491) 27.15%,
-    rgba(77, 145, 199, 0.191) 34.63%,
-    rgba(77, 145, 199, 0) 46.19%
+    rgb(77 145 199 / 77.6%) 20.2%,
+    rgb(77 145 199 / 49.1%) 27.15%,
+    rgb(77 145 199 / 19.1%) 34.63%,
+    rgb(77 145 199 / 0%) 46.19%
   );
+  content: "";
 }
 
 .top-discount-products__card::after {
@@ -1020,13 +1020,13 @@ footer {
   right: 16px;
   width: 48px;
   height: 48px;
-  content: "";
+  border-radius: 50%;
   background-color: var(--grey-0);
   background-image: url("/img/icons/arrow_right_up.svg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 24px;
-  border-radius: 50%;
+  content: "";
 
   @media screen and (min-width: 768px) {
     top: 24px;
@@ -1049,8 +1049,8 @@ footer {
   bottom: 0;
   left: 0;
   display: grid;
-  align-items: flex-end;
   grid-template-columns: 1fr auto;
+  align-items: flex-end;
   gap: 12px;
   width: 100%;
   padding: 16px;
@@ -1063,10 +1063,10 @@ footer {
 
 .top-discount-products__card-title {
   margin: 0;
+  color: var(--grey-0);
   font-weight: 500;
   font-size: 20px;
   line-height: 1.4;
-  color: var(--grey-0);
 
   @media screen and (min-width: 768px) {
     font-size: 28px;
@@ -1075,12 +1075,12 @@ footer {
 
 .top-discount-products__card-price {
   padding: 4px 8px;
-  background-color: var(--grey-0);
   border-radius: 12px;
+  background-color: var(--grey-0);
+  color: var(--blue-6);
   font-weight: 500;
   font-size: 20px;
   line-height: 1.4;
-  color: var(--blue-6);
 }
 
 .top-discount-products__cta-button {
@@ -1112,8 +1112,8 @@ footer {
 .top-discount-products__cta-icon {
   width: 24px;
   height: 24px;
-  object-fit: contain;
   transition: transform 250ms ease-in-out;
+  object-fit: contain;
 }
 
 .top-discount-products__cta-button:hover .top-discount-products__cta-icon,
@@ -1127,9 +1127,9 @@ footer {
   flex-direction: column;
   align-items: center;
   padding: 32px 16px;
-  background-color: var(--blue-0);
   border-radius: 32px;
   overflow: hidden;
+  background-color: var(--blue-0);
 
   @media screen and (min-width: 768px) {
     padding: 48px 24px;
@@ -1145,7 +1145,6 @@ footer {
 }
 
 .promo-11-11::after {
-  content: "";
   display: block;
   width: 100%;
   padding-top: 56%;
@@ -1153,6 +1152,7 @@ footer {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  content: "";
 
   @media screen and (min-width: 768px) {
     padding-top: 14%;
@@ -1162,11 +1162,11 @@ footer {
 
 .promo-11-11__title {
   margin: 0 0 8px;
+  text-align: center;
+  text-transform: uppercase;
   font-weight: 600;
   font-size: 32px;
   line-height: 1.37;
-  text-align: center;
-  text-transform: uppercase;
 
   @media screen and (min-width: 768px) {
     margin-bottom: 24px;
@@ -1204,8 +1204,8 @@ footer {
 }
 
 .promo-11-11__description {
-  margin-bottom: 24px;
   max-width: 832px;
+  margin-bottom: 24px;
   text-align: center;
   font-size: 16px;
   line-height: 1.75;
@@ -1218,16 +1218,16 @@ footer {
 }
 
 .promo-11-11__description-accent {
-  font-weight: 600;
   color: var(--blue-6);
+  font-weight: 600;
 }
 
 .promo-11-11__list {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  flex-wrap: wrap;
   margin-bottom: 24px;
 
   @media screen and (min-width: 768px) {
@@ -1248,10 +1248,10 @@ footer {
   overflow: hidden;
   background-color: var(--blue-1);
   color: var(--blue-6);
+  text-transform: uppercase;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.4;
-  text-transform: uppercase;
 
   @media screen and (min-width: 992px) {
     font-size: 20px;
@@ -1264,7 +1264,6 @@ footer {
 }
 
 .promo-11-11__item::before {
-  content: "";
   display: block;
   width: 20px;
   height: 20px;
@@ -1272,6 +1271,7 @@ footer {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
+  content: "";
 
   @media screen and (min-width: 992px) {
     width: 28px;
@@ -1310,8 +1310,8 @@ footer {
 .promo-11-11__cta-icon {
   width: 24px;
   height: 24px;
-  object-fit: contain;
   transition: transform 250ms ease-in-out;
+  object-fit: contain;
 }
 
 .promo-11-11__cta-button:hover .promo-11-11__cta-icon,

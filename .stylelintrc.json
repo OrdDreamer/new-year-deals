@@ -1,0 +1,154 @@
+{
+  "extends": ["stylelint-config-standard"],
+  "plugins": ["stylelint-order"],
+  "rules": {
+    "order/properties-order": [
+      [
+        {
+          "groupName": "Positioning",
+          "properties": [
+            "position",
+            "top",
+            "right",
+            "bottom",
+            "left",
+            "z-index"
+          ]
+        },
+        {
+          "groupName": "Display & Box Model",
+          "properties": [
+            "display",
+            "flex",
+            "flex-direction",
+            "flex-wrap",
+            "grid-template-columns",
+            "align-items",
+            "justify-content",
+            "gap",
+            "width",
+            "max-width",
+            "min-width",
+            "height",
+            "max-height",
+            "min-height",
+            "box-sizing"
+          ]
+        },
+        {
+          "groupName": "Spacing",
+          "properties": [
+            "margin",
+            "margin-top",
+            "margin-right",
+            "margin-bottom",
+            "margin-left",
+            "padding",
+            "padding-top",
+            "padding-right",
+            "padding-bottom",
+            "padding-left"
+          ]
+        },
+        {
+          "groupName": "Borders & Border Radius",
+          "properties": [
+            "border",
+            "border-top",
+            "border-right",
+            "border-bottom",
+            "border-left",
+            "border-radius",
+            "border-style"
+          ]
+        },
+        {
+          "groupName": "Effects",
+          "properties": [
+            "box-shadow",
+            "opacity"
+          ]
+        },
+        {
+          "groupName": "Overflow",
+          "properties": [
+            "overflow",
+            "overflow-x",
+            "overflow-y"
+          ]
+        },
+        {
+          "groupName": "Background",
+          "properties": [
+            "background",
+            "background-color",
+            "background-image",
+            "background-repeat",
+            "background-position",
+            "background-size",
+            "background-attachment"
+          ]
+        },
+        {
+          "groupName": "Colors & Typography",
+          "properties": [
+            "color",
+            "text-align",
+            "text-decoration",
+            "text-transform",
+            "text-shadow",
+            "font-weight",
+            "font-size",
+            "line-height",
+            "font-family",
+            "white-space"
+          ]
+        },
+        {
+          "groupName": "Transforms & Animations",
+          "properties": [
+            "transform",
+            "transition",
+            "animation",
+            "animation-duration"
+          ]
+        },
+        {
+          "groupName": "Other",
+          "properties": [
+            "cursor",
+            "pointer-events",
+            "object-fit",
+            "object-position",
+            "content",
+            "clip"
+          ]
+        }
+      ],
+      {
+        "unspecified": "bottom"
+      }
+    ],
+    "order/properties-alphabetical-order": null,
+    "property-no-unknown": [
+      true,
+      {
+        "ignoreProperties": ["/^--/"]
+      }
+    ],
+    "selector-class-pattern": null,
+    "property-no-vendor-prefix": null,
+    "selector-no-vendor-prefix": null,
+    "property-no-deprecated": null,
+    "color-hex-length": null,
+    "media-feature-range-notation": null,
+    "font-family-name-quotes": null,
+    "font-family-no-duplicate-names": null,
+    "declaration-block-no-redundant-longhand-properties": null,
+    "at-rule-empty-line-before": null,
+    "rule-empty-line-before": null,
+    "declaration-empty-line-before": null,
+    "block-no-empty": null
+  }
+}
+
