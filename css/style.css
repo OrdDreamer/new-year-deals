@@ -821,13 +821,87 @@ footer {
 .top-discount-products {
 }
 
+.top-discount-products__header {
+  padding: 4px 0 0;
+  margin-bottom: 32px;
+  position: relative;
+
+  @media screen and (min-width: 768px) {
+    padding: 24px 0 0;
+    margin-bottom: 48px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 40px 0 8px;
+  }
+}
+
+.top-discount-products__header::before {
+  content: "ПРОПОЗИЦІЇ";
+  text-transform: uppercase;
+  position: absolute;
+  top: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--blue-1);
+  opacity: 0.5;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 60px;
+  z-index: -1;
+
+  @media screen and (min-width: 768px) {
+    font-size: 93px;
+    line-height: 97px;
+  }
+
+  @media screen and (min-width: 992px) {
+    font-size: 124px;
+    line-height: 130px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 133px;
+    line-height: 140px;
+  }
+
+  @media screen and (min-width: 1408px) {
+    font-size: 160px;
+    line-height: 168px;
+  }
+}
+
 .top-discount-products__title {
+  margin: 0 0 8px;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.37;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    margin: 0 0 24px;
+  }
+
+  @media screen and (min-width: 992px) {
+    font-size: 60px;
+    line-height: 1.4;
+  }
 }
 
 .top-discount-products__title-accent {
+  color: var(--blue-6);
 }
 
 .top-discount-products__description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.75;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+    line-height: 1.55;
+  }
 }
 
 .top-discount-products__list {
