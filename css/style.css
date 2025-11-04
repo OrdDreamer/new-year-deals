@@ -1610,25 +1610,34 @@ footer {
 
 /* Why Us Section */
 .why-us {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: flex-start;
+  gap: 16px;
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .why-us__title {
   position: relative;
   width: 100%;
   margin: 0;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
   padding: 0 16px;
   text-align: center;
   font-weight: 500;
   font-size: 32px;
   line-height: 1.37;
+  grid-column: 1 / -1;
 
   @media screen and (min-width: 576px) {
     padding: 0 0 13px;
   }
-  
+
   @media screen and (min-width: 768px) {
-    margin-bottom: 48px;
+    margin-bottom: 32px;
     padding: 12px 0 32px;
   }
 
@@ -1697,15 +1706,66 @@ footer {
 }
 
 .why-us__article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 32px 0;
+  border: 1px solid var(--blue-1);
+  border-radius: 24px;
+  background:
+    url("/img/section-why-us/background.svg"),
+    linear-gradient(180deg, #f4f9fd 0%, #dfedf7 100%);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size:
+    100% auto,
+    100% 100%;
 }
 
 .why-us__article-title {
+  margin: 0 0 4px;
+  color: var(--blue-6);
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.4;
 }
 
 .why-us__article-text {
+  margin: 0 0 24px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.75;
+
+  @media screen and (min-width: 576px) {
+    font-size: 18px;
+    line-height: 1.55;
+  }
 }
 
 .why-us__article-image {
+  width: 200px;
+  height: 268px;
+
+  @media screen and (min-width: 768px) {
+    width: 283px;
+    height: 380px;
+  }
+
+  @media screen and (min-width: 992px) {
+    width: 387px;
+    height: 520px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 345px;
+    height: 464px;
+  }
+
+  @media screen and (min-width: 1408px) {
+    width: 304px;
+    height: 408px;
+  }
 }
 
 .why-us__list {
