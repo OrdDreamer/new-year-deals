@@ -42,14 +42,12 @@ class GTMPlugin {
         content = content.replace(/{{GTM_ID}}/g, this.gtmId);
       } else {
         // Якщо GTM ID не встановлено, видаляємо GTM теги
-        // Видаляємо GTM скрипт з head
         content = content.replace(
-          /<!-- Google Tag Manager -->[\s\S]*?<!-- End Google Tag Manager -->\s*/g,
+          /<!--\s*Google Tag Manager\s*-->[\s\S]*?<!--\s*End Google Tag Manager\s*-->\s*/g,
           ''
         );
-        // Видаляємо GTM noscript з body
         content = content.replace(
-          /<!-- Google Tag Manager \(noscript\) -->[\s\S]*?<!-- End Google Tag Manager \(noscript\) -->\s*/g,
+          /<!--\s*Google Tag Manager\s*\(noscript\)\s*-->[\s\S]*?<!--\s*End Google Tag Manager\s*\(noscript\)\s*-->\s*/g,
           ''
         );
       }
