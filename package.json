@@ -13,7 +13,9 @@
     "lint:css:style:fix": "stylelint 'css/style.css' --fix"
   },
   "devDependencies": {
+    "clean-css": "^5.3.3",
     "copy-webpack-plugin": "^11.0.0",
+    "css-minimizer-webpack-plugin": "^7.0.2",
     "html-webpack-plugin": "^5.6.0",
     "image-minimizer-webpack-plugin": "^4.1.4",
     "imagemin": "^9.0.1",

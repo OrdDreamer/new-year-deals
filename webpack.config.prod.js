@@ -3,6 +3,8 @@ const common = require('./webpack.common.js');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const CleanCSS = require('clean-css');
 const fs = require('fs');
 const path = require('path');
 
@@ -120,6 +122,21 @@ module.exports = (env = {}) => {
     output: {
       publicPath: basePath ? `${basePath}/` : '/',
     },
+    optimization: {
+      minimizer: [
+        '...',
+        new CssMinimizerPlugin({
+          minimizerOptions: {
+            preset: [
+              'default',
+              {
+                discardComments: { removeAll: true },
+              },
+            ],
+          },
+        }),
+      ],
+    },
     plugins: [
       new HtmlWebpackPlugin({
         template: './index.html',
@@ -127,11 +144,36 @@ module.exports = (env = {}) => {
         templateParameters: {
           GTM_ID: gtmId || false,
         },
+        minify: {
+          removeComments: true,
+          collapseWhitespace: true,
+          removeRedundantAttributes: true,
+          useShortDoctype: true,
+          removeEmptyAttributes: true,
+          removeStyleLinkTypeAttributes: true,
+          keepClosingSlash: true,
+          minifyJS: true,
+          minifyCSS: true,
+        },
       }),
       new CopyPlugin({
         patterns: [
           { from: 'img', to: 'img' },
-          { from: 'css', to: 'css' },
+          {
+            from: 'css',
+            to: 'css',
+            transform(content, filePath) {
+              if (filePath.endsWith('.css')) {
+                const minimizer = new CleanCSS({
+                  level: 2,
+                  format: false,
+                });
+                const result = minimizer.minify(content.toString());
+                return result.styles;
+              }
+              return content;
+            },
+          },
           { from: 'favicon.ico', to: 'favicon.ico' },
         ],
       }),
