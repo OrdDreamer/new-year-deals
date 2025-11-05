@@ -8,6 +8,6 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     clean: true,
     filename: './js/app.js',
-    publicPath: process.env.GITHUB_PAGES ? '/landing_11-11/' : '/',
+    // publicPath встановлюється окремо для dev/prod
   },
 };

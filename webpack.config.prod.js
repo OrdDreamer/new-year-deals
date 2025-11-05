@@ -5,7 +5,22 @@ const CopyPlugin = require('copy-webpack-plugin');
 const fs = require('fs');
 const path = require('path');
 
-const basePath = process.env.GITHUB_PAGES ? '/landing_11-11' : '';
+// Визначаємо basePath
+// Підтримуємо: PUBLIC_PATH env змінну або webpack env параметр
+const getBasePath = (env = {}) => {
+  // Перевіряємо PUBLIC_PATH змінну середовища
+  if (process.env.PUBLIC_PATH) {
+    return process.env.PUBLIC_PATH;
+  }
+  
+  // Перевіряємо webpack env параметр
+  if (env && env.publicPath) {
+    return env.publicPath;
+  }
+  
+  // Production - стандартні шляхи (без basePath)
+  return '';
+};
 
 // Кастомний плагін для заміни абсолютних шляхів у HTML та CSS
 class ReplacePathsPlugin {
@@ -56,7 +71,7 @@ class ReplacePathsPlugin {
 
   apply(compiler) {
     compiler.hooks.afterEmit.tap('ReplacePathsPlugin', (compilation) => {
-      if (!this.basePath) return;
+      if (!this.basePath) return; // Підміна шляхів потрібна тільки якщо basePath встановлено
 
       const outputPath = compilation.outputOptions.path;
 
@@ -79,20 +94,29 @@ class ReplacePathsPlugin {
   }
 }
 
-module.exports = merge(common, {
-  mode: 'production',
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: './index.html',
-      publicPath: process.env.GITHUB_PAGES ? '/landing_11-11/' : '/',
-    }),
-    new CopyPlugin({
-      patterns: [
-        { from: 'img', to: 'img' },
-        { from: 'css', to: 'css' },
-        { from: 'favicon.ico', to: 'favicon.ico' },
-      ],
-    }),
-    ...(basePath ? [new ReplacePathsPlugin(basePath)] : []),
-  ],
-});
+// Отримуємо basePath (webpack передає env як параметр)
+module.exports = (env = {}) => {
+  const basePath = getBasePath(env);
+  
+  return merge(common, {
+    mode: 'production',
+    output: {
+      publicPath: basePath ? `${basePath}/` : '/',
+    },
+    plugins: [
+      new HtmlWebpackPlugin({
+        template: './index.html',
+        publicPath: basePath ? `${basePath}/` : '/',
+      }),
+      new CopyPlugin({
+        patterns: [
+          { from: 'img', to: 'img' },
+          { from: 'css', to: 'css' },
+          { from: 'favicon.ico', to: 'favicon.ico' },
+        ],
+      }),
+      // Підміна шляхів (якщо basePath встановлено)
+      ...(basePath ? [new ReplacePathsPlugin(basePath)] : []),
+    ],
+  });
+};
