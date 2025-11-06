@@ -31,6 +31,14 @@ class ReplacePathsPlugin {
     this.basePath = basePath;
   }
 
+  // Перевіряє, чи шлях вже містить basePath (без зміни самого шляху)
+  containsBasePath(filePath) {
+    if (!this.basePath) return false;
+    // Перевіряємо, чи шлях починається з basePath або містить basePath/ десь всередині
+    // Це працює навіть якщо є ./ в шляху (наприклад: /promo/11-11-shopping-day/./js/app.js)
+    return filePath.startsWith(this.basePath) || filePath.includes(this.basePath + '/');
+  }
+
   replacePathsInFile(filePath) {
     if (!fs.existsSync(filePath)) return;
 
@@ -47,6 +55,10 @@ class ReplacePathsPlugin {
             filePath.startsWith('//') || filePath.startsWith('data:')) {
           return match;
         }
+        // Пропускаємо шляхи, які вже містять basePath (вже оброблені HtmlWebpackPlugin)
+        if (this.containsBasePath(filePath)) {
+          return match;
+        }
         return `url(${quote}${this.basePath}${slash}${filePath}${quote})`;
       });
       // Потім обробляємо без лапок
@@ -56,13 +68,24 @@ class ReplacePathsPlugin {
             filePath.startsWith('//') || filePath.startsWith('data:')) {
           return match;
         }
+        // Пропускаємо шляхи, які вже містять basePath (вже оброблені HtmlWebpackPlugin)
+        if (this.containsBasePath(filePath)) {
+          return match;
+        }
         return `url(${this.basePath}${slash}${filePath})`;
       });
     } else {
       // Обробка HTML: замінюємо атрибути href, src, content
+      // ВАЖЛИВО: HtmlWebpackPlugin вже обробляє шляхи через publicPath,
+      // тому тут обробляємо тільки статичні шляхи, які не були оброблені
       content = content.replace(/(href|src|content)=["'](\/(?!\/))([^"']+)["']/g, (match, attr, slash, filePath) => {
         // Пропускаємо абсолютні URL (http://, https://, //)
         if (filePath.startsWith('http://') || filePath.startsWith('https://') || filePath.startsWith('//')) {
+          return match;
+        }
+        // Пропускаємо шляхи, які вже містять basePath (вже оброблені HtmlWebpackPlugin)
+        // Нормалізуємо шлях для перевірки (видаляємо ./ та подвійні слеші)
+        if (this.containsBasePath(filePath)) {
           return match;
         }
         return `${attr}="${this.basePath}${slash}${filePath}"`;
@@ -82,8 +105,8 @@ class ReplacePathsPlugin {
       const htmlFile = path.join(outputPath, 'index.html');
       this.replacePathsInFile(htmlFile);
 
-      const html404File = path.join(outputPath, '404.html');
-      this.replacePathsInFile(html404File);
+      const htmlRuFile = path.join(outputPath, 'index.ru.html');
+      this.replacePathsInFile(htmlRuFile);
 
       // Обробка CSS файлів
       const cssDir = path.join(outputPath, 'css');
@@ -141,6 +164,27 @@ module.exports = (env = {}) => {
       new HtmlWebpackPlugin({
         template: './index.html',
         publicPath: basePath ? `${basePath}/` : '/',
+        inject: false, // Вимкнути автоматичну інжекцію скриптів (скрипт вже є в HTML)
+        templateParameters: {
+          GTM_ID: gtmId || false,
+        },
+        minify: {
+          removeComments: true,
+          collapseWhitespace: true,
+          removeRedundantAttributes: true,
+          useShortDoctype: true,
+          removeEmptyAttributes: true,
+          removeStyleLinkTypeAttributes: true,
+          keepClosingSlash: true,
+          minifyJS: true,
+          minifyCSS: true,
+        },
+      }),
+      new HtmlWebpackPlugin({
+        template: './index.ru.html',
+        filename: 'index.ru.html',
+        publicPath: basePath ? `${basePath}/` : '/',
+        inject: false, // Вимкнути автоматичну інжекцію скриптів (скрипт вже є в HTML)
         templateParameters: {
           GTM_ID: gtmId || false,
         },

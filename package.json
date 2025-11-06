@@ -6,7 +6,7 @@
     "start": "webpack serve --open --config webpack.config.dev.js",
     "build": "webpack --config webpack.config.prod.js",
     "build:github": "PUBLIC_PATH=/landing_11-11 npm run build",
-    "build:production": "GTM_ID=GTM-MFD96JSQ npm run build",
+    "build:production": "GTM_ID=GTM-MFD96JSQ PUBLIC_PATH=/promo/11-11-shopping-day npm run build",
     "lint:css": "stylelint 'css/**/*.css'",
     "lint:css:fix": "stylelint 'css/**/*.css' --fix",
     "lint:css:style": "stylelint 'css/style.css'",
