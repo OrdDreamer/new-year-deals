@@ -109,14 +109,16 @@ function initTimer() {
     const targetDate = getTargetDate();
     const timeLeft = targetDate - now;
 
-    // Якщо час вже пройшов, приховуємо таймер
-    if (timeLeft <= 0) {
+    // Обчислюємо дні до цільової дати
+    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+
+    // Якщо час вже пройшов або до дати більше 30 днів, приховуємо таймер
+    if (timeLeft <= 0 || days > 30) {
       timerElement.classList.add('hero__timer--hidden');
       return;
     }
 
-    // Обчислюємо дні, години, хвилини та секунди
-    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+    // Обчислюємо години, хвилини та секунди
     const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
@@ -127,7 +129,7 @@ function initTimer() {
     timerMinutes.textContent = formatTime(minutes);
     timerSeconds.textContent = formatTime(seconds);
 
-    // Показуємо таймер, якщо він був прихований і час ще є
+    // Показуємо таймер, якщо він був прихований
     if (timerElement.classList.contains('hero__timer--hidden')) {
       timerElement.classList.remove('hero__timer--hidden');
     }
@@ -137,14 +139,17 @@ function initTimer() {
   const targetDate = getTargetDate();
   const now = new Date();
   const timeLeft = targetDate - now;
+  const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
 
-  // Якщо час ще є, показуємо таймер і запускаємо оновлення
-  if (timeLeft > 0) {
+  // Якщо час ще є і до дати не більше 30 днів, показуємо таймер і запускаємо оновлення
+  if (timeLeft > 0 && days <= 30) {
     updateTimer();
     // Оновлюємо таймер кожну секунду
     setInterval(updateTimer, 1000);
+  } else {
+    // Якщо до дати більше 30 днів або часу немає, таймер залишається прихованим
+    timerElement.classList.add('hero__timer--hidden');
   }
-  // Якщо часу немає, таймер залишається прихованим (за замовчуванням)
 }
 
 document.addEventListener('DOMContentLoaded', function() {
