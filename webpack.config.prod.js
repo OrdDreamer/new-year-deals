@@ -4,7 +4,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-const CleanCSS = require('clean-css');
 const fs = require('fs');
 const path = require('path');
 
@@ -15,12 +14,12 @@ const getBasePath = (env = {}) => {
   if (process.env.PUBLIC_PATH) {
     return process.env.PUBLIC_PATH;
   }
-  
+
   // Перевіряємо webpack env параметр
   if (env && env.publicPath) {
     return env.publicPath;
   }
-  
+
   // Production - стандартні шляхи (без basePath)
   return '';
 };
@@ -44,14 +43,14 @@ class ReplacePathsPlugin {
 
     let content = fs.readFileSync(filePath, 'utf8');
     const isCss = filePath.endsWith('.css');
-    
+
     if (isCss) {
       // Обробка CSS: замінюємо url("/img/...") та url('/img/...') на url("/landing_11-11/img/...")
       // Обробляємо різні формати: url("/path"), url('/path'), url(/path)
       // Спочатку обробляємо з лапками
       content = content.replace(/url\((["'])(\/(?!\/))([^"')]+)\1\)/g, (match, quote, slash, filePath) => {
         // Пропускаємо абсолютні URL (http://, https://, //, data:)
-        if (filePath.startsWith('http://') || filePath.startsWith('https://') || 
+        if (filePath.startsWith('http://') || filePath.startsWith('https://') ||
             filePath.startsWith('//') || filePath.startsWith('data:')) {
           return match;
         }
@@ -64,7 +63,7 @@ class ReplacePathsPlugin {
       // Потім обробляємо без лапок
       content = content.replace(/url\((\/(?!\/))([^"')]+)\)/g, (match, slash, filePath) => {
         // Пропускаємо абсолютні URL (http://, https://, //, data:)
-        if (filePath.startsWith('http://') || filePath.startsWith('https://') || 
+        if (filePath.startsWith('http://') || filePath.startsWith('https://') ||
             filePath.startsWith('//') || filePath.startsWith('data:')) {
           return match;
         }
@@ -126,12 +125,12 @@ const getGTMId = (env = {}) => {
   if (process.env.GTM_ID) {
     return process.env.GTM_ID;
   }
-  
+
   // Перевіряємо webpack env параметр
   if (env && env.gtmId) {
     return env.gtmId;
   }
-  
+
   return '';
 };
 
@@ -139,7 +138,7 @@ const getGTMId = (env = {}) => {
 module.exports = (env = {}) => {
   const basePath = getBasePath(env);
   const gtmId = getGTMId(env);
-  
+
   return merge(common, {
     mode: 'production',
     output: {
@@ -154,6 +153,7 @@ module.exports = (env = {}) => {
               'default',
               {
                 discardComments: { removeAll: true },
+                discardUnused: false,
               },
             ],
           },
@@ -203,21 +203,7 @@ module.exports = (env = {}) => {
       new CopyPlugin({
         patterns: [
           { from: 'img', to: 'img' },
-          {
-            from: 'css',
-            to: 'css',
-            transform(content, filePath) {
-              if (filePath.endsWith('.css')) {
-                const minimizer = new CleanCSS({
-                  level: 2,
-                  format: false,
-                });
-                const result = minimizer.minify(content.toString());
-                return result.styles;
-              }
-              return content;
-            },
-          },
+          { from: 'css', to: 'css' },
           { from: 'favicon.ico', to: 'favicon.ico' },
         ],
       }),
