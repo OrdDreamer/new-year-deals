@@ -87,6 +87,10 @@ class ReplacePathsPlugin {
         if (this.containsBasePath(filePath)) {
           return match;
         }
+        // Пропускаємо шляхи, які є посиланнями на інші мови сторінки
+        if (filePath.startsWith('ru/') || filePath.startsWith('uk/')) {
+          return match;
+        }
         return `${attr}="${this.basePath}${slash}${filePath}"`;
       });
     }
@@ -205,6 +209,7 @@ module.exports = (env = {}) => {
           { from: 'img', to: 'img' },
           { from: 'css', to: 'css' },
           { from: 'favicon.ico', to: 'favicon.ico' },
+          { from: 'index.html', to: 'index.uk.html' },
         ],
       }),
       // Оптимізація зображень
