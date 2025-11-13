@@ -108,6 +108,9 @@ class ReplacePathsPlugin {
       const htmlFile = path.join(outputPath, 'index.html');
       this.replacePathsInFile(htmlFile);
 
+      const htmlUkFile = path.join(outputPath, 'index.uk.html');
+      this.replacePathsInFile(htmlUkFile);
+
       const htmlRuFile = path.join(outputPath, 'index.ru.html');
       this.replacePathsInFile(htmlRuFile);
 
@@ -167,6 +170,7 @@ module.exports = (env = {}) => {
     plugins: [
       new HtmlWebpackPlugin({
         template: './index.html',
+        filename: 'index.uk.html',
         publicPath: basePath ? `${basePath}/` : '/',
         inject: false, // Вимкнути автоматичну інжекцію скриптів (скрипт вже є в HTML)
         templateParameters: {
@@ -209,7 +213,6 @@ module.exports = (env = {}) => {
           { from: 'img', to: 'img' },
           { from: 'css', to: 'css' },
           { from: 'favicon.ico', to: 'favicon.ico' },
-          { from: 'index.html', to: 'index.uk.html' },
         ],
       }),
       // Оптимізація зображень
