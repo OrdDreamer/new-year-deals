@@ -337,7 +337,7 @@ footer {
   margin: 16px;
   padding: 12px 24px;
   border-radius: 200px;
-  background: var(--blue-6);
+  background: var(--red-7);
   color: var(--grey-0);
   text-align: center;
   text-decoration: none;
@@ -349,7 +349,7 @@ footer {
 
 .mobile-menu__cta-button:hover,
 .mobile-menu__cta-button:focus {
-  background: var(--blue-7);
+  background: var(--red-8);
 }
 
 .mobile-menu__nav {
@@ -362,9 +362,6 @@ footer {
   margin: 0;
   padding: 0;
   list-style: none;
-}
-
-.mobile-menu__nav-item {
 }
 
 .mobile-menu__nav-link {
@@ -380,7 +377,7 @@ footer {
 
 .mobile-menu__nav-link:hover,
 .mobile-menu__nav-link:focus {
-  color: var(--blue-6);
+  color: var(--red-7);
 }
 
 .mobile-menu__language-link {
@@ -418,9 +415,6 @@ footer {
   gap: 40px;
 }
 
-.header__nav-item {
-}
-
 .header__nav-link {
   display: block;
   padding: 4px 0;
@@ -434,7 +428,7 @@ footer {
 
 .header__nav-link:hover,
 .header__nav-link:focus {
-  color: var(--blue-6);
+  color: var(--red-7);
 }
 
 .header__language-switcher {
@@ -450,9 +444,6 @@ footer {
   font-size: 16px;
   line-height: 1.75;
   transition: background-color 250ms ease-in-out;
-}
-
-.header__language-switcher img {
 }
 
 .header__language-switcher-next-icon {
@@ -519,7 +510,7 @@ footer {
   display: block;
   padding: 10px 20px;
   border-radius: 200px;
-  background-color: var(--blue-6);
+  background-color: var(--red-7);
   color: var(--grey-0);
   text-decoration: none;
   font-weight: 500;
@@ -530,7 +521,7 @@ footer {
 
 .header__cta-button:hover,
 .header__cta-button:focus {
-  background-color: var(--blue-7);
+  background-color: var(--red-8);
 }
 
 /* Hero section styles */
