@@ -524,7 +524,11 @@ footer {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  -webkit-mask-image: -webkit-linear-gradient(to bottom, #000 80%, transparent 100%);
+  -webkit-mask-image: -webkit-linear-gradient(
+    to bottom,
+    #000 80%,
+    transparent 100%
+  );
   mask-image: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 1) 80%,
@@ -673,6 +677,7 @@ footer {
     margin-bottom: 0;
     width: auto;
   }
+  z-index: 1;
 }
 
 .hero__cta-button:hover,
@@ -725,6 +730,96 @@ footer {
     width: 560px;
     height: 560px;
   }
+}
+
+/* Offers section styles */
+.offers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+.offers__title {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.37;
+  text-align: center;
+
+  margin: 0 0 32px;
+
+
+  @media screen and (min-width: 992px) {
+    font-size: 60px;
+    line-height: 1.26;
+    margin-bottom: 48px;
+  }
+}
+
+.offers__title-accent {
+  color: var(--red-7);
+}
+
+.offers__title-icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.only-desktop-br {
+  display: none;
+  @media screen and (min-width: 992px) {
+    display: inline;
+  }
+}
+
+
+.offers__cta-button {
+  grid-area: content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  margin-bottom: 36px;
+  padding: 12px 24px;
+  border-radius: 200px;
+  background-color: var(--red-7);
+  color: var(--grey-0);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.6;
+  transition: background-color 250ms ease-in-out;
+
+  @media screen and (min-width: 576px) {
+    margin-bottom: 24px;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+    width: auto;
+  }
+  z-index: 1;
+}
+
+.offers__cta-button:hover,
+.offers__cta-button:focus {
+  background-color: var(--red-8);
+}
+
+.offers__cta-icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 250ms ease-in-out;
+  object-fit: contain;
+}
+
+.offers__cta-button:hover .offers__cta-icon,
+.offers__cta-button:focus .offers__cta-icon {
+  transform: translateX(4px);
 }
 
 /* Marketplaces section styles */
