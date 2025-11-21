@@ -5,7 +5,7 @@
   "scripts": {
     "start": "webpack serve --open --config webpack.config.dev.js",
     "build": "webpack --config webpack.config.prod.js",
-    "build:github": "PUBLIC_PATH=/promo/new-year-deals npm run build",
+    "build:github": "PUBLIC_PATH=/new-year-deals npm run build",
     "build:production": "GTM_ID=GTM-MFD96JSQ PUBLIC_PATH=/promo/new-year-deals npm run build",
     "lint:css": "stylelint 'css/**/*.css'",
     "lint:css:fix": "stylelint 'css/**/*.css' --fix",
