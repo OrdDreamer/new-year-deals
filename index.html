@@ -248,71 +248,83 @@
     </div>
 
     <main>
-      <section class="hero container" id="hero">
-        <h1 class="hero__title">
-          <span class="hero__title-accent">11.11</span> – головний день знижок у
-          Китаї!
-        </h1>
+      <section class="hero" id="hero">
+        <div class="hero__content container">
+          <div class="hero__content-left">
+            <h1 class="hero__title">Зимовий сезон знижок відкрито!</h1>
 
-        <p class="hero__description">
-          Зроби найвигідніші покупки року разом із Meest China: знижки до 70%,
-          широкий вибір товарів і повний супровід доставки в Україну
-        </p>
+            <p class="hero__description">
+              Скористайтеся розпродажами на азійських маркетплейсах - замовляйте
+              товари для себе чи бізнесу через Meest China Shop!
+            </p>
 
-        <div
-          class="hero__timer hero__timer--hidden"
-          id="timer"
-          aria-live="off"
-          role="timer"
-        >
-          <p class="hero__timer-item">
-            <span class="hero__timer-value" id="timer-days">00</span>
-            <span class="hero__timer-label">днів</span>
-          </p>
-          <p class="hero__timer-separator">:</p>
-          <p class="hero__timer-item">
-            <span class="hero__timer-value" id="timer-hours">00</span>
-            <span class="hero__timer-label">годин</span>
-          </p>
-          <p class="hero__timer-separator">:</p>
-          <p class="hero__timer-item">
-            <span class="hero__timer-value" id="timer-minutes">00</span>
-            <span class="hero__timer-label">хвилин</span>
-          </p>
-          <p class="hero__timer-separator">:</p>
-          <p class="hero__timer-item">
-            <span class="hero__timer-value" id="timer-seconds">00</span>
-            <span class="hero__timer-label">секунд</span>
-          </p>
-        </div>
+            <a
+              class="hero__cta-button"
+              href="https://meest-shop.com/#services_id"
+              rel="noopener"
+              target="_blank"
+            >
+              <span>Замовити</span>
+              <img
+                class="hero__cta-icon"
+                src="/img/icons/gift.svg"
+                alt=""
+                aria-hidden="true"
+                loading="lazy"
+                width="24"
+                height="24"
+              />
+            </a>
+          </div>
 
-        <a
-          class="hero__cta-button"
-          href="https://meest-shop.com/categories"
-          rel="noopener"
-          target="_blank"
-        >
-          <span>До каталогу</span>
           <img
-            class="hero__cta-icon"
-            src="/img/icons/arrow_right.svg"
+            class="hero__illustration"
+            src="/img/section-hero/illustration.png"
             alt=""
             aria-hidden="true"
             loading="lazy"
-            width="24"
-            height="24"
+            width="328"
+            height="328"
           />
-        </a>
+        </div>
 
-        <img
-          class="hero__illustration-mobile"
-          src="/img/section-hero/illustration-mobile.png"
-          alt=""
-          aria-hidden="true"
-          loading="lazy"
-          width="328"
-          height="368"
-        />
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          class="hero__background-video"
+          poster="/img/section-hero/background.jpg"
+        >
+          <source
+            src="/img/section-hero/videos/snow_video_540.webm"
+            type="video/webm"
+            media="(max-width: 720px)"
+          />
+          <source
+            src="/img/section-hero/videos/snow_video_540.mp4"
+            type="video/mp4"
+            media="(max-width: 720px)"
+          />
+          <source
+            src="/img/section-hero/videos/snow_video_720.webm"
+            type="video/webm"
+            media="(max-width: 1280px)"
+          />
+          <source
+            src="/img/section-hero/videos/snow_video_720.mp4"
+            type="video/mp4"
+            media="(max-width: 1280px)"
+          />
+          <source
+            src="/img/section-hero/videos/snow_video.webm"
+            type="video/webm"
+          />
+          <source
+            src="/img/section-hero/videos/snow_video.mp4"
+            type="video/mp4"
+          />
+        </video>
       </section>
 
       <section

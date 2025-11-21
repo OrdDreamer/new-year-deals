@@ -40,19 +40,19 @@ echo "Обрізаємо сире відео до $DURATION секунд..."
 ffmpeg -y -i "$RAW_VIDEO" -t $LOOP_END -c copy "$TRIMMED_VIDEO"
 
 ### 2️⃣ Накладення відео снігу на фон-картинку
-echo "Робимо бленд фон + відео..."
-ffmpeg -y -i "$BACKGROUND" -i "$TRIMMED_VIDEO" -filter_complex "
-[1:v] setpts=PTS-STARTPTS, format=gbrp[snow];
+# echo "Робимо бленд фон + відео..."
+# ffmpeg -y -i "$BACKGROUND" -i "$TRIMMED_VIDEO" -filter_complex "
+# [1:v] setpts=PTS-STARTPTS, format=gbrp[snow];
 
-[0:v] scale=1920:1080:force_original_aspect_ratio=increase,
-      crop=1920:1080:(in_w-1920)/2:(in_h-1080)/2,
-      format=gbrp[bg];
+# [0:v] scale=1920:1080:force_original_aspect_ratio=increase,
+#       crop=1920:1080:(in_w-1920)/2:(in_h-1080)/2,
+#       format=gbrp[bg];
 
-[bg][snow] blend=all_mode=screen:all_opacity=1 [blended];
+# [bg][snow] blend=all_mode=screen:all_opacity=1 [blended];
 
-[blended] format=yuv420p[out]
-" \
--map "[out]" -c:v libx264 -crf 18 -preset medium "$BLENDED_VIDEO"
+# [blended] format=yuv420p[out]
+# " \
+# -map "[out]" -c:v libx264 -crf 18 -preset medium "$BLENDED_VIDEO"
 
 ### 3️⃣ Створення плавного LOOP
 echo "Готуємо плавний loop..."
