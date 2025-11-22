@@ -1,0 +1,156 @@
+/* Контейнер каруселі */
+.carousel {
+  position: relative;
+  width: 100%;
+  margin: 32px 0;
+}
+
+/* Область видимості */
+.carousel__viewport {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.carousel__viewport:active {
+  cursor: grabbing;
+}
+
+/* Список слайдів */
+.carousel__list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transition: transform 0.4s ease-in-out;
+  will-change: transform;
+}
+
+/* Окремий слайд */
+.carousel__item {
+  flex: 0 0 100%;
+  min-width: 0;
+  padding: 0 8px;
+  box-sizing: border-box;
+}
+
+/* Для відображення кількох слайдів одночасно */
+@media screen and (min-width: 576px) {
+  .carousel__item {
+    flex: 0 0 50%; /* 2 слайди */
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .carousel__item {
+    flex: 0 0 33.333%; /* 3 слайди */
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .carousel__item {
+    flex: 0 0 25%; /* 4 слайди */
+  }
+}
+
+/* Кнопки навігації */
+.carousel__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: var(--red-7, #e63946);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.carousel__button:hover:not(:disabled) {
+  background-color: var(--red-7, #e63946);
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.carousel__button:active:not(:disabled) {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.carousel__button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.carousel__button--prev {
+  left: -24px;
+}
+
+.carousel__button--next {
+  right: -24px;
+}
+
+@media screen and (max-width: 768px) {
+  .carousel__button {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .carousel__button--prev {
+    left: 8px;
+  }
+  
+  .carousel__button--next {
+    right: 8px;
+  }
+}
+
+/* Контент слайду */
+.carousel__content {
+  width: 100%;
+  height: 100%;
+}
+
+/* Індикатори */
+.carousel__indicators {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+  list-style: none;
+  padding: 0;
+}
+
+.carousel__indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.carousel__indicator:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: scale(1.2);
+}
+
+.carousel__indicator--active {
+  background-color: var(--red-7, #e63946);
+  width: 24px;
+  border-radius: 4px;
+}
+
