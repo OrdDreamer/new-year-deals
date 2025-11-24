@@ -826,7 +826,7 @@
             height="24"
           />
         </a>
-      </section>s
+      </section>
 
       <div class="pattern">
         <div class="pattern__content">
@@ -1102,94 +1102,74 @@
         </div>
       </section>
 
-      <section
-        id="why-us"
-        class="container why-us"
-        aria-labelledby="why-us-title"
-      >
-        <h2 id="why-us-title" class="why-us__title" data-current-language="uk">
-          Чому варто обрати нас
-        </h2>
+      <section class=" promo-12-12" id="promo-12-12">
+        <div class="promo-12-12__content container">
+          <h2 class="promo-12-12__title">
+            Сезон великих знижок і ще більших можливостей
+          </h2>
 
-        <div class="why-us__article-container">
-          <article class="why-us__article">
-            <h3 class="why-us__article-title">Купівля напряму в Китаї</h3>
-            <p class="why-us__article-text">
-              Ви купуєте товар у виробника, без зайвих посередників.
-            </p>
-            <img
-              class="why-us__article-image"
-              src="/img/section-why-us/phone.png"
-              alt=""
-              width="200"
-              height="268"
-              aria-hidden="true"
-              loading="lazy"
-            />
-          </article>
-        </div>
+          <p class="promo-12-12__description">
+            У Китаї вірять у силу чисел - а ми віримо у силу вигідних
+            закупівель. Розпродаж 12.12 - ідеальний момент поповнити склад та
+            підготуватися до передноворічного попиту.
+          </p>
 
-        <ul class="why-us__list">
-          <li class="why-us__item">
-            <h3 class="why-us__item-title">Каталог товарів</h3>
-            <p class="why-us__item-text">
-              Знаходьте все необхідне в одному місці.
-            </p>
-          </li>
-          <li class="why-us__item">
-            <h3 class="why-us__item-title">Перевірка якості</h3>
-            <p class="why-us__item-text">
-              Ваші товари перевіряються на складі перед відправкою.
-            </p>
-          </li>
-          <li class="why-us__item">
-            <h3 class="why-us__item-title">Легке повернення</h3>
-            <p class="why-us__item-text">
-              У разі невідповідності товару, ми самі повертаємо його продавцю.
-            </p>
-          </li>
-          <li class="why-us__item">
-            <h3 class="why-us__item-title">Зручна доставка</h3>
-            <p class="why-us__item-text">
-              Морем, авіа або авто — обирайте, що підходить саме вам.
-            </p>
-          </li>
-          <li class="why-us__item">
-            <h3 class="why-us__item-title">Повний супровід</h3>
-            <p class="why-us__item-text">
-              Від пошуку товару до розмитнення й доставки в Україну.
-            </p>
-          </li>
-        </ul>
-      </section>
-
-      <section
-        id="call-to-action"
-        class="container"
-        aria-labelledby="cta-title"
-      >
-        <div class="cta">
-          <div class="cta__content">
-            <h2 id="cta-title" class="cta__title">
-              Використайте <span class="cta__title-accent">11.11</span> на
-              максимум!
-            </h2>
-            <a
-              class="cta__button"
-              href="https://meest-shop.com/#services_id"
-              target="_blank"
-              rel="noopener"
-            >
-              <span>Замовити</span>
-              <img
-                class="cta__icon"
-                src="/img/icons/arrow_right.svg"
-                alt=""
-                loading="lazy"
-                aria-hidden="true"
-              />
-            </a>
-          </div>
+          <ul class="promo-12-12__list">
+            <li class="promo-12-12__item">
+              <a
+                class="promo-12-12__link"
+                href="https://meest-shop.com/category/"
+                target="_blank"
+                rel="noopener"
+              >
+                <img
+                  src="/img/section-promo-12-12/img-1.png"
+                  alt=""
+                  aria-hidden="true"
+                  loading="lazy"
+                  width="120"
+                  height="120"
+                />
+                <span>Зимові знижки</span>
+              </a>
+            </li>
+            <li class="promo-12-12__item">
+              <a
+                class="promo-12-12__link"
+                href="https://meest-shop.com/category/"
+                target="_blank"
+                rel="noopener"
+              >
+                <img
+                  src="/img/section-promo-12-12/img-2.png"
+                  alt=""
+                  aria-hidden="true"
+                  loading="lazy"
+                  width="120"
+                  height="120"
+                />
+                <span>Товари <span class="min-576">напряму</span> з Азії</span>
+              </a>
+            </li>
+            <li class="promo-12-12__item">
+              <a
+                class="promo-12-12__link"
+                href="https://meest-shop.com/category/"
+                target="_blank"
+                rel="noopener"
+              >
+                <img
+                  src="/img/section-promo-12-12/img-3.png"
+                  alt=""
+                  aria-hidden="true"
+                  loading="lazy"
+                  width="120"
+                  height="120"
+                />
+                <span>Зручна доставка</span>
+              </a>
+            </li>
+          </ul>
         </div>
       </section>
     </main>
@@ -1274,13 +1254,16 @@
         });
         sliderByCategories.mount();
 
-        const sectionAdditionalOffersElement = document.querySelector("#additional-offers");
-        const prevButtonAdditionalOffers = sectionAdditionalOffersElement.querySelector(
-          ".products-slider__button--prev"
-        );
-        const nextButtonAdditionalOffers = sectionAdditionalOffersElement.querySelector(
-          ".products-slider__button--next"
-        );
+        const sectionAdditionalOffersElement =
+          document.querySelector("#additional-offers");
+        const prevButtonAdditionalOffers =
+          sectionAdditionalOffersElement.querySelector(
+            ".products-slider__button--prev"
+          );
+        const nextButtonAdditionalOffers =
+          sectionAdditionalOffersElement.querySelector(
+            ".products-slider__button--next"
+          );
         const sliderAdditionalOffers = new Splide(".splide-additional-offers", {
           type: "loop",
           fixedWidth: 280,
