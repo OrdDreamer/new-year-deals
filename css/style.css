@@ -729,6 +729,37 @@ footer {
   }
 }
 
+/* Title styles */
+.title {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.37;
+  text-align: center;
+
+  @media screen and (min-width: 992px) {
+    font-size: 60px;
+    line-height: 1.26;
+  }
+}
+
+.title-accent {
+  color: var(--red-7);
+}
+
+.title-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  object-position: center;
+
+  @media screen and (min-width: 992px) {
+    width: 74px;
+    height: 76px;
+  }
+}
+
 /* Offers section styles */
 .offers {
   display: flex;
@@ -744,27 +775,11 @@ footer {
 }
 
 .offers__title {
-  font-weight: 500;
-  font-size: 32px;
-  line-height: 1.37;
-  text-align: center;
-
   margin: 0 0 32px;
 
   @media screen and (min-width: 992px) {
-    font-size: 60px;
-    line-height: 1.26;
     margin-bottom: 48px;
   }
-}
-
-.offers__title-accent {
-  color: var(--red-7);
-}
-
-.offers__title-icon {
-  display: inline-block;
-  vertical-align: middle;
 }
 
 .only-desktop-br {
@@ -1293,10 +1308,6 @@ footer {
 }
 
 .how-to-order__title {
-  font-weight: 500;
-  font-size: 32px;
-  line-height: 44px;
-  text-align: center;
   margin: 0 0 8px;
 
   @media screen and (min-width: 768px) {
@@ -1304,14 +1315,8 @@ footer {
   }
 
   @media screen and (min-width: 992px) {
-    font-size: 60px;
-    line-height: 1.26;
     margin-bottom: 24px;
   }
-}
-
-.how-to-order__title-accent {
-  color: var(--red-7);
 }
 
 .only-576-992-br {
@@ -1331,20 +1336,6 @@ footer {
 
   @media screen and (min-width: 1200px) {
     display: none;
-  }
-}
-
-.how-to-order__title-icon {
-  display: inline-block;
-  vertical-align: middle;
-  width: 44px;
-  height: 44px;
-  object-fit: contain;
-  object-position: center;
-
-  @media screen and (min-width: 992px) {
-    width: 74px;
-    height: 76px;
   }
 }
 
