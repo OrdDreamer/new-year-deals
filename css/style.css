@@ -1463,6 +1463,94 @@ footer {
   transform: translateX(4px);
 }
 
+/* Additional Offers section styles */
+.additional-offers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 96px;
+  padding-bottom: 96px;
+
+  @media screen and (min-width: 992px) {
+    padding-top: 120px;
+  }
+}
+
+.additional-offers__title {
+  margin: 0 0 32px;
+
+  @media screen and (min-width: 992px) {
+    margin-bottom: 48px;
+  }
+}
+
+.only-576-br {
+  display: none;
+  @media screen and (min-width: 576px) {
+    display: block;
+  }
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.only-992-br {
+  display: none;
+  @media screen and (min-width: 992px) {
+    display: block;
+  }
+  @media screen and (min-width: 1200px) {
+    display: none;
+  }
+}
+
+.additional-offers__cta-button {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px 24px;
+  border-radius: 200px;
+  background-color: var(--red-7);
+  color: var(--grey-0);
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 250ms ease-in-out;
+  z-index: 1;
+  font-size: 16px;
+  line-height: 1.75;
+
+  @media screen and (min-width: 576px) {
+    padding: 16px 24px;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: max-content;
+  }
+}
+
+.additional-offers__cta-button:hover,
+.additional-offers__cta-button:focus {
+  background-color: var(--red-8);
+}
+
+.additional-offers__cta-icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 250ms ease-in-out;
+  object-fit: contain;
+}
+
+.additional-offers__cta-button:hover .additional-offers__cta-icon,
+.additional-offers__cta-button:focus .additional-offers__cta-icon {
+  transform: translateX(4px);
+}
+
 /* Why Us Section */
 .why-us {
   display: grid;
