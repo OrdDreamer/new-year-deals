@@ -193,15 +193,6 @@ footer {
   }
 }
 
-@keyframes scroll {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
 /* Header styles */
 .header {
   position: fixed;
@@ -1040,138 +1031,58 @@ footer {
   transform: rotate(180deg);
 }
 
-.top-discount-products__card {
+/* Pattern section styles */
+.pattern {
+  height: 112px;
   position: relative;
-  border-radius: 24px;
   overflow: hidden;
-
-  @media screen and (min-width: 768px) {
-    border-radius: 32px;
-  }
-}
-
-.top-discount-products__card::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    360deg,
-    #4d91c7 8.41%,
-    rgb(77 145 199 / 77.6%) 20.2%,
-    rgb(77 145 199 / 49.1%) 27.15%,
-    rgb(77 145 199 / 19.1%) 34.63%,
-    rgb(77 145 199 / 0%) 46.19%
-  );
-  content: "";
-}
-
-.top-discount-products__card::after {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background-color: var(--grey-0);
-  background-image: url("/img/icons/arrow_right_up.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 24px;
-  content: "";
-
-  @media screen and (min-width: 768px) {
-    top: 24px;
-    right: 24px;
-    width: 56px;
-    height: 56px;
-    background-size: 32px;
-  }
-}
-
-.top-discount-products__image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.top-discount-products__card-header {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: flex-end;
-  gap: 12px;
-  width: 100%;
-  padding: 16px;
-  white-space: normal;
-
-  @media screen and (min-width: 768px) {
-    padding: 24px;
-  }
-}
-
-.top-discount-products__card-title {
-  margin: 0;
-  color: var(--grey-0);
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.4;
-
-  @media screen and (min-width: 768px) {
-    font-size: 28px;
-  }
-}
-
-.top-discount-products__card-price {
-  padding: 4px 8px;
-  border-radius: 12px;
-  background-color: var(--grey-0);
-  color: var(--blue-6);
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.4;
-}
-
-.top-discount-products__cta-button {
+  background: url("/img/icons/snowflake_pattern.svg") repeat-x center / auto;
+  background-size: cover;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 8px;
-  width: 100%;
-  padding: 12px 24px;
-  border-radius: 200px;
-  background-color: var(--blue-6);
-  color: var(--grey-0);
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.6;
-  transition: background-color 250ms ease-in-out;
 
   @media screen and (min-width: 768px) {
-    width: auto;
+    height: 180px;
   }
 }
 
-.top-discount-products__cta-button:hover,
-.top-discount-products__cta-button:focus {
-  background-color: var(--blue-7);
+@keyframes scroll {
+  0% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(-75%);
+  }
 }
 
-.top-discount-products__cta-icon {
-  width: 24px;
-  height: 24px;
-  transition: transform 250ms ease-in-out;
-  object-fit: contain;
+.pattern__content {
+  display: flex;
+  transform: translateX(-25%);
+  animation: scroll 200s linear infinite;
 }
 
-.top-discount-products__cta-button:hover .top-discount-products__cta-icon,
-.top-discount-products__cta-button:focus .top-discount-products__cta-icon {
-  transform: translateX(4px);
+.pattern__inner-content {
+  display: flex;
+}
+
+.pattern__content::before,
+.pattern__content::after,
+.pattern__inner-content::before,
+.pattern__inner-content::after {
+  content: "MEEST CHINA SHOP • MEEST CHINA SHOP • MEEST CHINA SHOP • MEEST CHINA SHOP • MEEST CHINA SHOP • MEEST CHINA SHOP • MEEST CHINA SHOP • MEEST CHINA SHOP • MEEST CHINA SHOP • ";
+  font-weight: 500;
+  display: block;
+  white-space: nowrap;
+
+  font-size: 32px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  color: var(--blue-3);
+
+  @media screen and (min-width: 768px) {
+    font-size: 48px;
+    line-height: 1.33;
+  }
 }
 
 /* Promo 11-11 section styles */
