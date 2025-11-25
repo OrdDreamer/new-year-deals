@@ -506,7 +506,59 @@ footer {
   background-color: var(--red-8);
 }
 
-.hero, .promo-12-12 {
+/* Negative CTA button styles */
+.negative-cta-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px 24px;
+  border-radius: 200px;
+  background-color: var(--grey-0);
+  color: var(--red-7);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.6;
+  transition: background-color 250ms ease-in-out, box-shadow 250ms ease-in-out,
+    gap 250ms ease-in-out;
+
+  @media screen and (min-width: 576px) {
+    padding: 16px 24px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: auto;
+  }
+}
+
+.negative-cta-button:hover,
+.negative-cta-button:focus {
+  box-shadow: 0px 0px 18px 2px #ffffffcc;
+  gap: 12px;
+}
+
+.negative-cta-icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 250ms ease-in-out;
+  object-fit: contain;
+
+  @media screen and (min-width: 576px) {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.negative-cta-button:hover .negative-cta-icon,
+.negative-cta-button:focus .negative-cta-icon {
+  transform: translateX(4px);
+}
+
+/* Hero section styles */
+.hero,
+.promo-12-12 {
   position: relative;
   border-radius: 0 0 32px 32px;
   border: 1px solid var(--grey-0);
@@ -522,7 +574,7 @@ footer {
   );
   mask-image: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 1) 90%,
     rgba(0, 0, 0, 0) 100%
   );
 }
@@ -532,13 +584,14 @@ footer {
   mask-image: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 1) 30%,
-    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 90%,
     rgba(0, 0, 0, 0) 100%
   );
 }
 
-.hero:has(video), .promo-12-12:has(video) {
+.hero:has(video),
+.promo-12-12:has(video) {
   background-image: url("/img/section-hero/background_base.jpg");
 }
 
@@ -578,7 +631,8 @@ footer {
   }
 }
 
-.hero__background-video, .promo-12-12__background-video {
+.hero__background-video,
+.promo-12-12__background-video {
   position: absolute;
   top: 0;
   left: 0;
@@ -586,9 +640,12 @@ footer {
   height: 100%;
   object-fit: cover;
   mix-blend-mode: screen;
+  z-index: -1;
 }
 
-.hero::before, .promo-12-12::before, .promo-12-12::after {
+.hero::before,
+.promo-12-12::before,
+.promo-12-12::after {
   content: "";
   position: absolute;
   top: 0;
@@ -604,10 +661,10 @@ footer {
   opacity: 0.7;
 }
 
-.promo-12-12::before, .promo-12-12::after {
+.promo-12-12::before,
+.promo-12-12::after {
   background-image: url("/img/section-hero/snow.svg");
 }
-
 
 .promo-12-12::after {
   transform: rotate(180deg);
@@ -664,54 +721,16 @@ footer {
 
 .hero__cta-button {
   grid-area: content;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  width: 100%;
   margin-bottom: 36px;
-  padding: 12px 24px;
-  border-radius: 200px;
-  background-color: var(--grey-0);
-  color: var(--red-7);
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.6;
-  transition: background-color 250ms ease-in-out;
   z-index: 2;
 
   @media screen and (min-width: 576px) {
     margin-bottom: 24px;
-    padding: 16px 24px;
   }
 
   @media screen and (min-width: 768px) {
     margin-bottom: 0;
-    width: auto;
   }
-}
-
-.hero__cta-button:hover,
-.hero__cta-button:focus {
-  background-color: var(--red-0);
-}
-
-.hero__cta-icon {
-  width: 24px;
-  height: 24px;
-  transition: transform 250ms ease-in-out;
-  object-fit: contain;
-
-  @media screen and (min-width: 576px) {
-    width: 28px;
-    height: 28px;
-  }
-}
-
-.hero__cta-button:hover .hero__cta-icon,
-.hero__cta-button:focus .hero__cta-icon {
-  transform: translateX(4px);
 }
 
 .hero__illustration {
@@ -1594,7 +1613,6 @@ footer {
   }
 }
 
-
 .promo-12-12__content {
   margin: 0 auto;
   display: flex;
@@ -1703,6 +1721,14 @@ footer {
   @media screen and (min-width: 576px) {
     width: 160px;
     height: 160px;
+  }
+}
+
+.promo-12-12__cta-button {
+  margin: 40px 0 0;
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 60px;
   }
 }
 
