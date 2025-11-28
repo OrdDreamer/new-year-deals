@@ -1573,7 +1573,7 @@ footer {
   }
 }
 
-.promo-12-12__link {
+.promo-12-12__item-content {
   display: block;
   text-decoration: none;
   color: var(--grey-0);
@@ -1598,7 +1598,7 @@ footer {
   }
 }
 
-.promo-12-12__link img {
+.promo-12-12__item-content img {
   width: 120px;
   height: 120px;
   object-fit: contain;
