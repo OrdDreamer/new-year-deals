@@ -23,9 +23,6 @@ export function closeMobileMenu() {
   }
 }
 
-/**
- * Ініціалізує обробники подій для мобільного меню
- */
 export function initMobileMenu() {
   const burgerBtn = document.getElementById("burger-btn");
   const closeBtn = document.getElementById("mobile-menu-close");

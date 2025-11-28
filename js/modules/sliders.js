@@ -18,9 +18,6 @@ export function getSliderFeedbacks() {
   return sliderFeedbacks;
 }
 
-/**
- * Ініціалізує слайдери товарів
- */
 export function initProductSliders() {
   const sectionOffersElement = document.querySelector("#offers");
   if (!sectionOffersElement) return;
@@ -69,7 +66,6 @@ export function initProductSliders() {
 
   sliderByCategories.mount();
 
-  // Слайдер для additional-offers
   const sectionAdditionalOffersElement =
     document.querySelector("#additional-offers");
   if (!sectionAdditionalOffersElement) return;
@@ -121,9 +117,6 @@ export function initProductSliders() {
   sliderAdditionalOffers.mount();
 }
 
-/**
- * Ініціалізує слайдер відео відгуків
- */
 export function initFeedbacksSlider() {
   const sectionFeedbacksElement = document.querySelector("#feedbacks");
   if (!sectionFeedbacksElement) return;
@@ -169,16 +162,11 @@ export function initFeedbacksSlider() {
   sliderFeedbacks.mount();
 }
 
-/**
- * Ініціалізує всі слайдери
- */
 export function initAllSliders() {
-  // Ініціалізуємо слайдери товарів після їх завантаження
   window.addEventListener("productsLoaded", function () {
     initProductSliders();
   });
 
-  // Якщо товари вже завантажені (наприклад, з кешу), ініціалізуємо одразу
   setTimeout(function () {
     const productsList = document.querySelector(
       ".splide-by-categories .splide__list.products"
@@ -188,7 +176,6 @@ export function initAllSliders() {
     }
   }, 100);
 
-  // Ініціалізуємо слайдер відгуків одразу
   initFeedbacksSlider();
 }
 

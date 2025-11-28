@@ -10,9 +10,6 @@ import {
 
 let categoriesData = null;
 
-/**
- * Рендерить HTML для одного товару
- */
 export function renderProduct(product) {
   return `
     <li class="splide__slide products__item">
@@ -42,9 +39,6 @@ export function renderProduct(product) {
   `;
 }
 
-/**
- * Оновлює слайди в Splide слайдері через remove/add
- */
 function updateSplideSlides(splideInstance, products) {
   if (!splideInstance) {
     console.error("Splide instance not found");
@@ -53,15 +47,10 @@ function updateSplideSlides(splideInstance, products) {
 
   // Видаляємо всі існуючі слайди
   splideInstance.remove(() => true);
-
-  // Додаємо нові слайди
   const slidesHtml = products.map(renderProduct);
   splideInstance.add(slidesHtml);
 }
 
-/**
- * Рендерить список товарів у контейнер
- */
 export function renderProducts(products, containerSelector) {
   const container = document.querySelector(containerSelector);
   if (!container) {
@@ -69,7 +58,6 @@ export function renderProducts(products, containerSelector) {
     return;
   }
 
-  // Визначаємо, який слайдер використовувати на основі селектора
   let splideInstance = null;
   if (containerSelector.includes('splide-by-categories')) {
     splideInstance = getSliderByCategories();
@@ -77,13 +65,11 @@ export function renderProducts(products, containerSelector) {
     splideInstance = getSliderAdditionalOffers();
   }
 
-  // Якщо Splide інстанс існує, використовуємо метод remove/add
   if (splideInstance) {
     updateSplideSlides(splideInstance, products);
     return;
   }
 
-  // Якщо Splide ще не ініціалізований, використовуємо старий метод
   const productsList = container.querySelector(".splide__list.products");
   if (!productsList) {
     console.error(`Products list not found in: ${containerSelector}`);
@@ -93,9 +79,6 @@ export function renderProducts(products, containerSelector) {
   productsList.innerHTML = products.map(renderProduct).join("");
 }
 
-/**
- * Рендерить таби категорій
- */
 export function renderTabs(categories) {
   const tabsContainer = document.getElementById("offers-tabs");
   if (!tabsContainer) {
@@ -130,7 +113,6 @@ export function renderTabs(categories) {
     </ul>
   `;
 
-  // Додаємо обробники подій для табів
   const tabButtons = tabsContainer.querySelectorAll(".offers__tab");
   tabButtons.forEach((button) => {
     button.addEventListener("click", function () {
@@ -140,11 +122,7 @@ export function renderTabs(categories) {
   });
 }
 
-/**
- * Перемикає категорію товарів
- */
 export function switchCategory(categoryIndex, categories) {
-  // Оновлюємо активний таб
   const tabsContainer = document.getElementById("offers-tabs");
   const tabButtons = tabsContainer.querySelectorAll(".offers__tab");
   tabButtons.forEach((button, index) => {
@@ -157,7 +135,6 @@ export function switchCategory(categoryIndex, categories) {
     }
   });
 
-  // Оновлюємо товари
   if (categories[categoryIndex] && categories[categoryIndex].products) {
     renderProducts(
       categories[categoryIndex].products,
@@ -173,15 +150,11 @@ export function switchCategory(categoryIndex, categories) {
 export function loadProducts() {
   try {
     const data = productsData;
-
-    // Зберігаємо дані категорій для подальшого використання
     categoriesData = data.byCategories;
 
-    // Рендеримо таби для секції "by-categories"
     if (data.byCategories && Array.isArray(data.byCategories)) {
       renderTabs(data.byCategories);
 
-      // Рендеримо товари першої категорії за замовчуванням
       if (data.byCategories[0] && data.byCategories[0].products) {
         renderProducts(
           data.byCategories[0].products,
@@ -190,7 +163,6 @@ export function loadProducts() {
       }
     }
 
-    // Рендеримо товари для секції "additional-offers"
     if (data.additionalOffers) {
       renderProducts(
         data.additionalOffers,
@@ -198,7 +170,6 @@ export function loadProducts() {
       );
     }
 
-    // Викликаємо подію для повідомлення про завантаження товарів
     window.dispatchEvent(new CustomEvent("productsLoaded"));
   } catch (error) {
     console.error("Error loading products:", error);
