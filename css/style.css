@@ -522,7 +522,7 @@ footer {
   font-size: 16px;
   line-height: 1.75;
   transition: background-color 250ms ease-in-out, box-shadow 250ms ease-in-out,
-    gap 250ms ease-in-out;
+  gap 250ms ease-in-out;
 
   @media screen and (min-width: 576px) {
     padding: 16px 24px;
@@ -606,11 +606,13 @@ footer {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  /* stylelint-disable */
   -webkit-mask-image: -webkit-linear-gradient(
     to bottom,
     #000 80%,
     transparent 100%
   );
+  /* stylelint-enable */
   mask-image: linear-gradient(
     to bottom,
     rgb(0 0 0 / 100%) 90%,
@@ -618,19 +620,7 @@ footer {
   );
 }
 
-.promo-12-12 {
-  background-image: url("/img/section-promo-12-12/background_full.jpg");
-  mask-image: linear-gradient(
-    to bottom,
-    rgb(0 0 0 / 0%) 0%,
-    rgb(0 0 0 / 100%) 20%,
-    rgb(0 0 0 / 100%) 90%,
-    rgb(0 0 0 / 0%) 100%
-  );
-}
-
-.hero:has(video),
-.promo-12-12:has(video) {
+.hero:has(video) {
   background-image: url("/img/section-hero/background_base.jpg");
 }
 
@@ -695,7 +685,7 @@ footer {
   height: 100%;
   opacity: 0.7;
   background-image: url("/img/section-hero/stars.svg"),
-    url("/img/section-hero/snow.svg");
+  url("/img/section-hero/snow.svg");
   background-repeat: no-repeat, no-repeat;
   background-position: center center, center center;
   background-size: cover, cover;
@@ -965,7 +955,7 @@ footer {
   background-position: center center;
   background-size: 24px;
   transition: transform 250ms ease-in-out, border-color 250ms ease-in-out,
-    background-color 250ms ease-in-out;
+  background-color 250ms ease-in-out;
   content: "";
 
   @media screen and (min-width: 768px) {
@@ -1073,6 +1063,10 @@ footer {
   }
 }
 
+.products-slider__button--prev {
+  transform: rotate(180deg);
+}
+
 .products-slider__button--prev:hover,
 .products-slider__button--next:hover {
   background-color: var(--red-1);
@@ -1081,10 +1075,6 @@ footer {
 .products-slider__button--prev:active,
 .products-slider__button--next:active {
   background-color: var(--red-2);
-}
-
-.products-slider__button--prev {
-  transform: rotate(180deg);
 }
 
 /* Pattern section styles */
@@ -1497,6 +1487,19 @@ footer {
     padding-top: 234px;
     padding-bottom: 234px;
   }
+
+  background-image: url("/img/section-promo-12-12/background_full.jpg");
+  mask-image: linear-gradient(
+    to bottom,
+    rgb(0 0 0 / 0%) 0%,
+    rgb(0 0 0 / 100%) 20%,
+    rgb(0 0 0 / 100%) 90%,
+    rgb(0 0 0 / 0%) 100%
+  );
+}
+
+.promo-12-12:has(video) {
+  background-image: url("/img/section-hero/background_base.jpg");
 }
 
 .promo-12-12__content {
