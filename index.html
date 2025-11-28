@@ -1254,8 +1254,10 @@
                 <video
                   class="feedbacks__video"
                   poster="/img/section-feedbacks/posters/1.png"
-                  controls
                   preload="metadata"
+                  playsinline
+                  tabindex="0"
+                  aria-label="Відеовідгук 1"
                 >
                   <source
                     src="/img/section-feedbacks/videos/1.mp4"
@@ -1267,8 +1269,10 @@
                 <video
                   class="feedbacks__video"
                   poster="/img/section-feedbacks/posters/2.png"
-                  controls
                   preload="metadata"
+                  playsinline
+                  tabindex="0"
+                  aria-label="Відеовідгук 2"
                 >
                   <source
                     src="/img/section-feedbacks/videos/2.mp4"
@@ -1280,8 +1284,10 @@
                 <video
                   class="feedbacks__video"
                   poster="/img/section-feedbacks/posters/3.png"
-                  controls
                   preload="metadata"
+                  playsinline
+                  tabindex="0"
+                  aria-label="Відеовідгук 3"
                 >
                   <source
                     src="/img/section-feedbacks/videos/3.mp4"
@@ -1293,8 +1299,10 @@
                 <video
                   class="feedbacks__video"
                   poster="/img/section-feedbacks/posters/4.png"
-                  controls
                   preload="metadata"
+                  playsinline
+                  tabindex="0"
+                  aria-label="Відеовідгук 4"
                 >
                   <source
                     src="/img/section-feedbacks/videos/4.mp4"
@@ -1306,8 +1314,10 @@
                 <video
                   class="feedbacks__video"
                   poster="/img/section-feedbacks/posters/5.png"
-                  controls
                   preload="metadata"
+                  playsinline
+                  tabindex="0"
+                  aria-label="Відеовідгук 5"
                 >
                   <source
                     src="/img/section-feedbacks/videos/5.mp4"
@@ -1557,6 +1567,46 @@
           sliderFeedbacks.go(">");
         });
         sliderFeedbacks.mount();
+
+        const getFeedbackVideos = () =>
+          sectionFeedbacksElement.querySelectorAll(".feedbacks__video");
+
+        const pauseOtherVideos = (currentVideo) => {
+          getFeedbackVideos().forEach((video) => {
+            if (video !== currentVideo && !video.paused) {
+              video.pause();
+            }
+          });
+        };
+
+        const toggleVideoPlayback = (video) => {
+          if (video.paused) {
+            pauseOtherVideos(video);
+            video.play();
+          } else {
+            video.pause();
+          }
+        };
+
+        sectionFeedbacksElement.addEventListener("click", function (event) {
+          const video = event.target.closest(".feedbacks__video");
+
+          if (!video) {
+            return;
+          }
+
+          toggleVideoPlayback(video);
+        });
+
+        sectionFeedbacksElement.addEventListener("keydown", function (event) {
+          if (
+            event.target.classList.contains("feedbacks__video") &&
+            (event.key === "Enter" || event.key === " ")
+          ) {
+            event.preventDefault();
+            toggleVideoPlayback(event.target);
+          }
+        });
       });
     </script>
   </body>

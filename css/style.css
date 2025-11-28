@@ -1671,13 +1671,16 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 24px;
+  overflow: hidden;
 }
 
 .feedbacks__video {
   width: 248px;
   height: 440px;
   object-fit: cover;
-  border-radius: 24px;
+  cursor: pointer;
+  outline: none;
 
   @media screen and (min-width: 1200px) {
     width: 212px;
@@ -1688,6 +1691,10 @@ footer {
     width: 256px;
     height: 455px;
   }
+}
+
+.feedbacks__video:focus-visible {
+  box-shadow: 0 0 0 3px rgba(0, 97, 175, 0.4);
 }
 
 /* Footer styles */
