@@ -1227,6 +1227,140 @@
           </a>
         </div>
       </section>
+
+      <section class="container feedbacks-section" id="feedbacks">
+        <h2 class="feedbacks__title title">
+          <span class="title-accent">Розпаковки</span>
+          <img
+            class="title-icon"
+            src="/img/section-feedbacks/accent.png"
+            alt=""
+            loading="lazy"
+            aria-hidden="true"
+            width="44"
+            height="44"
+          />
+          від наших клієнтів
+        </h2>
+
+        <p class="feedbacks__description">
+          Клієнти Meest China Shop діляться своїми враженнями замовлень з Азії
+        </p>
+
+        <div class="splide splide-feedbacks products-slider">
+          <div class="splide__track">
+            <ul class="splide__list feedbacks">
+              <li class="splide__slide feedbacks__item">
+                <video
+                  class="feedbacks__video"
+                  poster="/img/section-feedbacks/posters/1.png"
+                  controls
+                  preload="metadata"
+                >
+                  <source
+                    src="/img/section-feedbacks/videos/1.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </li>
+              <li class="splide__slide feedbacks__item">
+                <video
+                  class="feedbacks__video"
+                  poster="/img/section-feedbacks/posters/2.png"
+                  controls
+                  preload="metadata"
+                >
+                  <source
+                    src="/img/section-feedbacks/videos/2.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </li>
+              <li class="splide__slide feedbacks__item">
+                <video
+                  class="feedbacks__video"
+                  poster="/img/section-feedbacks/posters/3.png"
+                  controls
+                  preload="metadata"
+                >
+                  <source
+                    src="/img/section-feedbacks/videos/3.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </li>
+              <li class="splide__slide feedbacks__item">
+                <video
+                  class="feedbacks__video"
+                  poster="/img/section-feedbacks/posters/4.png"
+                  controls
+                  preload="metadata"
+                >
+                  <source
+                    src="/img/section-feedbacks/videos/4.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </li>
+              <li class="splide__slide feedbacks__item">
+                <video
+                  class="feedbacks__video"
+                  poster="/img/section-feedbacks/posters/5.png"
+                  controls
+                  preload="metadata"
+                >
+                  <source
+                    src="/img/section-feedbacks/videos/5.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="products-slider__buttons">
+          <button class="products-slider__button--prev">
+            <span class="visually-hidden">Попередній слайд</span>
+            <img
+              src="/img/icons/arrow_right_red.svg"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+              width="28"
+              height="28"
+            />
+          </button>
+          <a
+            class="cta-button"
+            href="https://meest-shop.com/categories"
+            target="_blank"
+            rel="noopener"
+          >
+            <span>До каталогу</span>
+            <img
+              class="cta-icon"
+              src="/img/icons/gift_white.svg"
+              alt=""
+              loading="lazy"
+              aria-hidden="true"
+              width="24"
+              height="24"
+            />
+          </a>
+          <button class="products-slider__button--next">
+            <span class="visually-hidden">Наступний слайд</span>
+            <img
+              src="/img/icons/arrow_right_red.svg"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+              width="28"
+              height="28"
+            />
+          </button>
+        </div>
+      </section>
     </main>
 
     <footer class="container">
@@ -1242,7 +1376,7 @@
             height="148"
           />
           <h3 class="footer__cta-title">
-            Готуйтесь до свят разом з <br>Meest China Shop!
+            Готуйтесь до свят разом з <br />Meest China Shop!
           </h3>
           <a
             class="footer__cta-button negative-cta-button"
@@ -1387,6 +1521,42 @@
           sliderAdditionalOffers.go(">");
         });
         sliderAdditionalOffers.mount();
+
+        const sectionFeedbacksElement = document.querySelector("#feedbacks");
+        const prevButtonFeedbacks = sectionFeedbacksElement.querySelector(
+          ".products-slider__button--prev"
+        );
+        const nextButtonFeedbacks = sectionFeedbacksElement.querySelector(
+          ".products-slider__button--next"
+        );
+        const sliderFeedbacks = new Splide(".splide-feedbacks", {
+          type: "loop",
+          fixedWidth: 248,
+          fixedHeight: 440,
+          gap: 16,
+          autoplay: true,
+          interval: 3000,
+          pagination: false,
+          arrows: false,
+          mediaQuery: "min",
+          breakpoints: {
+            1200: {
+              fixedWidth: 212,
+              fixedHeight: 375,
+            },
+            1408: {
+              fixedWidth: 256,
+              fixedHeight: 455,
+            },
+          },
+        });
+        prevButtonFeedbacks.addEventListener("click", function () {
+          sliderFeedbacks.go("<");
+        });
+        nextButtonFeedbacks.addEventListener("click", function () {
+          sliderFeedbacks.go(">");
+        });
+        sliderFeedbacks.mount();
       });
     </script>
   </body>
