@@ -140,6 +140,7 @@ export function switchCategory(categoryIndex, categories) {
 
 /**
  * Завантажує товари з JSON файлу
+ * Шляхи до зображень обробляються під час збірки через webpack loader
  */
 export function loadProducts() {
   try {

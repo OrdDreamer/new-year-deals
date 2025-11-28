@@ -151,6 +151,20 @@ module.exports = (env = {}) => {
     output: {
       publicPath: basePath ? `${basePath}/` : '/',
     },
+    module: {
+      rules: [
+        {
+          test: /data\/products\.json$/,
+          use: {
+            loader: path.resolve(__dirname, 'webpack.json-loader.js'),
+            options: {
+              basePath: basePath ? `${basePath}/` : '',
+            },
+          },
+          type: 'json',
+        },
+      ],
+    },
     optimization: {
       minimizer: [
         '...',
@@ -214,7 +228,6 @@ module.exports = (env = {}) => {
           { from: 'css', to: 'css' },
           { from: 'favicon.ico', to: 'favicon.ico' },
           { from: 'js/splide.min.js', to: 'js/splide.min.js' },
-          { from: 'data', to: 'data' },
         ],
       }),
       // Оптимізація зображень
