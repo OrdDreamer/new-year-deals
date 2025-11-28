@@ -213,6 +213,7 @@ module.exports = (env = {}) => {
           { from: 'img', to: 'img' },
           { from: 'css', to: 'css' },
           { from: 'favicon.ico', to: 'favicon.ico' },
+          { from: 'js/splide.min.js', to: 'js/splide.min.js' },
         ],
       }),
       // Оптимізація зображень
