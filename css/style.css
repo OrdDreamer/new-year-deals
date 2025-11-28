@@ -875,14 +875,14 @@ footer {
 }
 
 .offers__tabs-list {
-  padding: 16px;
-  max-width: 100%;
   display: flex;
   flex-wrap: nowrap;
   gap: 16px;
-  list-style: none;
+  max-width: 100%;
   margin: 0 auto;
+  padding: 16px;
   overflow-x: auto;
+  list-style: none;
 }
 
 .offers__tabs-item {
@@ -891,26 +891,26 @@ footer {
 }
 
 .offers__tab {
-  white-space: nowrap;
+  padding: 12px 24px;
+  border: 1px solid var(--red-2);
+  border-radius: 200px;
+  background-color: var(--grey-0);
   font-weight: 500;
   font-size: 18px;
   line-height: 1.55;
-  background-color: var(--grey-0);
-  padding: 12px 24px;
-  border-radius: 200px;
-  border: 1px solid var(--red-2);
-  cursor: pointer;
+  white-space: nowrap;
   transition: color 250ms ease-in-out, box-shadow 250ms ease-in-out;
+  cursor: pointer;
 }
 
 .offers__tab--active {
-  cursor: default;
+  box-shadow: 0 0 12px 0 rgb(246 166 184 / 60%);
   color: var(--red-7);
-  box-shadow: 0 0 12px 0 rgba(246, 166, 184, 0.6);
+  cursor: default;
 }
 
 .offers__tab:hover {
-  box-shadow: 0 0 12px 0 rgba(246, 166, 184, 0.6);
+  box-shadow: 0 0 12px 0 rgb(246 166 184 / 60%);
 }
 
 /* Products slider styles */
