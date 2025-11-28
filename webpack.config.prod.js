@@ -77,7 +77,7 @@ class ReplacePathsPlugin {
       // Обробка HTML: замінюємо атрибути href, src, content
       // ВАЖЛИВО: HtmlWebpackPlugin вже обробляє шляхи через publicPath,
       // тому тут обробляємо тільки статичні шляхи, які не були оброблені
-      content = content.replace(/(href|src|content)=["'](\/(?!\/))([^"']+)["']/g, (match, attr, slash, filePath) => {
+      content = content.replace(/(href|src|content|poster)=["'](\/(?!\/))([^"']+)["']/g, (match, attr, slash, filePath) => {
         // Пропускаємо абсолютні URL (http://, https://, //)
         if (filePath.startsWith('http://') || filePath.startsWith('https://') || filePath.startsWith('//')) {
           return match;
