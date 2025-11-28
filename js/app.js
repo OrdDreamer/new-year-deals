@@ -89,6 +89,99 @@ function initFeedbacks(pauseOtherVideos = false) {
   });
 }
 
+function renderProduct(product) {
+  return `
+    <li class="splide__slide products__item">
+      <a
+        class="products__link"
+        href="${product.url}"
+        target="_blank"
+        rel="noopener"
+      >
+        <article class="products__card">
+          <img
+            class="products__image"
+            src="${product.image_url}"
+            alt=""
+            width="280"
+            height="280"
+            loading="lazy"
+            aria-hidden="true"
+          />
+          <header class="products__card-header">
+            <h3 class="products__card-title">${product.title}</h3>
+            <p class="products__card-price">${product.price}</p>
+          </header>
+        </article>
+      </a>
+    </li>
+  `;
+}
+
+function renderProducts(products, containerSelector) {
+  const container = document.querySelector(containerSelector);
+  if (!container) {
+    console.error(`Container not found: ${containerSelector}`);
+    return;
+  }
+
+  const productsList = container.querySelector(".splide__list.products");
+  if (!productsList) {
+    console.error(`Products list not found in: ${containerSelector}`);
+    return;
+  }
+
+  productsList.innerHTML = products.map(renderProduct).join("");
+}
+
+async function loadProducts() {
+  try {
+    const response = await fetch("/data/products.json");
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const data = await response.json();
+
+    // Рендеримо товари для секції "by-categories"
+    if (data.byCategories) {
+      renderProducts(
+        data.byCategories,
+        ".splide-by-categories.products-slider"
+      );
+    }
+
+    // Рендеримо товари для секції "additional-offers"
+    if (data.additionalOffers) {
+      renderProducts(
+        data.additionalOffers,
+        ".splide-additional-offers.products-slider"
+      );
+    }
+
+    // Оновлюємо існуючі екземпляри Splide після завантаження товарів
+    if (typeof Splide !== "undefined") {
+      // Оновлюємо слайдер для by-categories
+      const byCategoriesElement = document.querySelector(".splide-by-categories");
+      if (byCategoriesElement && byCategoriesElement.splide) {
+        byCategoriesElement.splide.refresh();
+      }
+
+      // Оновлюємо слайдер для additional-offers
+      const additionalOffersElement = document.querySelector(
+        ".splide-additional-offers"
+      );
+      if (additionalOffersElement && additionalOffersElement.splide) {
+        additionalOffersElement.splide.refresh();
+      }
+    }
+
+    // Викликаємо подію для повідомлення про завантаження товарів
+    window.dispatchEvent(new CustomEvent("productsLoaded"));
+  } catch (error) {
+    console.error("Error loading products:", error);
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   const burgerBtn = document.getElementById("burger-btn");
   const closeBtn = document.getElementById("mobile-menu-close");
@@ -107,4 +200,5 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   initFeedbacks(false);
+  loadProducts();
 });
