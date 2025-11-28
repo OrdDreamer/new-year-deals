@@ -2,6 +2,8 @@
  * Модуль для роботи з товарами та категоріями
  */
 
+import productsData from '../../data/products.json';
+
 let categoriesData = null;
 
 /**
@@ -139,13 +141,9 @@ export function switchCategory(categoryIndex, categories) {
 /**
  * Завантажує товари з JSON файлу
  */
-export async function loadProducts() {
+export function loadProducts() {
   try {
-    const response = await fetch("/data/products.json");
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    const data = await response.json();
+    const data = productsData;
 
     // Зберігаємо дані категорій для подальшого використання
     categoriesData = data.byCategories;
