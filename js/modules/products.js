@@ -3,6 +3,10 @@
  */
 
 import productsData from '../../data/products.json';
+import {
+  getSliderByCategories,
+  getSliderAdditionalOffers,
+} from './sliders.js';
 
 let categoriesData = null;
 
@@ -39,6 +43,23 @@ export function renderProduct(product) {
 }
 
 /**
+ * Оновлює слайди в Splide слайдері через remove/add
+ */
+function updateSplideSlides(splideInstance, products) {
+  if (!splideInstance) {
+    console.error("Splide instance not found");
+    return;
+  }
+
+  // Видаляємо всі існуючі слайди
+  splideInstance.remove(() => true);
+
+  // Додаємо нові слайди
+  const slidesHtml = products.map(renderProduct);
+  splideInstance.add(slidesHtml);
+}
+
+/**
  * Рендерить список товарів у контейнер
  */
 export function renderProducts(products, containerSelector) {
@@ -48,6 +69,21 @@ export function renderProducts(products, containerSelector) {
     return;
   }
 
+  // Визначаємо, який слайдер використовувати на основі селектора
+  let splideInstance = null;
+  if (containerSelector.includes('splide-by-categories')) {
+    splideInstance = getSliderByCategories();
+  } else if (containerSelector.includes('splide-additional-offers')) {
+    splideInstance = getSliderAdditionalOffers();
+  }
+
+  // Якщо Splide інстанс існує, використовуємо метод remove/add
+  if (splideInstance) {
+    updateSplideSlides(splideInstance, products);
+    return;
+  }
+
+  // Якщо Splide ще не ініціалізований, використовуємо старий метод
   const productsList = container.querySelector(".splide__list.products");
   if (!productsList) {
     console.error(`Products list not found in: ${containerSelector}`);
@@ -127,14 +163,6 @@ export function switchCategory(categoryIndex, categories) {
       categories[categoryIndex].products,
       ".splide-by-categories.products-slider"
     );
-
-    // Оновлюємо Splide слайдер
-    if (typeof Splide !== "undefined") {
-      const byCategoriesElement = document.querySelector(".splide-by-categories");
-      if (byCategoriesElement && byCategoriesElement.splide) {
-        byCategoriesElement.splide.refresh();
-      }
-    }
   }
 }
 
@@ -168,23 +196,6 @@ export function loadProducts() {
         data.additionalOffers,
         ".splide-additional-offers.products-slider"
       );
-    }
-
-    // Оновлюємо існуючі екземпляри Splide після завантаження товарів
-    if (typeof Splide !== "undefined") {
-      // Оновлюємо слайдер для by-categories
-      const byCategoriesElement = document.querySelector(".splide-by-categories");
-      if (byCategoriesElement && byCategoriesElement.splide) {
-        byCategoriesElement.splide.refresh();
-      }
-
-      // Оновлюємо слайдер для additional-offers
-      const additionalOffersElement = document.querySelector(
-        ".splide-additional-offers"
-      );
-      if (additionalOffersElement && additionalOffersElement.splide) {
-        additionalOffersElement.splide.refresh();
-      }
     }
 
     // Викликаємо подію для повідомлення про завантаження товарів

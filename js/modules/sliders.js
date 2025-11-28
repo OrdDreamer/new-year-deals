@@ -2,6 +2,22 @@
  * Модуль для ініціалізації Splide слайдерів
  */
 
+let sliderByCategories = null;
+let sliderAdditionalOffers = null;
+let sliderFeedbacks = null;
+
+export function getSliderByCategories() {
+  return sliderByCategories;
+}
+
+export function getSliderAdditionalOffers() {
+  return sliderAdditionalOffers;
+}
+
+export function getSliderFeedbacks() {
+  return sliderFeedbacks;
+}
+
 /**
  * Ініціалізує слайдери товарів
  */
@@ -18,7 +34,7 @@ export function initProductSliders() {
 
   if (!prevButton || !nextButton) return;
 
-  const sliderByCategories = new Splide(".splide-by-categories", {
+  sliderByCategories = new Splide(".splide-by-categories", {
     type: "loop",
     fixedWidth: 280,
     fixedHeight: 280,
@@ -40,11 +56,15 @@ export function initProductSliders() {
   });
 
   prevButton.addEventListener("click", function () {
-    sliderByCategories.go("<");
+    if (sliderByCategories) {
+      sliderByCategories.go("<");
+    }
   });
 
   nextButton.addEventListener("click", function () {
-    sliderByCategories.go(">");
+    if (sliderByCategories) {
+      sliderByCategories.go(">");
+    }
   });
 
   sliderByCategories.mount();
@@ -65,7 +85,7 @@ export function initProductSliders() {
 
   if (!prevButtonAdditionalOffers || !nextButtonAdditionalOffers) return;
 
-  const sliderAdditionalOffers = new Splide(".splide-additional-offers", {
+  sliderAdditionalOffers = new Splide(".splide-additional-offers", {
     type: "loop",
     fixedWidth: 280,
     fixedHeight: 280,
@@ -87,11 +107,15 @@ export function initProductSliders() {
   });
 
   prevButtonAdditionalOffers.addEventListener("click", function () {
-    sliderAdditionalOffers.go("<");
+    if (sliderAdditionalOffers) {
+      sliderAdditionalOffers.go("<");
+    }
   });
 
   nextButtonAdditionalOffers.addEventListener("click", function () {
-    sliderAdditionalOffers.go(">");
+    if (sliderAdditionalOffers) {
+      sliderAdditionalOffers.go(">");
+    }
   });
 
   sliderAdditionalOffers.mount();
@@ -113,7 +137,7 @@ export function initFeedbacksSlider() {
 
   if (!prevButtonFeedbacks || !nextButtonFeedbacks) return;
 
-  const sliderFeedbacks = new Splide(".splide-feedbacks", {
+  sliderFeedbacks = new Splide(".splide-feedbacks", {
     type: "loop",
     fixedWidth: 248,
     fixedHeight: 440,
@@ -131,11 +155,15 @@ export function initFeedbacksSlider() {
   });
 
   prevButtonFeedbacks.addEventListener("click", function () {
-    sliderFeedbacks.go("<");
+    if (sliderFeedbacks) {
+      sliderFeedbacks.go("<");
+    }
   });
 
   nextButtonFeedbacks.addEventListener("click", function () {
-    sliderFeedbacks.go(">");
+    if (sliderFeedbacks) {
+      sliderFeedbacks.go(">");
+    }
   });
 
   sliderFeedbacks.mount();
