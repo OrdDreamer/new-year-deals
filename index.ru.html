@@ -1,1351 +1,1135 @@
-<!doctype html>
-<html lang="ru">
-
-<head>
-  <meta charset="utf-8">
-  <% if (GTM_ID) { %>
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
     <!-- Google Tag Manager -->
-      <script>(function (w, d, s, l, i) {
-        w[l] = w[l] || []; w[l].push({
-          'gtm.start':
-            new Date().getTime(), event: 'gtm.js'
-        }); var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-      })(window, document, 'script', 'dataLayer', '<%= GTM_ID %>');</script>
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          "gtm.start": new Date().getTime(),
+          event: "gtm.js",
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", '<%= GTM_ID || "" %>');
+    </script>
     <!-- End Google Tag Manager -->
-    <% } %>
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1"
-  >
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>11.11 – главный день скидок в Китае! | Meest China Shop</title>
-  <meta
-    name="description"
-    content="11.11 – главный день скидок в Китае! Сделайте самые выгодные покупки года вместе с Meest China: скидки до 70%, широкий выбор товаров и полное сопровождение доставки в Украину."
-  >
+    <title>Зимовий сезон знижок відкрито! | Meest China Shop</title>
+    <meta
+      name="description"
+      content="Новорічні знижки від Meest China! Зроби найвигідніші покупки на Новий рік: знижки, широкий вибір товарів і повний супровід доставки в Україну."
+    />
 
-  <meta
-    name="robots"
-    content="noindex, follow"
-  >
+    <meta name="robots" content="noindex, follow" />
 
-  <!-- Google Fonts -->
-  <link
-    rel="preconnect"
-    href="https://fonts.googleapis.com"
-  >
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  >
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap"
-    rel="stylesheet"
-  >
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
 
-  <link
-    rel="canonical"
-    href="https://meest-shop.com/landing"
-  >
+    <link rel="canonical" href="https://meest-shop.com/promo/new-year-deals" />
 
-  <!-- Facebook Meta Tags -->
-  <meta
-    property="og:title"
-    content="11.11 – главный день скидок в Китае!"
-  >
-  <meta
-    property="og:description"
-    content="Сделайте самые выгодные покупки года вместе с Meest China: скидки до 70%, широкий выбор товаров и полное сопровождение доставки в Украину."
-  >
-  <meta
-    property="og:type"
-    content="website"
-  >
-  <meta
-    property="og:url"
-    content="https://meest-shop.com/promo/11-11-shopping-day"
-  >
-  <meta
-    property="og:image"
-    content="/img/og-image.png"
-  >
-  <meta
-    property="og:image:alt"
-    content="11.11 - главный день скидок в Китае с Meest China"
-  >
-  <meta
-    property="og:site_name"
-    content="Meest China Shop"
-  >
+    <!-- Facebook Meta Tags -->
+    <meta property="og:title" content="Зимовий сезон знижок відкрито!" />
+    <meta
+      property="og:description"
+      content="Новорічні знижки від Meest China! Зроби найвигідніші покупки на Новий рік: знижки, широкий вибір товарів і повний супровід доставки в Україну."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://meest-shop.com/promo/new-year-deals"
+    />
+    <meta property="og:image" content="/img/og-image.png" />
+    <meta
+      property="og:image:alt"
+      content="Зимовий сезон знижок відкрито від Meest China"
+    />
+    <meta property="og:site_name" content="Meest China Shop" />
 
-  <!-- Twitter Meta Tags -->
-  <meta
-    name="twitter:card"
-    content="summary_large_image"
-  >
-  <meta
-    name="twitter:title"
-    content="11.11 – главный день скидок в Китае!"
-  >
-  <meta
-    name="twitter:description"
-    content="Сделайте самые выгодные покупки года вместе с Meest China: скидки до 70%, широкий выбор товаров и полное сопровождение доставки в Украину."
-  >
-  <meta
-    name="twitter:domain"
-    content="meest-shop.com"
-  >
-  <meta
-    name="twitter:url"
-    content="https://meest-shop.com/promo/11-11-shopping-day"
-  >
-  <meta
-    name="twitter:image"
-    content="/img/og-image.png"
-  >
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Зимовий сезон знижок відкрито!" />
+    <meta
+      name="twitter:description"
+      content="Новорічні знижки від Meest China! Зроби найвигідніші покупки на Новий рік: знижки, широкий вибір товарів і повний супровід доставки в Україну."
+    />
+    <meta name="twitter:domain" content="meest-shop.com" />
+    <meta
+      name="twitter:url"
+      content="https://meest-shop.com/promo/new-year-deals"
+    />
+    <meta name="twitter:image" content="/img/og-image.png" />
 
-  <link
-    rel="stylesheet"
-    href="/css/normalize.css"
-  >
-  <link
-    rel="stylesheet"
-    href="/css/style.css"
-  >
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/splide-core.min.css" />
 
-  <link
-    rel="icon"
-    href="/favicon.ico"
-  >
-  <link
-    rel="apple-touch-icon"
-    href="/favicon.ico"
-  >
-</head>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/favicon.ico" />
+  </head>
 
-<body>
-  <% if (GTM_ID) { %>
+  <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe
-        src="https://www.googletagmanager.com/ns.html?id=<%= GTM_ID %>"
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=<%= GTM_ID || '' %>"
         height="0"
         width="0"
-        style="display:none;visibility:hidden"
-      ></iframe></noscript>
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
     <!-- End Google Tag Manager (noscript) -->
-  <% } %>
 
-  <header
-    class="header"
-    id="header"
-  >
-    <div class="header__container container">
-      <a
-        class="header__logo"
-        href="https://meest-shop.com/ru/"
-        aria-label="Meest China Shop – перейти на главную страницу"
-      >
-        <img
-          src="/img/logo.svg"
-          alt=""
-          width="100"
-          height="48"
+    <header class="header" id="header">
+      <div class="header__container container">
+        <a
+          class="header__logo"
+          href="https://meest-shop.com/"
+          aria-label="Meest China Shop – перейти на головну сторінку"
         >
+          <img src="/img/logo.svg" alt="" width="100" height="48" />
+        </a>
+
+        <button
+          class="header__burger only-mobile"
+          id="burger-btn"
+          type="button"
+          aria-label="Відкрити меню"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+        >
+          <img
+            src="/img/icons/menu.svg"
+            alt=""
+            width="48"
+            height="48"
+            aria-hidden="true"
+          />
+        </button>
+
+        <nav class="header__nav only-desktop" aria-label="Головна навігація">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a href="#offers" class="header__nav-link"> Пропозиції </a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#categories" class="header__nav-link">Категорії</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#how-to-order" class="header__nav-link">Як замовити</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#promo-12-12" class="header__nav-link">Переваги</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#feedbacks" class="header__nav-link">Розпаковки</a>
+            </li>
+          </ul>
+        </nav>
+
+        <a
+          class="header__language-switcher only-desktop"
+          href="/ru/promo/new-year-deals"
+          lang="ru"
+          aria-label="Змінити мову сторінки на російську"
+          data-current-language="uk"
+        >
+          <img
+            src="/img/icons/world.svg"
+            alt=""
+            width="24"
+            height="24"
+            aria-hidden="true"
+          />
+          <img
+            class="header__language-switcher-next-icon"
+            src="/img/icons/arrow_right_blue.svg"
+            alt=""
+            width="24"
+            height="24"
+            aria-hidden="true"
+          />
+          <span>RU</span>
+        </a>
+
+        <a
+          class="header__cta-button only-desktop"
+          href="https://meest-shop.com/#services_id"
+          target="_blank"
+          rel="noopener"
+          >Замовити</a
+        >
+      </div>
+    </header>
+
+    <!-- Мобільне меню -->
+    <div class="mobile-menu only-mobile" id="mobile-menu">
+      <div class="mobile-menu__header">
+        <a
+          class="mobile-menu__logo"
+          href="https://meest-shop.com/"
+          aria-label="Meest China Shop – перейти на головну сторінку"
+        >
+          <img src="/img/logo.svg" alt="" width="100" height="48" />
+        </a>
+        <button
+          class="mobile-menu__close"
+          id="mobile-menu-close"
+          type="button"
+          aria-label="Закрити меню"
+        >
+          <img
+            src="/img/icons/close.svg"
+            alt=""
+            width="48"
+            height="48"
+            aria-hidden="true"
+          />
+        </button>
+      </div>
+
+      <a
+        class="mobile-menu__cta-button"
+        href="https://meest-shop.com/#services_id"
+        target="_blank"
+        rel="noopener"
+      >
+        Замовити
       </a>
 
-      <button
-        class="header__burger only-mobile"
-        id="burger-btn"
-        type="button"
-        aria-label="Открыть меню"
-        aria-controls="mobile-menu"
-        aria-expanded="false"
-      >
-        <img
-          src="/img/icons/menu.svg"
-          alt=""
-          width="48"
-          height="48"
-          aria-hidden="true"
-        >
-      </button>
-
-      <nav
-        class="header__nav only-desktop"
-        aria-label="Основная навигация"
-      >
-        <ul class="header__nav-list">
-          <li class="header__nav-item">
-            <a
-              href="#top-discount-products"
-              class="header__nav-link"
-            >
-              Предложения
+      <nav class="mobile-menu__nav" aria-label="Мобільна навігація">
+        <ul class="mobile-menu__nav-list">
+          <li class="mobile-menu__nav-item">
+            <a href="#offers" class="mobile-menu__nav-link">Пропозиції</a>
+          </li>
+          <li class="mobile-menu__nav-item">
+            <a href="#categories" class="mobile-menu__nav-link">Категорії</a>
+          </li>
+          <li class="mobile-menu__nav-item">
+            <a href="#how-to-order" class="mobile-menu__nav-link">
+              Як замовити
             </a>
           </li>
-          <li class="header__nav-item">
-            <a
-              href="#how-to-order"
-              class="header__nav-link"
-            >
-              Как заказать
-            </a>
+          <li class="mobile-menu__nav-item">
+            <a href="#promo-12-12" class="mobile-menu__nav-link">Переваги</a>
           </li>
-          <li class="header__nav-item">
-            <a
-              href="#why-us"
-              class="header__nav-link"
-            >
-              Преимущества
-            </a>
+          <li class="mobile-menu__nav-item">
+            <a href="#feedbacks" class="mobile-menu__nav-link">Розпаковки</a>
           </li>
         </ul>
       </nav>
 
       <a
-        class="header__language-switcher only-desktop"
-        href="/uk/promo/11-11-shopping-day"
+        class="mobile-menu__language-link"
+        href="/ru/promo/new-year-deals"
         lang="ru"
-        aria-label="Изменить язык страницы на украинский"
-        data-current-language="ru"
+        aria-label="Змінити мову сторінки на російську"
       >
         <img
-          src="/img/icons/world.svg"
+          src="/img/icons/translate.svg"
           alt=""
           width="24"
           height="24"
           aria-hidden="true"
-        >
-        <img
-          class="header__language-switcher-next-icon"
-          src="/img/icons/arrow_right_blue.svg"
-          alt=""
-          width="24"
-          height="24"
-          aria-hidden="true"
-        >
-        <span>UA</span>
+        />
+        Змінити мову
       </a>
-
-      <a
-        class="header__cta-button only-desktop"
-        href="https://meest-shop.com/#services_id"
-        target="_blank"
-        rel="noopener"
-      >Заказать</a>
     </div>
 
-  </header>
+    <main>
+      <section class="hero" id="hero">
+        <div class="hero__content container">
+          <div class="hero__content-left">
+            <h1 class="hero__title">Зимовий сезон знижок відкрито!</h1>
 
-  <!-- Мобільне меню -->
-  <div
-    class="mobile-menu only-mobile"
-    id="mobile-menu"
-  >
-    <div class="mobile-menu__header">
-      <a
-        class="mobile-menu__logo"
-        href="https://meest-shop.com/ru/"
-        aria-label="Meest China Shop – перейти на главную страницу"
-      >
-        <img
-          src="/img/logo.svg"
-          alt=""
-          width="100"
-          height="48"
-        >
-      </a>
-      <button
-        class="mobile-menu__close"
-        id="mobile-menu-close"
-        type="button"
-        aria-label="Закрыть меню"
-      >
-        <img
-          src="/img/icons/close.svg"
-          alt=""
-          width="48"
-          height="48"
+            <p class="hero__description">
+              Скористайтеся розпродажами на азійських маркетплейсах - замовляйте
+              товари для себе чи бізнесу через Meest China Shop!
+            </p>
+
+            <a
+              class="hero__cta-button negative-cta-button"
+              href="https://meest-shop.com/#services_id"
+              rel="noopener"
+              target="_blank"
+            >
+              <span>Замовити</span>
+              <img
+                class="negative-cta-icon"
+                src="/img/icons/gift.svg"
+                alt=""
+                aria-hidden="true"
+                loading="lazy"
+                width="28"
+                height="28"
+              />
+            </a>
+          </div>
+
+          <img
+            class="hero__illustration"
+            src="/img/section-hero/illustration.png"
+            alt=""
+            aria-hidden="true"
+            loading="lazy"
+            width="328"
+            height="328"
+          />
+        </div>
+
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          class="hero__background-video"
+          poster="/img/section-hero/background.jpg"
           aria-hidden="true"
         >
-      </button>
-    </div>
+          <source
+            src="/img/section-hero/videos/snow_video_540.webm"
+            type="video/webm"
+            media="(max-width: 720px)"
+          />
+          <source
+            src="/img/section-hero/videos/snow_video_540.mp4"
+            type="video/mp4"
+            media="(max-width: 720px)"
+          />
+          <source
+            src="/img/section-hero/videos/snow_video_720.webm"
+            type="video/webm"
+            media="(max-width: 1280px)"
+          />
+          <source
+            src="/img/section-hero/videos/snow_video_720.mp4"
+            type="video/mp4"
+            media="(max-width: 1280px)"
+          />
+          <source
+            src="/img/section-hero/videos/snow_video.webm"
+            type="video/webm"
+          />
+          <source
+            src="/img/section-hero/videos/snow_video.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </section>
 
-    <a
-      class="mobile-menu__cta-button"
-      href="https://meest-shop.com/#services_id"
-      target="_blank"
-      rel="noopener"
-    >
-      Заказать
-    </a>
-
-    <nav
-      class="mobile-menu__nav"
-      aria-label="Мобильная навигация"
-    >
-      <ul class="mobile-menu__nav-list">
-        <li class="mobile-menu__nav-item">
-          <a
-            href="#top-discount-products"
-            class="mobile-menu__nav-link"
-          >Предложения</a>
-        </li>
-        <li class="mobile-menu__nav-item">
-          <a
-            href="#how-to-order"
-            class="mobile-menu__nav-link"
-          >Как заказать</a>
-        </li>
-        <li class="mobile-menu__nav-item">
-          <a
-            href="#why-us"
-            class="mobile-menu__nav-link"
-          >Преимущества</a>
-        </li>
-      </ul>
-    </nav>
-
-    <a
-      class="mobile-menu__language-link"
-      href="/uk/promo/11-11-shopping-day"
-      lang="ru"
-      aria-label="Изменить язык страницы на украинский"
-    >
-      <img
-        src="/img/icons/translate.svg"
-        alt=""
-        width="24"
-        height="24"
-        aria-hidden="true"
-      >
-      Изменить язык
-    </a>
-  </div>
-
-  <main>
-    <section
-      class="hero container"
-      id="hero"
-    >
-      <h1 class="hero__title">
-        <span class="hero__title-accent">11.11</span> – главный день скидок в Китае!
-      </h1>
-
-      <p class="hero__description">
-        Сделайте самые выгодные покупки года вместе с Meest China: скидки до 70%, широкий выбор товаров и полное сопровождение
-        доставки в Украину
-      </p>
-
-      <div
-        class="hero__timer hero__timer--hidden"
-        id="timer"
-        aria-live="off"
-        role="timer"
-      >
-        <p class="hero__timer-item">
-          <span
-            class="hero__timer-value"
-            id="timer-days"
-          >00</span>
-          <span class="hero__timer-label">дней</span>
-        </p>
-        <p class="hero__timer-separator">:</p>
-        <p class="hero__timer-item">
-          <span
-            class="hero__timer-value"
-            id="timer-hours"
-          >00</span>
-          <span class="hero__timer-label">часов</span>
-        </p>
-        <p class="hero__timer-separator">:</p>
-        <p class="hero__timer-item">
-          <span
-            class="hero__timer-value"
-            id="timer-minutes"
-          >00</span>
-          <span class="hero__timer-label">минут</span>
-        </p>
-        <p class="hero__timer-separator">:</p>
-        <p class="hero__timer-item">
-          <span
-            class="hero__timer-value"
-            id="timer-seconds"
-          >00</span>
-          <span class="hero__timer-label">секунд</span>
-        </p>
-      </div>
-
-      <a
-        class="hero__cta-button"
-        href="https://meest-shop.com/categories"
-        rel="noopener"
-        target="_blank"
-      >
-        <span>В каталог</span>
-        <img
-          class="hero__cta-icon"
-          src="/img/icons/arrow_right.svg"
-          alt=""
-          aria-hidden="true"
-          loading="lazy"
-          width="24"
-          height="24"
-        >
-      </a>
-
-      <img
-        class="hero__illustration-mobile"
-        src="/img/section-hero/illustration-mobile.png"
-        alt=""
-        aria-hidden="true"
-        loading="lazy"
-        width="328"
-        height="368"
-      >
-    </section>
-
-    <section
-      class="marketplaces container"
-      id="marketplaces"
-      aria-labelledby="marketplaces-heading"
-    >
-      <h2
-        class="visually-hidden"
-        id="marketplaces-heading"
-      >Маркетплейсы, с которых можно заказывать через нас</h2>
-      <ul class="marketplaces__list">
-        <li class="marketplaces__item">
+      <section class="container offers" id="offers">
+        <h2 class="offers__title title">
+          <span class="title-accent">Святковий настрій</span>
           <img
-            class="marketplaces__logo"
-            src="/img/marketplaces/1688.png"
-            alt="Маркетплейс 1688"
-            width="106"
-            height="40"
+            class="title-icon"
+            src="/img/section-offers/accent_1.png"
+            alt=""
+            width="44"
+            height="44"
             loading="lazy"
-          >
-        </li>
-        <li class="marketplaces__item">
+            aria-hidden="true"
+          />
+          починається
+          <br class="only-desktop-br" />
           <img
-            class="marketplaces__logo"
-            src="/img/marketplaces/taobao.png"
-            alt="Маркетплейс Taobao"
-            width="100"
-            height="40"
+            class="title-icon"
+            src="/img/section-offers/accent_2.png"
+            alt=""
+            width="44"
+            height="44"
             loading="lazy"
-          >
-        </li>
-        <li class="marketplaces__item">
-          <img
-            class="marketplaces__logo"
-            src="/img/marketplaces/amazon.png"
-            alt="Маркетплейс Amazon.co.jp"
-            width="173"
-            height="40"
-            loading="lazy"
-          >
-        </li>
-        <li class="marketplaces__item">
-          <img
-            class="marketplaces__logo"
-            src="/img/marketplaces/beautynetkorea.png"
-            alt="Маркетплейс BeautyNetKorea"
-            width="261"
-            height="40"
-            loading="lazy"
-          >
-        </li>
-        <li class="marketplaces__item">
-          <img
-            class="marketplaces__logo"
-            src="/img/marketplaces/biccamera.png"
-            alt="Маркетплейс BIC Camera"
-            width="190"
-            height="40"
-            loading="lazy"
-          >
-        </li>
-        <li class="marketplaces__item">
-          <img
-            class="marketplaces__logo"
-            src="/img/marketplaces/gmarket.png"
-            alt="Маркетплейс Gmarket"
-            width="154"
-            height="40"
-            loading="lazy"
-          >
-        </li>
-        <li class="marketplaces__item">
-          <img
-            class="marketplaces__logo"
-            src="/img/marketplaces/oliveyoung.png"
-            alt="Маркетплейс Olive Young"
-            width="200"
-            height="40"
-            loading="lazy"
-          >
-        </li>
-        <li class="marketplaces__item">
-          <img
-            class="marketplaces__logo"
-            src="/img/marketplaces/pinduoduo.png"
-            alt="Маркетплейс Pinduoduo"
-            width="160"
-            height="40"
-            loading="lazy"
-          >
-        </li>
-        <li class="marketplaces__item">
-          <img
-            class="marketplaces__logo"
-            src="/img/marketplaces/poizon.png"
-            alt="Маркетплейс Poizon"
-            width="138"
-            height="40"
-            loading="lazy"
-          >
-        </li>
-        <li class="marketplaces__item">
-          <img
-            class="marketplaces__logo"
-            src="/img/marketplaces/rakuten.png"
-            alt="Маркетплейс Rakuten"
-            width="128"
-            height="40"
-            loading="lazy"
-          >
-        </li>
-        <li class="marketplaces__item">
-          <img
-            class="marketplaces__logo"
-            src="/img/marketplaces/yes24.png"
-            alt="Маркетплейс Yes24"
-            width="110"
-            height="40"
-            loading="lazy"
-          >
-        </li>
-        <li class="marketplaces__item">
-          <img
-            class="marketplaces__logo"
-            src="/img/marketplaces/yodobashi.png"
-            alt="Маркетплейс Yodobashi"
-            width="170"
-            height="40"
-            loading="lazy"
-          >
-        </li>
-        <li class="marketplaces__item">
-          <img
-            class="marketplaces__logo"
-            src="/img/marketplaces/zozo.png"
-            alt="Маркетплейс Zozo"
-            width="134"
-            height="40"
-            loading="lazy"
-          >
-        </li>
-        <li class="marketplaces__item">
-          <img
-            class="marketplaces__logo"
-            src="/img/marketplaces/weidian.png"
-            alt="Маркетплейс Weidian"
-            width="164"
-            height="40"
-            loading="lazy"
-          >
-        </li>
-        <li class="marketplaces__item">
-          <img
-            class="marketplaces__logo"
-            src="/img/marketplaces/uniqlo.png"
-            alt="Маркетплейс UNIQLO"
-            width="90"
-            height="40"
-            loading="lazy"
-          >
-        </li>
-        <li class="marketplaces__item">
-          <img
-            class="marketplaces__logo"
-            src="/img/marketplaces/muji.png"
-            alt="Маркетплейс MUJI"
-            width="154"
-            height="40"
-            loading="lazy"
-          >
-        </li>
-        <li class="marketplaces__item">
-          <img
-            class="marketplaces__logo"
-            src="/img/marketplaces/jd.png"
-            alt="Маркетплейс JD.com"
-            width="131"
-            height="40"
-            loading="lazy"
-          >
-        </li>
-        <li class="marketplaces__item">
-          <img
-            class="marketplaces__logo"
-            src="/img/marketplaces/naver.png"
-            alt="Маркетплейс Naver Shopping"
-            width="125"
-            height="40"
-            loading="lazy"
-          >
-        </li>
-        <li class="marketplaces__item">
-          <img
-            class="marketplaces__logo"
-            src="/img/marketplaces/atomy.png"
-            alt="Маркетплейс Atomy"
-            width="78"
-            height="40"
-            loading="lazy"
-          >
-        </li>
-      </ul>
-    </section>
-
-    <section
-      class="top-discount-products container"
-      id="top-discount-products"
-      aria-labelledby="top-discount-products-title"
-    >
-      <header class="top-discount-products__header" data-current-language="ru">
-        <h2
-          class="top-discount-products__title"
-          id="top-discount-products-title"
-        >
-          Топ-товары со скидками <span class="top-discount-products__title-accent">11.11</span>
+            aria-hidden="true"
+          />
+          з вигідних
+          <span class="title-accent">покупок</span>
         </h2>
-        <p class="top-discount-products__description">
-          Выбирайте самые популярные товары с лучшими ценами от поставщиков Китая, Южной Кореи и Японии. Планируйте
-          закупки на 11.11 — пополняйте ассортимент с минимальными затратами
-        </p>
-      </header>
-      <div class="top-discount-products__list-container">
-        <ul class="top-discount-products__list">
-          <li class="top-discount-products__item">
-            <a
-              class="top-discount-products__link"
-              href="https://meest-shop.com/product/taobao/658049868323"
-              target="_blank"
-              rel="noopener"
-            >
-              <article class="top-discount-products__card">
-                <img
-                  class="top-discount-products__image"
-                  src="/img/products/658049868323.png"
-                  alt=""
-                  width="280"
-                  height="280"
-                  loading="lazy"
-                  aria-hidden="true"
-                >
-                <header class="top-discount-products__card-header">
-                  <h3 class="top-discount-products__card-title">Новогодние украшения</h3>
-                  <p class="top-discount-products__card-price">$ 2,49</p>
-                </header>
-              </article>
-            </a>
-          </li>
-          <li class="top-discount-products__item">
-            <a
-              class="top-discount-products__link"
-              href="https://meest-shop.com/product/alibaba1688/645570059334"
-              target="_blank"
-              rel="noopener"
-            >
-              <article class="top-discount-products__card">
-                <img
-                  class="top-discount-products__image"
-                  src="/img/products/645570059334.jpg"
-                  alt=""
-                  width="280"
-                  height="280"
-                  loading="lazy"
-                  aria-hidden="true"
-                >
-                <header class="top-discount-products__card-header">
-                  <h3 class="top-discount-products__card-title">Рождественские украшения</h3>
-                  <p class="top-discount-products__card-price">$ 1,62</p>
-                </header>
-              </article>
-            </a>
-          </li>
-          <li class="top-discount-products__item">
-            <a
-              class="top-discount-products__link"
-              href="https://meest-shop.com/product/alibaba1688/955301221589"
-              target="_blank"
-              rel="noopener"
-            >
-              <article class="top-discount-products__card">
-                <img
-                  class="top-discount-products__image"
-                  src="/img/products/955301221589.png"
-                  alt=""
-                  width="280"
-                  height="280"
-                  loading="lazy"
-                  aria-hidden="true"
-                >
-                <header class="top-discount-products__card-header">
-                  <h3 class="top-discount-products__card-title">Новогодние статуэтки</h3>
-                  <p class="top-discount-products__card-price">$ 7,34</p>
-                </header>
-              </article>
-            </a>
-          </li>
-          <li class="top-discount-products__item">
-            <a
-              class="top-discount-products__link"
-              href="https://meest-shop.com/product/alibaba1688/842917068211"
-              target="_blank"
-              rel="noopener"
-            >
-              <article class="top-discount-products__card">
-                <img
-                  class="top-discount-products__image"
-                  src="/img/products/842917068211.png"
-                  alt=""
-                  width="280"
-                  height="280"
-                  loading="lazy"
-                  aria-hidden="true"
-                >
-                <header class="top-discount-products__card-header">
-                  <h3 class="top-discount-products__card-title">Гирлянда-роса</h3>
-                  <p class="top-discount-products__card-price">$ 5,58</p>
-                </header>
-              </article>
-            </a>
-          </li>
-          <li class="top-discount-products__item">
-            <a
-              class="top-discount-products__link"
-              href="https://meest-shop.com/product/alibaba1688/810105318390"
-              target="_blank"
-              rel="noopener"
-            >
-              <article class="top-discount-products__card">
-                <img
-                  class="top-discount-products__image"
-                  src="/img/products/810105318390.png"
-                  alt=""
-                  width="280"
-                  height="280"
-                  loading="lazy"
-                  aria-hidden="true"
-                >
-                <header class="top-discount-products__card-header">
-                  <h3 class="top-discount-products__card-title">Зарядная станция</h3>
-                  <p class="top-discount-products__card-price">$ 87,96</p>
-                </header>
-              </article>
-            </a>
-          </li>
-          <li class="top-discount-products__item">
-            <a
-              class="top-discount-products__link"
-              href="https://meest-shop.com/product/alibaba1688/893748290130"
-              target="_blank"
-              rel="noopener"
-            >
-              <article class="top-discount-products__card">
-                <img
-                  class="top-discount-products__image"
-                  src="/img/products/893748290130.jpg"
-                  alt=""
-                  width="280"
-                  height="280"
-                  loading="lazy"
-                  aria-hidden="true"
-                >
-                <header class="top-discount-products__card-header">
-                  <h3 class="top-discount-products__card-title">Фигурка дракона</h3>
-                  <p class="top-discount-products__card-price">$ 2,55</p>
-                </header>
-              </article>
-            </a>
-          </li>
-          <li class="top-discount-products__item">
-            <a
-              class="top-discount-products__link"
-              href="https://meest-shop.com/product/taobao/891839266306"
-              target="_blank"
-              rel="noopener"
-            >
-              <article class="top-discount-products__card">
-                <img
-                  class="top-discount-products__image"
-                  src="/img/products/891839266306.png"
-                  alt=""
-                  width="280"
-                  height="280"
-                  loading="lazy"
-                  aria-hidden="true"
-                >
-                <header class="top-discount-products__card-header">
-                  <h3 class="top-discount-products__card-title">Робот-пылесос</h3>
-                  <p class="top-discount-products__card-price">$ 62,56</p>
-                </header>
-              </article>
-            </a>
-          </li>
-          <li class="top-discount-products__item">
-            <a
-              class="top-discount-products__link"
-              href="https://meest-shop.com/product/taobao/768106751900"
-              target="_blank"
-              rel="noopener"
-            >
-              <article class="top-discount-products__card">
-                <img
-                  class="top-discount-products__image"
-                  src="/img/products/768106751900.png"
-                  alt=""
-                  width="280"
-                  height="280"
-                  loading="lazy"
-                  aria-hidden="true"
-                >
-                <header class="top-discount-products__card-header">
-                  <h3 class="top-discount-products__card-title">Игрушка для собак</h3>
-                  <p class="top-discount-products__card-price">$ 1,5</p>
-                </header>
-              </article>
-            </a>
-          </li>
-          <li class="top-discount-products__item">
-            <a
-              class="top-discount-products__link"
-              href="https://meest-shop.com/product/taobao/754357488243"
-              target="_blank"
-              rel="noopener"
-            >
-              <article class="top-discount-products__card">
-                <img
-                  class="top-discount-products__image"
-                  src="/img/products/754357488243.png"
-                  alt=""
-                  width="280"
-                  height="280"
-                  loading="lazy"
-                  aria-hidden="true"
-                >
-                <header class="top-discount-products__card-header">
-                  <h3 class="top-discount-products__card-title">Мини-поилка для животных</h3>
-                  <p class="top-discount-products__card-price">$ 1,34</p>
-                </header>
-              </article>
-            </a>
-          </li>
-          <li class="top-discount-products__item">
-            <a
-              class="top-discount-products__link"
-              href="https://meest-shop.com/product/taobao/889662102293"
-              target="_blank"
-              rel="noopener"
-            >
-              <article class="top-discount-products__card">
-                <img
-                  class="top-discount-products__image"
-                  src="/img/products/889662102293.png"
-                  alt=""
-                  width="280"
-                  height="280"
-                  loading="lazy"
-                  aria-hidden="true"
-                >
-                <header class="top-discount-products__card-header">
-                  <h3 class="top-discount-products__card-title">Поводок для собак</h3>
-                  <p class="top-discount-products__card-price">$ 2,38</p>
-                </header>
-              </article>
-            </a>
-          </li>
-          <li class="top-discount-products__item">
-            <a
-              class="top-discount-products__link"
-              href="https://meest-shop.com/product/taobao/877236140259"
-              target="_blank"
-              rel="noopener"
-            >
-              <article class="top-discount-products__card">
-                <img
-                  class="top-discount-products__image"
-                  src="/img/products/877236140259.png"
-                  alt=""
-                  width="280"
-                  height="280"
-                  loading="lazy"
-                  aria-hidden="true"
-                >
-                <header class="top-discount-products__card-header">
-                  <h3 class="top-discount-products__card-title">Робот-пылесос</h3>
-                  <p class="top-discount-products__card-price">$ 84,14</p>
-                </header>
-              </article>
-            </a>
-          </li>
-          <li class="top-discount-products__item">
-            <a
-              class="top-discount-products__link"
-              href="https://meest-shop.com/product/alibaba1688/744512145406"
-              target="_blank"
-              rel="noopener"
-            >
-              <article class="top-discount-products__card">
-                <img
-                  class="top-discount-products__image"
-                  src="/img/products/744512145406.png"
-                  alt=""
-                  width="280"
-                  height="280"
-                  loading="lazy"
-                  aria-hidden="true"
-                >
-                <header class="top-discount-products__card-header">
-                  <h3 class="top-discount-products__card-title">Зарядная станция</h3>
-                  <p class="top-discount-products__card-price">$ 161,38</p>
-                </header>
-              </article>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <a
-        class="top-discount-products__cta-button"
-        href="https://meest-shop.com/categories"
-        target="_blank"
-        rel="noopener"
-        aria-label="Перейти в каталог товаров"
-      >
-        <span>Больше товаров</span>
-        <img
-          class="top-discount-products__cta-icon"
-          src="/img/icons/arrow_right.svg"
-          alt=""
-          aria-hidden="true"
-          loading="lazy"
-          width="24"
-          height="24"
-        >
-      </a>
-    </section>
 
-    <section
-      class="promo-11-11 container"
-      id="promo-11-11"
-      aria-labelledby="promo-11-11-title"
-    >
-      <h2
-        class="promo-11-11__title"
-        id="promo-11-11-title"
-      >
-        <span
-          class="promo-11-11__icon desktop"
-          aria-hidden="true"
-        >
-          <img
-            src="/img/section-promo-11-11/accent_1.png"
-            alt=""
-            width="200"
-            height="84"
-            loading="lazy"
-            aria-hidden="true"
-          >
-        </span>
-        Идеальное
-        <span
-          class="promo-11-11__icon mobile"
-          aria-hidden="true"
-        >
-          <img
-            src="/img/section-promo-11-11/accent_1.png"
-            alt=""
-            width="105"
-            height="44"
-            loading="lazy"
-            aria-hidden="true"
-          >
-        </span>
-        время <br>для
-        <span
-          class="promo-11-11__icon mobile"
-          aria-hidden="true"
-        >
-          <img
-            src="/img/section-promo-11-11/accent_2.png"
-            alt=""
-            width="84"
-            height="44"
-            loading="lazy"
-            aria-hidden="true"
-          >
-        </span>
-        масштабных
-        <span
-          class="promo-11-11__icon desktop"
-          aria-hidden="true"
-        >
-          <img
-            src="/img/section-promo-11-11/accent_2.png"
-            alt=""
-            width="160"
-            height="84"
-            loading="lazy"
-            aria-hidden="true"
-          >
-        </span>
-        закупок
-      </h2>
+        <div class="offers__tabs" id="offers-tabs">
+          <!-- Таби завантажуються з data/products.json -->
+        </div>
 
-      <p class="promo-11-11__description">
-        <span class="promo-11-11__description-accent">11.11</span> — это ежегодная глобальная распродажа, которая стартовала в
-        Китае на Alibaba и Taobao, и уже стала
-        крупнейшим событием в мире онлайн-шопинга
-      </p>
-
-      <p class="visually-hidden">Основные преимущества акции:</p>
-      <ul class="promo-11-11__list">
-        <li class="promo-11-11__item darker">Самые низкие цены года</li>
-        <li class="promo-11-11__item">Новинки</li>
-        <li class="promo-11-11__item darker">Эксклюзивные товары</li>
-        <li class="promo-11-11__item">Выгодные закупки</li>
-        <li class="promo-11-11__item">Опт и розница</li>
-        <li class="promo-11-11__item darker">Без посредников</li>
-        <li class="promo-11-11__item">Удобная доставка</li>
-        <li class="promo-11-11__item darker">Полное сопровождение</li>
-      </ul>
-
-      <a
-        class="promo-11-11__cta-button"
-        href="https://meest-shop.com/#services_id"
-        target="_blank"
-        rel="noopener"
-      >
-        <span>Начать покупать</span>
-        <img
-          class="promo-11-11__cta-icon"
-          src="/img/icons/arrow_right.svg"
-          alt=""
-          aria-hidden="true"
-          loading="lazy"
-          width="24"
-          height="24"
-        >
-      </a>
-    </section>
-
-    <section
-      class="how-to-order container"
-      id="how-to-order"
-      aria-labelledby="how-to-order-title"
-    >
-      <h2
-        class="how-to-order__title"
-        id="how-to-order-title"
-        data-current-language="ru"
-      >Как оформить заказ</h2>
-
-      <ol class="how-to-order__list">
-        <li class="how-to-order__item">Выберите нужные товары на Taobao, Tmall, JD или других азиатских сайтах.</li>
-        <li class="how-to-order__item">Предоставьте нам ссылку через форму на сайте.</li>
-        <li class="how-to-order__item">Мы выкупим товар напрямую у продавца, проверим качество и организуем доставку.
-        </li>
-        <li class="how-to-order__item">Вы получите заказ в Украине без лишних хлопот.</li>
-      </ol>
-
-      <div class="how-to-order__categories-container">
-        <ul class="how-to-order__categories-list">
-          <li class="how-to-order__categories-item">
-            <a
-              class="how-to-order__categories-link"
-              href="https://meest-shop.com/category/cholovichii-odiag/tolstovki-ta-khudi"
-              target="_blank"
-              rel="noopener"
-            >
-              <img
-                src="/img/section-how-to-order/1.png"
-                alt=""
-                aria-hidden="true"
-                loading="lazy"
-                width="180"
-                height="180"
-              >
-              <span class="visually-hidden">Мужская одежда</span>
-            </a>
-          </li>
-          <li class="how-to-order__categories-item">
-            <a
-              class="how-to-order__categories-link"
-              href="https://meest-shop.com/category/kukhniayidalnia/chaini-nabori"
-              target="_blank"
-              rel="noopener"
-            >
-              <img
-                src="/img/section-how-to-order/2.png"
-                alt=""
-                aria-hidden="true"
-                loading="lazy"
-                width="180"
-                height="180"
-              >
-              <span class="visually-hidden">Чайные наборы</span>
-            </a>
-          </li>
-          <li class="how-to-order__categories-item">
-            <a
-              class="how-to-order__categories-link"
-              href="https://meest-shop.com/category/kospleyi-ta-kolektsiyi"
-              target="_blank"
-              rel="noopener"
-            >
-              <img
-                src="/img/section-how-to-order/3.png"
-                alt=""
-                aria-hidden="true"
-                loading="lazy"
-                width="180"
-                height="180"
-              >
-              <span class="visually-hidden">Косплеи и коллекции</span>
-            </a>
-          </li>
-          <li class="how-to-order__categories-item">
-            <a
-              class="how-to-order__categories-link"
-              href="https://meest-shop.com/category/tovari-1688/tovari-dlia-ditei"
-              target="_blank"
-              rel="noopener"
-            >
-              <img
-                src="/img/section-how-to-order/4.png"
-                alt=""
-                aria-hidden="true"
-                loading="lazy"
-                width="180"
-                height="180"
-              >
-              <span class="visually-hidden">Для детей</span>
-            </a>
-          </li>
-          <li class="how-to-order__categories-item">
-            <a
-              class="how-to-order__categories-link"
-              href="https://meest-shop.com/category/tovari-1688/zhinochii-odiag"
-              target="_blank"
-              rel="noopener"
-            >
-              <img
-                src="/img/section-how-to-order/5.png"
-                alt=""
-                aria-hidden="true"
-                loading="lazy"
-                width="180"
-                height="180"
-              >
-              <span class="visually-hidden">Женская одежда</span>
-            </a>
-          </li>
-
-          <li class="how-to-order__categories-item">
-            <a
-              class="how-to-order__categories-link"
-              href="https://meest-shop.com/category/zhinochii-odiag/bilizna"
-              target="_blank"
-              rel="noopener"
-            >
-              <img
-                src="/img/section-how-to-order/6.png"
-                alt=""
-                aria-hidden="true"
-                loading="lazy"
-                width="180"
-                height="180"
-              >
-              <span class="visually-hidden">Нижнее белье</span>
-            </a>
-          </li>
-          <li class="how-to-order__categories-item">
-            <a
-              class="how-to-order__categories-link"
-              href="https://meest-shop.com/category/dekor-dlia-domu"
-              target="_blank"
-              rel="noopener"
-            >
-              <img
-                src="/img/section-how-to-order/7.png"
-                alt=""
-                aria-hidden="true"
-                loading="lazy"
-                width="180"
-                height="180"
-              >
-              <span class="visually-hidden">Товары для дома</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <a
-        class="how-to-order__cta-button"
-        href="https://meest-shop.com/#services_id"
-        target="_blank"
-        rel="noopener"
-      >
-        <span>Сделать заказ</span>
-        <img
-          class="how-to-order__cta-icon"
-          src="/img/icons/arrow_right.svg"
-          alt=""
-          loading="lazy"
-          aria-hidden="true"
-          width="24"
-          height="24"
-        >
-      </a>
-    </section>
-
-    <section
-      id="why-us"
-      class="container why-us"
-      aria-labelledby="why-us-title"
-    >
-      <h2
-        id="why-us-title"
-        class="why-us__title"
-        data-current-language="ru"
-      >Почему стоит выбрать нас</h2>
-
-      <div class="why-us__article-container">
-        <article class="why-us__article">
-          <h3 class="why-us__article-title">Покупка напрямую в Китае</h3>
-          <p class="why-us__article-text">Вы покупаете товар у производителя, без лишних посредников.</p>
-          <img
-            class="why-us__article-image"
-            src="/img/section-why-us/phone.png"
-            alt=""
-            width="200"
-            height="268"
-            aria-hidden="true"
-            loading="lazy"
-          >
-        </article>
-      </div>
-
-      <ul class="why-us__list">
-        <li class="why-us__item">
-          <h3 class="why-us__item-title">Каталог товаров</h3>
-          <p class="why-us__item-text">Находите все необходимое в одном месте.</p>
-        </li>
-        <li class="why-us__item">
-          <h3 class="why-us__item-title">Проверка качества</h3>
-          <p class="why-us__item-text">Ваши товары проверяются на складе перед отправкой.</p>
-        </li>
-        <li class="why-us__item">
-          <h3 class="why-us__item-title">Легкий возврат</h3>
-          <p class="why-us__item-text">В случае несоответствия товара, мы сами возвращаем его продавцу.</p>
-        </li>
-        <li class="why-us__item">
-          <h3 class="why-us__item-title">Удобная доставка</h3>
-          <p class="why-us__item-text">Морем, авиа или авто — выбирайте, что подходит именно вам.</p>
-        </li>
-        <li class="why-us__item">
-          <h3 class="why-us__item-title">Полное сопровождение</h3>
-          <p class="why-us__item-text">От поиска товара до растаможки и доставки в Украину.</p>
-        </li>
-      </ul>
-    </section>
-
-    <section
-      id="call-to-action"
-      class="container"
-      aria-labelledby="cta-title"
-    >
-      <div class="cta">
-        <div class="cta__content">
-          <h2
-            id="cta-title"
-            class="cta__title"
-          >Используйте <span class="cta__title-accent">11.11</span> на максимум!</h2>
-          <a
-            class="cta__button"
-            href="https://meest-shop.com/#services_id"
-            target="_blank"
-            rel="noopener"
-          >
-            <span>Заказать</span>
+        <div class="splide splide-by-categories products-slider">
+          <div class="splide__track">
+            <ul class="splide__list products">
+              <!-- Товари завантажуються з data/products.json -->
+            </ul>
+          </div>
+        </div>
+        <div class="products-slider__buttons">
+          <button class="products-slider__button--prev">
+            <span class="visually-hidden">Попередній слайд</span>
             <img
-              class="cta__icon"
-              src="/img/icons/arrow_right.svg"
+              src="/img/icons/arrow_right_red.svg"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+              width="28"
+              height="28"
+            />
+          </button>
+          <a
+            class="cta-button offers__cta-button"
+            href="https://meest-shop.com/categories"
+            rel="noopener"
+            target="_blank"
+          >
+            <span>Більше товарів</span>
+            <img
+              class="cta-icon"
+              src="/img/icons/tree.svg"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+              width="28"
+              height="28"
+            />
+          </a>
+          <button class="products-slider__button--next">
+            <span class="visually-hidden">Наступний слайд</span>
+            <img
+              src="/img/icons/arrow_right_red.svg"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+              width="28"
+              height="28"
+            />
+          </button>
+        </div>
+      </section>
+
+      <div class="pattern">
+        <div class="pattern__content">
+          <div class="pattern__inner-content"></div>
+        </div>
+      </div>
+
+      <section class="container categories" id="categories">
+        <div class="categories__section-container">
+          <h2 class="categories__title">
+            Купуйте зараз - святкуйте без турбот!
+          </h2>
+
+          <p class="categories__description">
+            Підготуйся до Нового року без метушні - обери подарунки, декор і
+            святковий настрій на Meest China Shop
+          </p>
+
+          <div class="categories__container">
+            <h3 class="visually-hidden">Популярні категорії</h3>
+            <ul class="categories__list">
+              <li class="categories__item">
+                <a
+                  class="categories__link"
+                  href="https://meest-shop.com/category/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <img
+                    src="/img/section-categories/gifts.png"
+                    alt=""
+                    aria-hidden="true"
+                    loading="lazy"
+                    width="60"
+                    height="60"
+                  />
+                  <span>Подарунки</span>
+                </a>
+              </li>
+              <li class="categories__item">
+                <a
+                  class="categories__link"
+                  href="https://meest-shop.com/category/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <img
+                    src="/img/section-categories/childrens_toys.png"
+                    alt=""
+                    aria-hidden="true"
+                    loading="lazy"
+                    width="60"
+                    height="60"
+                  />
+                  <span>Дитячі іграшки</span>
+                </a>
+              </li>
+              <li class="categories__item">
+                <a
+                  class="categories__link"
+                  href="https://meest-shop.com/category/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <img
+                    src="/img/section-categories/home_goods.png"
+                    alt=""
+                    aria-hidden="true"
+                    loading="lazy"
+                    width="60"
+                    height="60"
+                  />
+                  <span>Товари для дому</span>
+                </a>
+              </li>
+              <li class="categories__item">
+                <a
+                  class="categories__link"
+                  href="https://meest-shop.com/category/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <img
+                    src="/img/section-categories/holiday_decor.png"
+                    alt=""
+                    aria-hidden="true"
+                    loading="lazy"
+                    width="60"
+                    height="60"
+                  />
+                  <span>Святковий декор</span>
+                </a>
+              </li>
+              <li class="categories__item">
+                <a
+                  class="categories__link"
+                  href="https://meest-shop.com/category/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <img
+                    src="/img/section-categories/electronics.png"
+                    alt=""
+                    aria-hidden="true"
+                    loading="lazy"
+                    width="60"
+                    height="60"
+                  />
+                  <span>Електроніка</span>
+                </a>
+              </li>
+              <li class="categories__item">
+                <a
+                  class="categories__link"
+                  href="https://meest-shop.com/category/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <img
+                    src="/img/section-categories/holiday_clothing.png"
+                    alt=""
+                    aria-hidden="true"
+                    loading="lazy"
+                    width="60"
+                    height="60"
+                  />
+                  <span>Одяг для свят</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="how-to-order container"
+        id="how-to-order"
+        aria-labelledby="how-to-order-title"
+      >
+        <h2
+          class="how-to-order__title title"
+          id="how-to-order-title"
+          data-current-language="uk"
+        >
+          Замовляйте
+          <img
+            class="title-icon"
+            src="/img/section-how-to-order/accent.png"
+            alt=""
+            loading="lazy"
+            aria-hidden="true"
+            width="44"
+            height="44"
+          />
+          <span class="title-accent">вигідно</span>
+          <br class="only-576-992-br" />
+          за 4 кроки
+        </h2>
+
+        <p class="how-to-order__description">
+          Ми зробили процес закупівель максимально зручним і зрозумілим
+        </p>
+
+        <ol class="how-to-order__list">
+          <li class="how-to-order__item">
+            <img
+              src="/img/section-how-to-order/step-1.png"
               alt=""
               loading="lazy"
               aria-hidden="true"
-            >
-          </a>
+              width="120"
+              height="120"
+            />
+            <span class="how-to-order__item-number">1.</span> Знаходите товар
+            на 1688, Taobao або інших маркетплейсах Азії
+          </li>
+          <li class="how-to-order__item">
+            <img
+              src="/img/section-how-to-order/step-2.png"
+              alt=""
+              loading="lazy"
+              aria-hidden="true"
+              width="120"
+              height="120"
+            />
+            <span class="how-to-order__item-number">2.</span> Додаєте посилання
+            на товар - а ми купуємо його за вас
+          </li>
+          <li class="how-to-order__item">
+            <img
+              src="/img/section-how-to-order/step-3.png"
+              alt=""
+              loading="lazy"
+              aria-hidden="true"
+              width="120"
+              height="120"
+            />
+            <span class="how-to-order__item-number">3.</span> Оплачуєте
+            замовлення просто через особистий кабінет на сайті
+          </li>
+          <li class="how-to-order__item">
+            <img
+              src="/img/section-how-to-order/step-4.png"
+              alt=""
+              loading="lazy"
+              aria-hidden="true"
+              width="120"
+              height="120"
+            />
+            <span class="how-to-order__item-number">4.</span> Отримуєте доставку
+            в Україну без мовних бар’єрів і зайвих турбот
+          </li>
+        </ol>
+
+        <a
+          class="cta-button"
+          href="https://meest-shop.com/#services_id"
+          target="_blank"
+          rel="noopener"
+        >
+          <span>Зробити замовлення</span>
+          <img
+            class="cta-icon"
+            src="/img/icons/gift_white.svg"
+            alt=""
+            loading="lazy"
+            aria-hidden="true"
+            width="24"
+            height="24"
+          />
+        </a>
+      </section>
+
+      <div class="pattern">
+        <div class="pattern__content">
+          <div class="pattern__inner-content"></div>
         </div>
       </div>
-    </section>
-  </main>
 
-  <footer class="container footer">
-    <div class="footer__container">
-      <a
-        class="footer__logo"
-        href="https://meest-shop.com/ru/"
-        aria-label="Meest China Shop – перейти на главную страницу"
-      >
-        <img
-          class="footer__logo-img"
-          src="/img/logo_dark.svg"
-          alt=""
-          width="108"
-          height="44"
+      <section class="container additional-offers" id="additional-offers">
+        <h2 class="additional-offers__title title">
+          Популярне
+          <img
+            class="title-icon"
+            src="/img/section-additional-offers/accent_1.png"
+            alt=""
+            width="44"
+            height="44"
+            loading="lazy"
+            aria-hidden="true"
+          />
+          <br class="only-992-br" />
+          для
+          <br class="only-576-br" />
+          <span class="title-accent">яскравих свят</span>
+          <img
+            class="title-icon"
+            src="/img/section-additional-offers/accent_2.png"
+            alt=""
+            width="44"
+            height="44"
+            loading="lazy"
+            aria-hidden="true"
+          />
+        </h2>
+
+        <div class="splide splide-additional-offers products-slider">
+          <div class="splide__track">
+            <ul class="splide__list products">
+              <!-- Товари завантажуються з data/products.json -->
+            </ul>
+          </div>
+        </div>
+        <div class="products-slider__buttons">
+          <button class="products-slider__button--prev">
+            <span class="visually-hidden">Попередній слайд</span>
+            <img
+              src="/img/icons/arrow_right_red.svg"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+              width="28"
+              height="28"
+            />
+          </button>
+          <a
+            class="cta-button additional-offers__cta-button"
+            href="https://meest-shop.com/categories"
+            rel="noopener"
+            target="_blank"
+          >
+            <span>Більше товарів</span>
+            <img
+              class="cta-icon"
+              src="/img/icons/tree.svg"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+              width="28"
+              height="28"
+            />
+          </a>
+          <button class="products-slider__button--next">
+            <span class="visually-hidden">Наступний слайд</span>
+            <img
+              src="/img/icons/arrow_right_red.svg"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+              width="28"
+              height="28"
+            />
+          </button>
+        </div>
+      </section>
+
+      <section class="promo-12-12" id="promo-12-12">
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          class="promo-12-12__background-video"
+          poster="/img/section-promo-12-12/background_full.jpg"
+          aria-hidden="true"
         >
-      </a>
+          <source
+            src="/img/section-promo-12-12/videos/snow_video_540.webm"
+            type="video/webm"
+            media="(max-width: 720px)"
+          />
+          <source
+            src="/img/section-promo-12-12/videos/snow_video_540.mp4"
+            type="video/mp4"
+            media="(max-width: 720px)"
+          />
+          <source
+            src="/img/section-promo-12-12/videos/snow_video_720.webm"
+            type="video/webm"
+            media="(max-width: 1280px)"
+          />
+          <source
+            src="/img/section-promo-12-12/videos/snow_video_720.mp4"
+            type="video/mp4"
+            media="(max-width: 1280px)"
+          />
+          <source
+            src="/img/section-promo-12-12/videos/snow_video.webm"
+            type="video/webm"
+          />
+          <source
+            src="/img/section-promo-12-12/videos/snow_video.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <div class="promo-12-12__content container">
+          <h2 class="promo-12-12__title">
+            Сезон великих знижок і ще більших можливостей
+          </h2>
 
-      <nav
-        class="footer__nav"
-        aria-label="Навигация в футере"
-      >
-        <ul class="footer__nav-list">
-          <li class="footer__nav-item">
-            <a
-              class="footer__nav-link"
-              href="#top-discount-products"
-            >Предложения</a>
-          </li>
-          <li class="footer__nav-item">
-            <a
-              class="footer__nav-link"
-              href="#how-to-order"
-            >Как заказать</a>
-          </li>
-          <li class="footer__nav-item">
-            <a
-              class="footer__nav-link"
-              href="#why-us"
-            >Преимущества</a>
-          </li>
-        </ul>
-      </nav>
+          <p class="promo-12-12__description">
+            У Китаї вірять у силу чисел - а ми віримо у силу вигідних
+            закупівель. Розпродаж 12.12 - ідеальний момент поповнити склад та
+            підготуватися до передноворічного попиту.
+          </p>
 
-      <p class="footer__copyright">
-        <span class="footer__copyright-text">© 2025 Powered by © Meest Group. </span>
-        <span class="footer__copyright-text">All rights reserved.</span>
-      </p>
-    </div>
-  </footer>
-  <script src="/js/app.js"></script>
-</body>
+          <ul class="promo-12-12__list">
+            <li class="promo-12-12__item">
+              <p class="promo-12-12__item-content">
+                <img
+                  src="/img/section-promo-12-12/img-1.png"
+                  alt=""
+                  aria-hidden="true"
+                  loading="lazy"
+                  width="120"
+                  height="120"
+                />
+                <span>Зимові знижки</span>
+              </p>
+            </li>
+            <li class="promo-12-12__item">
+              <p class="promo-12-12__item-content">
+                <img
+                  src="/img/section-promo-12-12/img-2.png"
+                  alt=""
+                  aria-hidden="true"
+                  loading="lazy"
+                  width="120"
+                  height="120"
+                />
+                <span>Товари <span class="min-576">напряму</span> з Азії</span>
+              </p>
+            </li>
+            <li class="promo-12-12__item">
+              <p class="promo-12-12__item-content">
+                <img
+                  src="/img/section-promo-12-12/img-3.png"
+                  alt=""
+                  aria-hidden="true"
+                  loading="lazy"
+                  width="120"
+                  height="120"
+                />
+                <span>Зручна доставка</span>
+              </p>
+            </li>
+          </ul>
 
+          <a
+            class="promo-12-12__cta-button negative-cta-button"
+            href="https://meest-shop.com/#services_id"
+            rel="noopener"
+            target="_blank"
+          >
+            <span>Зробити замовлення</span>
+            <img
+              class="negative-cta-icon"
+              src="/img/icons/gift.svg"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+              width="28"
+              height="28"
+            />
+          </a>
+        </div>
+      </section>
+
+      <section class="container feedbacks-section" id="feedbacks">
+        <h2 class="feedbacks__title title">
+          <span class="title-accent">Розпаковки</span>
+          <img
+            class="title-icon"
+            src="/img/section-feedbacks/accent.png"
+            alt=""
+            loading="lazy"
+            aria-hidden="true"
+            width="44"
+            height="44"
+          />
+          від наших клієнтів
+        </h2>
+
+        <p class="feedbacks__description">
+          Клієнти Meest China Shop діляться своїми враженнями замовлень з Азії
+        </p>
+
+        <div class="splide splide-feedbacks products-slider">
+          <div class="splide__track">
+            <ul class="splide__list feedbacks feedbacks-list">
+              <li class="splide__slide feedbacks__item">
+                <div class="feedbacks__video-wrapper">
+                  <video
+                    class="feedbacks__video"
+                    poster="/img/section-feedbacks/posters/1.png"
+                    preload="metadata"
+                    playsinline
+                    aria-label="Відеовідгук 1"
+                  >
+                    <source
+                      src="/img/section-feedbacks/videos/1.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                  <div class="feedbacks__video-overlay" aria-hidden="true">
+                    <span class="feedbacks__video-icon">
+                      <img
+                        src="/img/icons/play.svg"
+                        alt=""
+                        aria-hidden="true"
+                        loading="lazy"
+                        width="40"
+                        height="40"
+                      />
+                    </span>
+                  </div>
+                </div>
+              </li>
+              <li class="splide__slide feedbacks__item">
+                <div class="feedbacks__video-wrapper">
+                  <video
+                    class="feedbacks__video"
+                    poster="/img/section-feedbacks/posters/2.png"
+                    preload="metadata"
+                    playsinline
+                    aria-label="Відеовідгук 2"
+                  >
+                    <source
+                      src="/img/section-feedbacks/videos/2.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                  <div class="feedbacks__video-overlay" aria-hidden="true">
+                    <span class="feedbacks__video-icon">
+                      <img
+                        src="/img/icons/play.svg"
+                        alt=""
+                        aria-hidden="true"
+                        loading="lazy"
+                        width="40"
+                        height="40"
+                      />
+                    </span>
+                  </div>
+                </div>
+              </li>
+              <li class="splide__slide feedbacks__item">
+                <div class="feedbacks__video-wrapper">
+                  <video
+                    class="feedbacks__video"
+                    poster="/img/section-feedbacks/posters/3.png"
+                    preload="metadata"
+                    playsinline
+                    aria-label="Відеовідгук 3"
+                  >
+                    <source
+                      src="/img/section-feedbacks/videos/3.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                  <div class="feedbacks__video-overlay" aria-hidden="true">
+                    <span class="feedbacks__video-icon">
+                      <img
+                        src="/img/icons/play.svg"
+                        alt=""
+                        aria-hidden="true"
+                        loading="lazy"
+                        width="40"
+                        height="40"
+                      />
+                    </span>
+                  </div>
+                </div>
+              </li>
+              <li class="splide__slide feedbacks__item">
+                <div class="feedbacks__video-wrapper">
+                  <video
+                    class="feedbacks__video"
+                    poster="/img/section-feedbacks/posters/4.png"
+                    preload="metadata"
+                    playsinline
+                    aria-label="Відеовідгук 4"
+                  >
+                    <source
+                      src="/img/section-feedbacks/videos/4.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                  <div class="feedbacks__video-overlay" aria-hidden="true">
+                    <span class="feedbacks__video-icon">
+                      <img
+                        src="/img/icons/play.svg"
+                        alt=""
+                        aria-hidden="true"
+                        loading="lazy"
+                        width="40"
+                        height="40"
+                      />
+                    </span>
+                  </div>
+                </div>
+              </li>
+              <li class="splide__slide feedbacks__item">
+                <div class="feedbacks__video-wrapper">
+                  <video
+                    class="feedbacks__video"
+                    poster="/img/section-feedbacks/posters/5.png"
+                    preload="metadata"
+                    playsinline
+                    aria-label="Відеовідгук 5"
+                  >
+                    <source
+                      src="/img/section-feedbacks/videos/5.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                  <div class="feedbacks__video-overlay" aria-hidden="true">
+                    <span class="feedbacks__video-icon">
+                      <img
+                        src="/img/icons/play.svg"
+                        alt=""
+                        aria-hidden="true"
+                        loading="lazy"
+                        width="40"
+                        height="40"
+                      />
+                    </span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="products-slider__buttons">
+          <button class="products-slider__button--prev">
+            <span class="visually-hidden">Попередній слайд</span>
+            <img
+              src="/img/icons/arrow_right_red.svg"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+              width="28"
+              height="28"
+            />
+          </button>
+          <a
+            class="cta-button feedbacks__cta-button"
+            href="https://meest-shop.com/categories"
+            target="_blank"
+            rel="noopener"
+          >
+            <span>До каталогу</span>
+            <img
+              class="cta-icon"
+              src="/img/icons/gift_white.svg"
+              alt=""
+              loading="lazy"
+              aria-hidden="true"
+              width="24"
+              height="24"
+            />
+          </a>
+          <button class="products-slider__button--next">
+            <span class="visually-hidden">Наступний слайд</span>
+            <img
+              src="/img/icons/arrow_right_red.svg"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+              width="28"
+              height="28"
+            />
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="container">
+      <div class="footer__container">
+        <div class="footer__cta">
+          <img
+            class="footer__cta-image"
+            src="/img/section-footer/santa.png"
+            alt=""
+            aria-hidden="true"
+            loading="lazy"
+            width="148"
+            height="148"
+          />
+          <h3 class="footer__cta-title">
+            Готуйтесь до свят разом з <br />Meest China Shop!
+          </h3>
+          <a
+            class="footer__cta-button negative-cta-button"
+            href="https://meest-shop.com/#services_id"
+            rel="noopener"
+            target="_blank"
+          >
+            <span>Зробити замовлення</span>
+            <img
+              class="negative-cta-icon"
+              src="/img/icons/gift_blue.svg"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+              width="28"
+              height="28"
+            />
+          </a>
+          <img
+            class="footer__cta-image"
+            src="/img/section-footer/snowman.png"
+            alt=""
+            aria-hidden="true"
+            loading="lazy"
+            width="148"
+            height="148"
+          />
+        </div>
+        <a
+          class="footer__logo"
+          href="https://meest-shop.com/"
+          aria-label="Meest China Shop – перейти на головну сторінку"
+        >
+          <img
+            class="footer__logo-img"
+            src="/img/logo_dark.svg"
+            alt=""
+            width="108"
+            height="44"
+          />
+        </a>
+
+        <nav class="footer__nav" aria-label="Навігація у футері">
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item">
+              <a href="#offers" class="footer__nav-link"> Пропозиції </a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#categories" class="footer__nav-link">Категорії</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#how-to-order" class="footer__nav-link">Як замовити</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#promo-12-12" class="footer__nav-link">Переваги</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#feedbacks" class="footer__nav-link">Розпаковки</a>
+            </li>
+          </ul>
+        </nav>
+
+        <p class="footer__copyright">
+          © 2025 Powered by © Meest Group. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="/js/splide.min.js"></script>
+    <script type="module" src="/js/app.js"></script>
+  </body>
 </html>
