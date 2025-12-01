@@ -10,7 +10,43 @@ import {
 
 let categoriesData = null;
 
+/**
+ * Визначає поточну мову сторінки
+ * @returns {string} 'uk' або 'ru'
+ */
+function getCurrentLanguage() {
+  const lang = document.documentElement.lang || 'uk';
+  return lang === 'ru' ? 'ru' : 'uk';
+}
+
+/**
+ * Отримує назву товару з урахуванням поточної мови
+ * @param {Object} product - Об'єкт товару
+ * @returns {string} Назва товару
+ */
+function getProductTitle(product) {
+  if (typeof product.title === 'object' && product.title !== null) {
+    const lang = getCurrentLanguage();
+    return product.title[lang] || product.title.uk || '';
+  }
+  return product.title || '';
+}
+
+/**
+ * Отримує назву категорії з урахуванням поточної мови
+ * @param {Object} category - Об'єкт категорії
+ * @returns {string} Назва категорії
+ */
+function getCategoryName(category) {
+  if (typeof category.name === 'object' && category.name !== null) {
+    const lang = getCurrentLanguage();
+    return category.name[lang] || category.name.uk || '';
+  }
+  return category.name || '';
+}
+
 export function renderProduct(product) {
+  const title = getProductTitle(product);
   return `
     <li class="splide__slide products__item">
       <a
@@ -30,7 +66,7 @@ export function renderProduct(product) {
             aria-hidden="true"
           />
           <header class="products__card-header">
-            <h3 class="products__card-title">${product.title}</h3>
+            <h3 class="products__card-title">${title}</h3>
             <p class="products__card-price">${product.price}</p>
           </header>
         </article>
@@ -117,7 +153,7 @@ export function renderTabs(categories) {
             aria-controls="offers-products"
             data-category-index="${index}"
           >
-            ${category.name}
+            ${getCategoryName(category)}
           </button>
         </li>
       `

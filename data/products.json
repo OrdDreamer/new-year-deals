@@ -1,212 +1,320 @@
 {
   "byCategories": [
     {
-      "name": "Подарунки",
+      "name": {
+        "uk": "Подарунки",
+        "ru": "Подарки"
+      },
       "products": [
         {
           "url": "https://meest-shop.com/product/taobao/658049868323",
-          "title": "Різдвяні прикраси",
+          "title": {
+            "uk": "Різдвяні прикраси",
+            "ru": "Рождественские украшения"
+          },
           "price": "$ 2,49",
           "image_url": "/img/products/658049868323.png"
         },
         {
           "url": "https://meest-shop.com/product/alibaba1688/645570059334",
-          "title": "Різдвяні прикраси",
+          "title": {
+            "uk": "Різдвяні прикраси",
+            "ru": "Рождественские украшения"
+          },
           "price": "$ 1,62",
           "image_url": "/img/products/645570059334.jpg"
         },
         {
           "url": "https://meest-shop.com/product/alibaba1688/955301221589",
-          "title": "Різдвяні статуетки",
+          "title": {
+            "uk": "Різдвяні статуетки",
+            "ru": "Рождественские статуэтки"
+          },
           "price": "$ 7,34",
           "image_url": "/img/products/955301221589.png"
         },
         {
           "url": "https://meest-shop.com/product/alibaba1688/842917068211",
-          "title": "Гірлянда-роса",
+          "title": {
+            "uk": "Гірлянда-роса",
+            "ru": "Гирлянда-роса"
+          },
           "price": "$ 5,58",
           "image_url": "/img/products/842917068211.png"
         },
         {
           "url": "https://meest-shop.com/product/taobao/658049868323",
-          "title": "Різдвяні прикраси",
+          "title": {
+            "uk": "Різдвяні прикраси",
+            "ru": "Рождественские украшения"
+          },
           "price": "$ 2,49",
           "image_url": "/img/products/658049868323.png"
         },
         {
           "url": "https://meest-shop.com/product/alibaba1688/645570059334",
-          "title": "Різдвяні прикраси",
+          "title": {
+            "uk": "Різдвяні прикраси",
+            "ru": "Рождественские украшения"
+          },
           "price": "$ 1,62",
           "image_url": "/img/products/645570059334.jpg"
         },
         {
           "url": "https://meest-shop.com/product/alibaba1688/955301221589",
-          "title": "Різдвяні статуетки",
+          "title": {
+            "uk": "Різдвяні статуетки",
+            "ru": "Рождественские статуэтки"
+          },
           "price": "$ 7,34",
           "image_url": "/img/products/955301221589.png"
         },
         {
           "url": "https://meest-shop.com/product/alibaba1688/842917068211",
-          "title": "Гірлянда-роса",
+          "title": {
+            "uk": "Гірлянда-роса",
+            "ru": "Гирлянда-роса"
+          },
           "price": "$ 5,58",
           "image_url": "/img/products/842917068211.png"
         }
       ]
     },
     {
-      "name": "Електроніка",
+      "name": {
+        "uk": "Електроніка",
+        "ru": "Электроника"
+      },
       "products": [
         {
           "url": "https://meest-shop.com/product/alibaba1688/810105318390",
-          "title": "Зарядна станція",
+          "title": {
+            "uk": "Зарядна станція",
+            "ru": "Зарядная станция"
+          },
           "price": "$ 87,96",
           "image_url": "/img/products/810105318390.png"
         },
         {
           "url": "https://meest-shop.com/product/taobao/891839266306",
-          "title": "Робот-пилосос",
+          "title": {
+            "uk": "Робот-пилосос",
+            "ru": "Робот-пылесос"
+          },
           "price": "$ 62,56",
           "image_url": "/img/products/891839266306.png"
         },
         {
           "url": "https://meest-shop.com/product/alibaba1688/893748290130",
-          "title": "Фігурка дракона",
+          "title": {
+            "uk": "Фігурка дракона",
+            "ru": "Фигурка дракона"
+          },
           "price": "$ 2,55",
           "image_url": "/img/products/893748290130.jpg"
         },
         {
           "url": "https://meest-shop.com/product/taobao/768106751900",
-          "title": "Іграшка для собак",
+          "title": {
+            "uk": "Іграшка для собак",
+            "ru": "Игрушка для собак"
+          },
           "price": "$ 1,5",
           "image_url": "/img/products/768106751900.png"
         },
         {
           "url": "https://meest-shop.com/product/alibaba1688/810105318390",
-          "title": "Зарядна станція",
+          "title": {
+            "uk": "Зарядна станція",
+            "ru": "Зарядная станция"
+          },
           "price": "$ 87,96",
           "image_url": "/img/products/810105318390.png"
         },
         {
           "url": "https://meest-shop.com/product/taobao/891839266306",
-          "title": "Робот-пилосос",
+          "title": {
+            "uk": "Робот-пилосос",
+            "ru": "Робот-пылесос"
+          },
           "price": "$ 62,56",
           "image_url": "/img/products/891839266306.png"
         },
         {
           "url": "https://meest-shop.com/product/alibaba1688/893748290130",
-          "title": "Фігурка дракона",
+          "title": {
+            "uk": "Фігурка дракона",
+            "ru": "Фигурка дракона"
+          },
           "price": "$ 2,55",
           "image_url": "/img/products/893748290130.jpg"
         },
         {
           "url": "https://meest-shop.com/product/taobao/768106751900",
-          "title": "Іграшка для собак",
+          "title": {
+            "uk": "Іграшка для собак",
+            "ru": "Игрушка для собак"
+          },
           "price": "$ 1,5",
           "image_url": "/img/products/768106751900.png"
         }
       ]
     },
     {
-      "name": "Дитячі іграшки",
+      "name": {
+        "uk": "Дитячі іграшки",
+        "ru": "Детские игрушки"
+      },
       "products": [
         {
           "url": "https://meest-shop.com/product/taobao/768106751900",
-          "title": "Іграшка для собак",
+          "title": {
+            "uk": "Іграшка для собак",
+            "ru": "Игрушка для собак"
+          },
           "price": "$ 1,5",
           "image_url": "/img/products/768106751900.png"
         },
         {
           "url": "https://meest-shop.com/product/taobao/658049868323",
-          "title": "Різдвяні прикраси",
+          "title": {
+            "uk": "Різдвяні прикраси",
+            "ru": "Рождественские украшения"
+          },
           "price": "$ 2,49",
           "image_url": "/img/products/658049868323.png"
         },
         {
           "url": "https://meest-shop.com/product/alibaba1688/955301221589",
-          "title": "Різдвяні статуетки",
+          "title": {
+            "uk": "Різдвяні статуетки",
+            "ru": "Рождественские статуэтки"
+          },
           "price": "$ 7,34",
           "image_url": "/img/products/955301221589.png"
         },
         {
           "url": "https://meest-shop.com/product/taobao/768106751900",
-          "title": "Іграшка для собак",
+          "title": {
+            "uk": "Іграшка для собак",
+            "ru": "Игрушка для собак"
+          },
           "price": "$ 1,5",
           "image_url": "/img/products/768106751900.png"
         },
         {
           "url": "https://meest-shop.com/product/taobao/658049868323",
-          "title": "Різдвяні прикраси",
+          "title": {
+            "uk": "Різдвяні прикраси",
+            "ru": "Рождественские украшения"
+          },
           "price": "$ 2,49",
           "image_url": "/img/products/658049868323.png"
         },
         {
           "url": "https://meest-shop.com/product/alibaba1688/955301221589",
-          "title": "Різдвяні статуетки",
+          "title": {
+            "uk": "Різдвяні статуетки",
+            "ru": "Рождественские статуэтки"
+          },
           "price": "$ 7,34",
           "image_url": "/img/products/955301221589.png"
         },
         {
           "url": "https://meest-shop.com/product/taobao/658049868323",
-          "title": "Різдвяні прикраси",
+          "title": {
+            "uk": "Різдвяні прикраси",
+            "ru": "Рождественские украшения"
+          },
           "price": "$ 2,49",
           "image_url": "/img/products/658049868323.png"
         },
         {
           "url": "https://meest-shop.com/product/alibaba1688/955301221589",
-          "title": "Різдвяні статуетки",
+          "title": {
+            "uk": "Різдвяні статуетки",
+            "ru": "Рождественские статуэтки"
+          },
           "price": "$ 7,34",
           "image_url": "/img/products/955301221589.png"
         }
       ]
     },
     {
-      "name": "Святковий декор",
+      "name": {
+        "uk": "Святковий декор",
+        "ru": "Праздничный декор"
+      },
       "products": [
         {
           "url": "https://meest-shop.com/product/alibaba1688/842917068211",
-          "title": "Гірлянда-роса",
+          "title": {
+            "uk": "Гірлянда-роса",
+            "ru": "Гирлянда-роса"
+          },
           "price": "$ 5,58",
           "image_url": "/img/products/842917068211.png"
         },
         {
           "url": "https://meest-shop.com/product/alibaba1688/645570059334",
-          "title": "Різдвяні прикраси",
+          "title": {
+            "uk": "Різдвяні прикраси",
+            "ru": "Рождественские украшения"
+          },
           "price": "$ 1,62",
           "image_url": "/img/products/645570059334.jpg"
         },
         {
           "url": "https://meest-shop.com/product/alibaba1688/955301221589",
-          "title": "Різдвяні статуетки",
+          "title": {
+            "uk": "Різдвяні статуетки",
+            "ru": "Рождественские статуэтки"
+          },
           "price": "$ 7,34",
           "image_url": "/img/products/955301221589.png"
         },
         {
           "url": "https://meest-shop.com/product/taobao/658049868323",
-          "title": "Різдвяні прикраси",
+          "title": {
+            "uk": "Різдвяні прикраси",
+            "ru": "Рождественские украшения"
+          },
           "price": "$ 2,49",
           "image_url": "/img/products/658049868323.png"
         },
         {
           "url": "https://meest-shop.com/product/alibaba1688/842917068211",
-          "title": "Гірлянда-роса",
+          "title": {
+            "uk": "Гірлянда-роса",
+            "ru": "Гирлянда-роса"
+          },
           "price": "$ 5,58",
           "image_url": "/img/products/842917068211.png"
         },
         {
           "url": "https://meest-shop.com/product/alibaba1688/645570059334",
-          "title": "Різдвяні прикраси",
+          "title": {
+            "uk": "Різдвяні прикраси",
+            "ru": "Рождественские украшения"
+          },
           "price": "$ 1,62",
           "image_url": "/img/products/645570059334.jpg"
         },
         {
           "url": "https://meest-shop.com/product/alibaba1688/955301221589",
-          "title": "Різдвяні статуетки",
+          "title": {
+            "uk": "Різдвяні статуетки",
+            "ru": "Рождественские статуэтки"
+          },
           "price": "$ 7,34",
           "image_url": "/img/products/955301221589.png"
         },
         {
           "url": "https://meest-shop.com/product/taobao/658049868323",
-          "title": "Різдвяні прикраси",
+          "title": {
+            "uk": "Різдвяні прикраси",
+            "ru": "Рождественские украшения"
+          },
           "price": "$ 2,49",
           "image_url": "/img/products/658049868323.png"
         }
@@ -216,49 +324,73 @@
   "additionalOffers": [
     {
       "url": "https://meest-shop.com/product/taobao/658049868323",
-      "title": "Різдвяні прикраси",
+      "title": {
+        "uk": "Різдвяні прикраси",
+        "ru": "Рождественские украшения"
+      },
       "price": "$ 2,49",
       "image_url": "/img/products/658049868323.png"
     },
     {
       "url": "https://meest-shop.com/product/alibaba1688/645570059334",
-      "title": "Різдвяні прикраси",
+      "title": {
+        "uk": "Різдвяні прикраси",
+        "ru": "Рождественские украшения"
+      },
       "price": "$ 1,62",
       "image_url": "/img/products/645570059334.jpg"
     },
     {
       "url": "https://meest-shop.com/product/alibaba1688/955301221589",
-      "title": "Різдвяні статуетки",
+      "title": {
+        "uk": "Різдвяні статуетки",
+        "ru": "Рождественские статуэтки"
+      },
       "price": "$ 7,34",
       "image_url": "/img/products/955301221589.png"
     },
     {
       "url": "https://meest-shop.com/product/alibaba1688/842917068211",
-      "title": "Гірлянда-роса",
+      "title": {
+        "uk": "Гірлянда-роса",
+        "ru": "Гирлянда-роса"
+      },
       "price": "$ 5,58",
       "image_url": "/img/products/842917068211.png"
     },
     {
       "url": "https://meest-shop.com/product/alibaba1688/810105318390",
-      "title": "Зарядна станція",
+      "title": {
+        "uk": "Зарядна станція",
+        "ru": "Зарядная станция"
+      },
       "price": "$ 87,96",
       "image_url": "/img/products/810105318390.png"
     },
     {
       "url": "https://meest-shop.com/product/alibaba1688/893748290130",
-      "title": "Фігурка дракона",
+      "title": {
+        "uk": "Фігурка дракона",
+        "ru": "Фигурка дракона"
+      },
       "price": "$ 2,55",
       "image_url": "/img/products/893748290130.jpg"
     },
     {
       "url": "https://meest-shop.com/product/taobao/891839266306",
-      "title": "Робот-пилосос",
+      "title": {
+        "uk": "Робот-пилосос",
+        "ru": "Робот-пылесос"
+      },
       "price": "$ 62,56",
       "image_url": "/img/products/891839266306.png"
     },
     {
       "url": "https://meest-shop.com/product/taobao/768106751900",
-      "title": "Іграшка для собак",
+      "title": {
+        "uk": "Іграшка для собак",
+        "ru": "Игрушка для собак"
+      },
       "price": "$ 1,5",
       "image_url": "/img/products/768106751900.png"
     }
