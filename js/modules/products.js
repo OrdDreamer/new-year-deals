@@ -45,6 +45,19 @@ function updateSplideSlides(splideInstance, products) {
     return;
   }
 
+  // Перевіряємо, чи слайдер знищений (destroyed)
+  // Якщо слайдер знищений, оновлюємо DOM безпосередньо
+  if (splideInstance.state && splideInstance.state.is(Splide.STATES.DESTROYED)) {
+    const container = splideInstance.root;
+    if (container) {
+      const productsList = container.querySelector(".splide__list.products");
+      if (productsList) {
+        productsList.innerHTML = products.map(renderProduct).join("");
+        return;
+      }
+    }
+  }
+
   // Видаляємо всі існуючі слайди
   splideInstance.remove(() => true);
   const slidesHtml = products.map(renderProduct);
