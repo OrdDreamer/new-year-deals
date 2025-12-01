@@ -1,0 +1,104 @@
+# This file is a template, and might need editing before it works on your project.
+# This is a sample GitLab CI/CD configuration file that should run without any modifications.
+# It demonstrates a basic 3 stage CI/CD pipeline. Instead of real tests or scripts,
+# it uses echo commands to simulate the pipeline execution.
+#
+# A pipeline is composed of independent jobs that run scripts, grouped into stages.
+# Stages run in sequential order, but jobs within stages run in parallel.
+#
+# For more information, see: https://docs.gitlab.com/ee/ci/yaml/index.html#stages
+#
+# You can copy and paste this template into a new `.gitlab-ci.yml` file.
+# You should not add this template to an existing `.gitlab-ci.yml` file by using the `include:` keyword.
+#
+# To contribute improvements to CI/CD templates, please follow the Development guide at:
+# https://docs.gitlab.com/ee/development/cicd/templates.html
+# This specific template is located at:
+# https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Getting-Started.gitlab-ci.yml
+
+#stages: # List of stages for jobs, and their order of execution
+#  - build_auth_app
+#  - build_deploy_app
+
+#stages:
+#  - build
+#  - deploy
+
+stages:
+  - build
+  - deploy
+
+variables:
+  DEST_PATH: "/home/mc.local/t.voroniuk/containers/landings/apps/meest-shop/new-year-deals"
+
+build:
+  image: registry.voronyuk.com/meest-shop-landing:node-22-alpine
+  stage: build
+#  extends: .default_rules
+  when: manual
+  script:
+    - ls -lah
+    - npm install
+    - npm run build:new:production
+  artifacts:
+    paths:
+      - dist
+  #  before_script:
+#    - which ssh-agent || ( apk update && apk add openssh-client )
+#    - eval $(ssh-agent -s)
+#    - echo "${SSH_KEY}" | ssh-add -
+  tags:
+    - docker
+
+deploy:
+  image: docker:19.03.12
+  stage: deploy
+  dependencies:
+    - build
+  when: manual
+  environment: development
+  script:
+    - ssh -o StrictHostKeyChecking=no "t.voroniuk@192.168.105.72" "mkdir -p \"${DEST_PATH}\""
+    - scp -oStrictHostKeyChecking=no -r ./dist/* "t.voroniuk"@"192.168.105.72":"${DEST_PATH}"
+  before_script:
+    - which ssh-agent || ( apk update && apk add openssh-client )
+    - eval $(ssh-agent -s)
+    - echo "${SSH_KEY}" | ssh-add -
+  tags:
+    - docker
+
+## Базові налаштування для завдань
+#.default_rules:
+#  rules:
+#    - if: '$CI_COMMIT_REF_NAME == $MAIN_DEPLOY_BRANCH'
+#      when: always
+#      variables:
+#        HOST: "$PRODUCTION_HOST"
+#        USERNAME: "$SSH_USERNAME_PRODUCTION"
+#        SSH_KEY: "$SSH_PRIVATE_KEY_PRODUCTION"
+#        DEST_DIR: "/home/t.voroniuk/www/ng.meest.cn"
+#        WP_CONFIG: "$WP_CONFIG_PRODUCTION"
+#    - if: '$CI_COMMIT_REF_NAME == $DEV_DEPLOY_BRANCH'
+#      when: always
+#      variables:
+#        HOST: "$DEVELOPMENT_HOST"
+#        USERNAME: "$SSH_USERNAME_DEVELOPMENT"
+#        SSH_KEY: "$SSH_PRIVATE_KEY_DEVELOPMENT"
+#        DEST_DIR: "/home/mc.local/t.voroniuk/containers/landings/apps/ng.meest.cn"
+#        WP_CONFIG: "$WP_CONFIG_DEVELOPMENT"
+
+#deploy:
+#  image: docker:19.03.12
+#  stage: deploy
+#  environment: development
+#  extends: .default_rules
+#  script:
+#    - ls -lah
+#    - echo "${WP_CONFIG}" > wp-config.php
+#    - scp -oStrictHostKeyChecking=no -r ./* "${USERNAME}"@"${HOST}":"${DEST_DIR}"
+#  before_script:
+#    - which ssh-agent || ( apk update && apk add openssh-client )
+#    - eval $(ssh-agent -s)
+#    - echo "${SSH_KEY}" | ssh-add -
+#  tags:
+#    - docker
