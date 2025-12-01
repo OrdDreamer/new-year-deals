@@ -34,7 +34,7 @@ jobs:
       - name: Build with Webpack
         env:
           GITHUB_PAGES: true
-        run: npm run build:production
+        run: npm run build:new:production
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
