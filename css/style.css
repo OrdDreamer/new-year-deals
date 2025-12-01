@@ -1336,6 +1336,14 @@ footer {
   }
 }
 
+:lang(ru) .categories__link {
+  font-size: 18px;
+
+  @media screen and (min-width: 576px) {
+    font-size: 20px;
+  }
+}
+
 .categories__link:hover {
   box-shadow: 0 0 18px 2px #a6c8e3cc;
 }
