@@ -323,40 +323,13 @@
   ],
   "additionalOffers": [
     {
-      "url": "https://meest-shop.com/product/taobao/658049868323",
+      "url": "https://meest-shop.com/product/taobao/666986250528",
       "title": {
-        "uk": "Різдвяні прикраси",
-        "ru": "Рождественские украшения"
+        "uk": "Зарядна станція",
+        "ru": "Зарядная станция"
       },
-      "price": "$ 2,49",
-      "image_url": "/img/products/658049868323.png"
-    },
-    {
-      "url": "https://meest-shop.com/product/alibaba1688/645570059334",
-      "title": {
-        "uk": "Різдвяні прикраси",
-        "ru": "Рождественские украшения"
-      },
-      "price": "$ 1,62",
-      "image_url": "/img/products/645570059334.jpg"
-    },
-    {
-      "url": "https://meest-shop.com/product/alibaba1688/955301221589",
-      "title": {
-        "uk": "Різдвяні статуетки",
-        "ru": "Рождественские статуэтки"
-      },
-      "price": "$ 7,34",
-      "image_url": "/img/products/955301221589.png"
-    },
-    {
-      "url": "https://meest-shop.com/product/alibaba1688/842917068211",
-      "title": {
-        "uk": "Гірлянда-роса",
-        "ru": "Гирлянда-роса"
-      },
-      "price": "$ 5,58",
-      "image_url": "/img/products/842917068211.png"
+      "price": "$ 192,65",
+      "image_url": "/img/products/666986250528.jpg"
     },
     {
       "url": "https://meest-shop.com/product/alibaba1688/810105318390",
@@ -364,35 +337,62 @@
         "uk": "Зарядна станція",
         "ru": "Зарядная станция"
       },
-      "price": "$ 87,96",
-      "image_url": "/img/products/810105318390.png"
+      "price": "$ 88,09",
+      "image_url": "/img/products/810105318390.jpg"
     },
     {
-      "url": "https://meest-shop.com/product/alibaba1688/893748290130",
+      "url": "https://meest-shop.com/product/alibaba1688/764302556339",
       "title": {
-        "uk": "Фігурка дракона",
-        "ru": "Фигурка дракона"
+        "uk": "Зарядна станція",
+        "ru": "Зарядная станция"
       },
-      "price": "$ 2,55",
-      "image_url": "/img/products/893748290130.jpg"
+      "price": "$ 305,88",
+      "image_url": "/img/products/764302556339.jpg"
     },
     {
-      "url": "https://meest-shop.com/product/taobao/891839266306",
+      "url": "https://meest-shop.com/product/alibaba1688/885276904670",
       "title": {
-        "uk": "Робот-пилосос",
-        "ru": "Робот-пылесос"
+        "uk": "Зарядна станція",
+        "ru": "Зарядная станция"
       },
-      "price": "$ 62,56",
-      "image_url": "/img/products/891839266306.png"
+      "price": "$ 220,44",
+      "image_url": "/img/products/885276904670.jpg"
     },
     {
-      "url": "https://meest-shop.com/product/taobao/768106751900",
+      "url": "https://meest-shop.com/product/alibaba1688/944002660389",
       "title": {
-        "uk": "Іграшка для собак",
-        "ru": "Игрушка для собак"
+        "uk": "Зарядна станція",
+        "ru": "Зарядная станция"
       },
-      "price": "$ 1,5",
-      "image_url": "/img/products/768106751900.png"
+      "price": "$ 213,24",
+      "image_url": "/img/products/944002660389.jpg"
+    },
+    {
+      "url": "https://meest-shop.com/product/alibaba1688/827237599340",
+      "title": {
+        "uk": "Зарядна станція",
+        "ru": "Зарядная станция"
+      },
+      "price": "$ 1.411,8",
+      "image_url": "/img/products/827237599340.jpg"
+    },
+    {
+      "url": "https://meest-shop.com/product/alibaba1688/880148516915",
+      "title": {
+        "uk": "Зарядна станція",
+        "ru": "Зарядная станция"
+      },
+      "price": "$ 161,76",
+      "image_url": "/img/products/880148516915.jpg"
+    },
+    {
+      "url": "https://meest-shop.com/product/taobao/673119361302",
+      "title": {
+        "uk": "Зарядна станція",
+        "ru": "Зарядная станция"
+      },
+      "price": "$ 56,23",
+      "image_url": "/img/products/673119361302.jpg"
     }
   ]
 }
