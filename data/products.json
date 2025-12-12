@@ -7,7 +7,10 @@
       },
       "products": [
         {
-          "url": "https://meest-shop.com/product/alibaba1688/970703090556",
+          "url": {
+            "uk": "https://meest-shop.com/product/alibaba1688/970703090556",
+            "ru": "https://meest-shop.com/ru/product/alibaba1688/970703090556"
+          },
           "title": {
             "uk": "Лампа-проектор",
             "ru": "Лампа-проектор"
@@ -16,7 +19,10 @@
           "image_url": "/img/products/970703090556.jpg"
         },
         {
-          "url": "https://meest-shop.com/product/alibaba1688/943233483424",
+          "url": {
+            "uk": "https://meest-shop.com/product/alibaba1688/943233483424",
+            "ru": "https://meest-shop.com/ru/product/alibaba1688/943233483424"
+          },
           "title": {
             "uk": "Проектор",
             "ru": "Проектор"
@@ -25,7 +31,10 @@
           "image_url": "/img/products/943233483424.jpg"
         },
         {
-          "url": "https://meest-shop.com/product/alibaba1688/778107241731",
+          "url": {
+            "uk": "https://meest-shop.com/product/alibaba1688/778107241731",
+            "ru": "https://meest-shop.com/ru/product/alibaba1688/778107241731"
+          },
           "title": {
             "uk": "Годинник-нічник",
             "ru": "Часы-ночник"
@@ -34,7 +43,10 @@
           "image_url": "/img/products/778107241731.jpg"
         },
         {
-          "url": "https://meest-shop.com/product/alibaba1688/730640730706",
+          "url": {
+            "uk": "https://meest-shop.com/product/alibaba1688/730640730706",
+            "ru": "https://meest-shop.com/ru/product/alibaba1688/730640730706"
+          },
           "title": {
             "uk": "Чайник",
             "ru": "Чайник"
@@ -43,7 +55,10 @@
           "image_url": "/img/products/730640730706.jpg"
         },
         {
-          "url": "https://meest-shop.com/product/alibaba1688/961754148310",
+          "url": {
+            "uk": "https://meest-shop.com/product/alibaba1688/961754148310",
+            "ru": "https://meest-shop.com/ru/product/alibaba1688/961754148310"
+          },
           "title": {
             "uk": "Набір дитячих тарілок",
             "ru": "Набор детских тарелок"
@@ -52,7 +67,10 @@
           "image_url": "/img/products/961754148310.jpg"
         },
         {
-          "url": "https://meest-shop.com/product/alibaba1688/892996859074",
+          "url": {
+            "uk": "https://meest-shop.com/product/alibaba1688/892996859074",
+            "ru": "https://meest-shop.com/ru/product/alibaba1688/892996859074"
+          },
           "title": {
             "uk": "Набір канцелярії",
             "ru": "Набор канцелярии"
@@ -61,7 +79,10 @@
           "image_url": "/img/products/892996859074.jpg"
         },
         {
-          "url": "https://meest-shop.com/product/alibaba1688/988734011188",
+          "url": {
+            "uk": "https://meest-shop.com/product/alibaba1688/988734011188",
+            "ru": "https://meest-shop.com/ru/product/alibaba1688/988734011188"
+          },
           "title": {
             "uk": "Чашка",
             "ru": "Чашка"
@@ -70,7 +91,10 @@
           "image_url": "/img/products/988734011188.jpg"
         },
         {
-          "url": "https://meest-shop.com/product/alibaba1688/675228428853",
+          "url": {
+            "uk": "https://meest-shop.com/product/alibaba1688/675228428853",
+            "ru": "https://meest-shop.com/ru/product/alibaba1688/675228428853"
+          },
           "title": {
             "uk": "Блокнот",
             "ru": "Блокнот"
@@ -87,7 +111,10 @@
       },
       "products": [
         {
-          "url": "https://meest-shop.com/product/taobao/673764244879",
+          "url": {
+            "uk": "https://meest-shop.com/product/taobao/673764244879",
+            "ru": "https://meest-shop.com/ru/product/taobao/673764244879"
+          },
           "title": {
             "uk": "4К камера",
             "ru": "4К камера"
@@ -96,7 +123,10 @@
           "image_url": "/img/products/673764244879.jpg"
         },
         {
-          "url": "https://meest-shop.com/product/taobao/853272391747",
+          "url": {
+            "uk": "https://meest-shop.com/product/taobao/853272391747",
+            "ru": "https://meest-shop.com/ru/product/taobao/853272391747"
+          },
           "title": {
             "uk": "7-дюймова ігрова консоль",
             "ru": "7-дюймовая игровая консоль"
@@ -105,7 +135,10 @@
           "image_url": "/img/products/853272391747.jpg"
         },
         {
-          "url": "https://meest-shop.com/product/taobao/588242673939",
+          "url": {
+            "uk": "https://meest-shop.com/product/taobao/588242673939",
+            "ru": "https://meest-shop.com/ru/product/taobao/588242673939"
+          },
           "title": {
             "uk": "Бездротова клавіатура",
             "ru": "Беспроводная клавиатура"
@@ -114,7 +147,10 @@
           "image_url": "/img/products/588242673939.jpg"
         },
         {
-          "url": "https://meest-shop.com/product/taobao/682322563482",
+          "url": {
+            "uk": "https://meest-shop.com/product/taobao/682322563482",
+            "ru": "https://meest-shop.com/ru/product/taobao/682322563482"
+          },
           "title": {
             "uk": "Портативна сонячна станція",
             "ru": "Портативная солнечная станция"
@@ -123,7 +159,10 @@
           "image_url": "/img/products/682322563482.jpg"
         },
         {
-          "url": "https://meest-shop.com/product/taobao/822831492043",
+          "url": {
+            "uk": "https://meest-shop.com/product/taobao/822831492043",
+            "ru": "https://meest-shop.com/ru/product/taobao/822831492043"
+          },
           "title": {
             "uk": "Масажер для шиї",
             "ru": "Массажер для шеи"
@@ -132,7 +171,10 @@
           "image_url": "/img/products/822831492043.jpg"
         },
         {
-          "url": "https://meest-shop.com/product/taobao/537553352088",
+          "url": {
+            "uk": "https://meest-shop.com/product/taobao/537553352088",
+            "ru": "https://meest-shop.com/ru/product/taobao/537553352088"
+          },
           "title": {
             "uk": "Power Bank 20000",
             "ru": "Power Bank 20000"
@@ -141,7 +183,10 @@
           "image_url": "/img/products/537553352088.jpg"
         },
         {
-          "url": "https://meest-shop.com/product/taobao/933594230776",
+          "url": {
+            "uk": "https://meest-shop.com/product/taobao/933594230776",
+            "ru": "https://meest-shop.com/ru/product/taobao/933594230776"
+          },
           "title": {
             "uk": "Камера",
             "ru": "Камера"
@@ -150,7 +195,10 @@
           "image_url": "/img/products/933594230776.jpg"
         },
         {
-          "url": "https://meest-shop.com/product/taobao/961122571540",
+          "url": {
+            "uk": "https://meest-shop.com/product/taobao/961122571540",
+            "ru": "https://meest-shop.com/ru/product/taobao/961122571540"
+          },
           "title": {
             "uk": "LED маска для обличчя",
             "ru": "LED маска для лица"
@@ -167,7 +215,10 @@
       },
       "products": [
         {
-          "url": "https://meest-shop.com/product/alibaba1688/641556309589",
+          "url": {
+            "uk": "https://meest-shop.com/product/alibaba1688/641556309589",
+            "ru": "https://meest-shop.com/ru/product/alibaba1688/641556309589"
+          },
           "title": {
             "uk": "Розвиваючі іграшки",
             "ru": "Развивающие игрушки"
@@ -176,7 +227,10 @@
           "image_url": "/img/products/641556309589.jpg"
         },
         {
-          "url": "https://meest-shop.com/product/alibaba1688/798657685463",
+          "url": {
+            "uk": "https://meest-shop.com/product/alibaba1688/798657685463",
+            "ru": "https://meest-shop.com/ru/product/alibaba1688/798657685463"
+          },
           "title": {
             "uk": "Дерев'яний конструктор",
             "ru": "Деревянный конструктор"
@@ -185,7 +239,10 @@
           "image_url": "/img/products/798657685463.jpg"
         },
         {
-          "url": "https://meest-shop.com/product/alibaba1688/790327299101",
+          "url": {
+            "uk": "https://meest-shop.com/product/alibaba1688/790327299101",
+            "ru": "https://meest-shop.com/ru/product/alibaba1688/790327299101"
+          },
           "title": {
             "uk": "Набір пазлів",
             "ru": "Набор пазлов"
@@ -194,7 +251,10 @@
           "image_url": "/img/products/790327299101.jpg"
         },
         {
-          "url": "https://meest-shop.com/product/alibaba1688/889336970278",
+          "url": {
+            "uk": "https://meest-shop.com/product/alibaba1688/889336970278",
+            "ru": "https://meest-shop.com/ru/product/alibaba1688/889336970278"
+          },
           "title": {
             "uk": "Повітряний пластилін",
             "ru": "Воздушный пластилин"
@@ -203,7 +263,10 @@
           "image_url": "/img/products/889336970278.jpg"
         },
         {
-          "url": "https://meest-shop.com/product/alibaba1688/729892417620",
+          "url": {
+            "uk": "https://meest-shop.com/product/alibaba1688/729892417620",
+            "ru": "https://meest-shop.com/ru/product/alibaba1688/729892417620"
+          },
           "title": {
             "uk": "Флеш-картки",
             "ru": "Флеш-карточки"
@@ -212,7 +275,10 @@
           "image_url": "/img/products/729892417620.jpg"
         },
         {
-          "url": "https://meest-shop.com/product/alibaba1688/623559221072",
+          "url": {
+            "uk": "https://meest-shop.com/product/alibaba1688/623559221072",
+            "ru": "https://meest-shop.com/ru/product/alibaba1688/623559221072"
+          },
           "title": {
             "uk": "Scratch-розмальовки",
             "ru": "Scratch-раскраски"
@@ -221,7 +287,10 @@
           "image_url": "/img/products/623559221072.jpg"
         },
         {
-          "url": "https://meest-shop.com/product/alibaba1688/829948421274",
+          "url": {
+            "uk": "https://meest-shop.com/product/alibaba1688/829948421274",
+            "ru": "https://meest-shop.com/ru/product/alibaba1688/829948421274"
+          },
           "title": {
             "uk": "Слайм",
             "ru": "Слайм"
@@ -230,7 +299,10 @@
           "image_url": "/img/products/829948421274.jpg"
         },
         {
-          "url": "https://meest-shop.com/product/alibaba1688/891921660152",
+          "url": {
+            "uk": "https://meest-shop.com/product/alibaba1688/891921660152",
+            "ru": "https://meest-shop.com/ru/product/alibaba1688/891921660152"
+          },
           "title": {
             "uk": "Набір наклейок",
             "ru": "Набор наклеек"
@@ -247,7 +319,10 @@
       },
       "products": [
         {
-          "url": "https://meest-shop.com/product/alibaba1688/859042492929",
+          "url": {
+            "uk": "https://meest-shop.com/product/alibaba1688/859042492929",
+            "ru": "https://meest-shop.com/ru/product/alibaba1688/859042492929"
+          },
           "title": {
             "uk": "Обруч для волосся",
             "ru": "Обруч для волос"
@@ -256,7 +331,10 @@
           "image_url": "/img/products/859042492929.jpg"
         },
         {
-          "url": "https://meest-shop.com/product/alibaba1688/862384721391",
+          "url": {
+            "uk": "https://meest-shop.com/product/alibaba1688/862384721391",
+            "ru": "https://meest-shop.com/ru/product/alibaba1688/862384721391"
+          },
           "title": {
             "uk": "Міні-штучне дерево",
             "ru": "Мини-искусственное дерево"
@@ -265,7 +343,10 @@
           "image_url": "/img/products/862384721391.jpg"
         },
         {
-          "url": "https://meest-shop.com/product/alibaba1688/954521945408",
+          "url": {
+            "uk": "https://meest-shop.com/product/alibaba1688/954521945408",
+            "ru": "https://meest-shop.com/ru/product/alibaba1688/954521945408"
+          },
           "title": {
             "uk": "Світлодіодні новорічні ліхтарики",
             "ru": "Светодиодные новогодние фонарики"
@@ -274,7 +355,10 @@
           "image_url": "/img/products/954521945408.jpg"
         },
         {
-          "url": "https://meest-shop.com/product/alibaba1688/739835621822",
+          "url": {
+            "uk": "https://meest-shop.com/product/alibaba1688/739835621822",
+            "ru": "https://meest-shop.com/ru/product/alibaba1688/739835621822"
+          },
           "title": {
             "uk": "Світлодіодні ліхтарики",
             "ru": "Светодиодные фонарики"
@@ -283,7 +367,10 @@
           "image_url": "/img/products/739835621822.jpg"
         },
         {
-          "url": "https://meest-shop.com/product/alibaba1688/902726836014",
+          "url": {
+            "uk": "https://meest-shop.com/product/alibaba1688/902726836014",
+            "ru": "https://meest-shop.com/ru/product/alibaba1688/902726836014"
+          },
           "title": {
             "uk": "Різдвяна прикраса",
             "ru": "Рождественское украшение"
@@ -292,7 +379,10 @@
           "image_url": "/img/products/902726836014.jpg"
         },
         {
-          "url": "https://meest-shop.com/product/alibaba1688/626781536966",
+          "url": {
+            "uk": "https://meest-shop.com/product/alibaba1688/626781536966",
+            "ru": "https://meest-shop.com/ru/product/alibaba1688/626781536966"
+          },
           "title": {
             "uk": "Набір кульок",
             "ru": "Набор шариков"
@@ -301,7 +391,10 @@
           "image_url": "/img/products/626781536966.jpg"
         },
         {
-          "url": "https://meest-shop.com/product/alibaba1688/737618820244",
+          "url": {
+            "uk": "https://meest-shop.com/product/alibaba1688/737618820244",
+            "ru": "https://meest-shop.com/ru/product/alibaba1688/737618820244"
+          },
           "title": {
             "uk": "Ялинкова прикраса",
             "ru": "Елочное украшение"
@@ -310,7 +403,10 @@
           "image_url": "/img/products/737618820244.jpg"
         },
         {
-          "url": "https://meest-shop.com/product/alibaba1688/725693495657",
+          "url": {
+            "uk": "https://meest-shop.com/product/alibaba1688/725693495657",
+            "ru": "https://meest-shop.com/ru/product/alibaba1688/725693495657"
+          },
           "title": {
             "uk": "Чохол для пляшки",
             "ru": "Чехол для бутылки"
@@ -323,7 +419,10 @@
   ],
   "additionalOffers": [
     {
-      "url": "https://meest-shop.com/product/taobao/666986250528",
+      "url": {
+        "uk": "https://meest-shop.com/product/taobao/666986250528",
+        "ru": "https://meest-shop.com/ru/product/taobao/666986250528"
+      },
       "title": {
         "uk": "Зарядна станція",
         "ru": "Зарядная станция"
@@ -332,7 +431,10 @@
       "image_url": "/img/products/666986250528.jpg"
     },
     {
-      "url": "https://meest-shop.com/product/alibaba1688/810105318390",
+      "url": {
+        "uk": "https://meest-shop.com/product/alibaba1688/810105318390",
+        "ru": "https://meest-shop.com/ru/product/alibaba1688/810105318390"
+      },
       "title": {
         "uk": "Зарядна станція",
         "ru": "Зарядная станция"
@@ -341,7 +443,10 @@
       "image_url": "/img/products/810105318390.jpg"
     },
     {
-      "url": "https://meest-shop.com/product/alibaba1688/764302556339",
+      "url": {
+        "uk": "https://meest-shop.com/product/alibaba1688/764302556339",
+        "ru": "https://meest-shop.com/ru/product/alibaba1688/764302556339"
+      },
       "title": {
         "uk": "Зарядна станція",
         "ru": "Зарядная станция"
@@ -350,7 +455,10 @@
       "image_url": "/img/products/764302556339.jpg"
     },
     {
-      "url": "https://meest-shop.com/product/alibaba1688/885276904670",
+      "url": {
+        "uk": "https://meest-shop.com/product/alibaba1688/885276904670",
+        "ru": "https://meest-shop.com/ru/product/alibaba1688/885276904670"
+      },
       "title": {
         "uk": "Зарядна станція",
         "ru": "Зарядная станция"
@@ -359,7 +467,10 @@
       "image_url": "/img/products/885276904670.jpg"
     },
     {
-      "url": "https://meest-shop.com/product/alibaba1688/944002660389",
+      "url": {
+        "uk": "https://meest-shop.com/product/alibaba1688/944002660389",
+        "ru": "https://meest-shop.com/ru/product/alibaba1688/944002660389"
+      },
       "title": {
         "uk": "Зарядна станція",
         "ru": "Зарядная станция"
@@ -368,7 +479,10 @@
       "image_url": "/img/products/944002660389.jpg"
     },
     {
-      "url": "https://meest-shop.com/product/alibaba1688/827237599340",
+      "url": {
+        "uk": "https://meest-shop.com/product/alibaba1688/827237599340",
+        "ru": "https://meest-shop.com/ru/product/alibaba1688/827237599340"
+      },
       "title": {
         "uk": "Зарядна станція",
         "ru": "Зарядная станция"
@@ -377,7 +491,10 @@
       "image_url": "/img/products/827237599340.jpg"
     },
     {
-      "url": "https://meest-shop.com/product/alibaba1688/880148516915",
+      "url": {
+        "uk": "https://meest-shop.com/product/alibaba1688/880148516915",
+        "ru": "https://meest-shop.com/ru/product/alibaba1688/880148516915"
+      },
       "title": {
         "uk": "Зарядна станція",
         "ru": "Зарядная станция"
@@ -386,7 +503,10 @@
       "image_url": "/img/products/880148516915.jpg"
     },
     {
-      "url": "https://meest-shop.com/product/taobao/673119361302",
+      "url": {
+        "uk": "https://meest-shop.com/product/taobao/673119361302",
+        "ru": "https://meest-shop.com/ru/product/taobao/673119361302"
+      },
       "title": {
         "uk": "Зарядна станція",
         "ru": "Зарядная станция"

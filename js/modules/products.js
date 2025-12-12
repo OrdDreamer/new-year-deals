@@ -45,13 +45,27 @@ function getCategoryName(category) {
   return category.name || '';
 }
 
+/**
+ * Отримує URL товару з урахуванням поточної мови
+ * @param {Object} product - Об'єкт товару
+ * @returns {string} URL товару
+ */
+function getProductUrl(product) {
+  if (typeof product.url === 'object' && product.url !== null) {
+    const lang = getCurrentLanguage();
+    return product.url[lang] || product.url.uk || '';
+  }
+  return product.url || '';
+}
+
 export function renderProduct(product) {
   const title = getProductTitle(product);
+  const url = getProductUrl(product);
   return `
     <li class="splide__slide products__item">
       <a
         class="products__link"
-        href="${product.url}"
+        href="${url}"
         target="_blank"
         rel="noopener"
       >
